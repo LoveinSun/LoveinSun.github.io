@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html  lang="en" >
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <title>Azure Service Bus 实现定时器以及按序执行任务 | JugglerDancing</title>
+    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Azure Service Bus 实现定时器以及按序执行任务">
+<meta property="og:url" content="http://juggler.fun/uncategorized/Azure-Service-Bus-%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8C%89%E5%BA%8F%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/index.html">
+<meta property="og:site_name" content="JugglerDancing">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-22T10:50:13.000Z">
+<meta property="article:modified_time" content="2022-03-22T10:51:14.577Z">
+<meta property="article:author" content="Juggler">
+<meta name="twitter:card" content="summary">
+
+    
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    
+<link rel="stylesheet" href="/css/common.min.css">
+
+
+
+    
+    
+    
+        <link href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css" rel="stylesheet">
+    
+    
+        <link href="//cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/css/lightgallery.min.css" rel="stylesheet">
+    
+    
+    
+<link rel="stylesheet" href="/css/iconfont.min.css">
+
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+    <body>
+        <header class="header header-fixture">
+    <div class="profile-search-wrap flex sm:block">
+        
+        
+        <div class="profile sm:text-center md:px-1 lg:px-3 sm:pb-4 sm:pt-6">
+            <a id="avatar" role="link" href="https://github.com/LoveinSun" class="inline-block lg:w-16 lg:h-16 w-8 h-8 m-2" target="_blank" rel="noopener" rel="noreferrer" >
+                <img src="https://www.gravatar.com/avatar/bf7ae8749e532822e3278817f312ba25?s=128" class="rounded-full" alt="avatar">
+            </a>
+            <h2 id="name" class="hidden lg:block">Juggler</h2>
+            <h3 id="title" class="hidden xl:block">Juggler is dancing</h3>
+            
+            <small id="location" class="hidden lg:block">
+                <i class="iconfont icon-map-icon"></i>
+                Beijing, China
+            </small>
+            
+        </div>
+        
+        
+<div class="search flex-1 flex lg:inline-block sm:hidden lg:px-4 lg:mt-2 lg:mb-4 lg:w-full">
+    <form id="search-form" class="my-auto flex-1 lg:border lg:border-solid lg:border-gray-200">
+        <div class="input-group table bg-gray-100 lg:bg-white w-full">
+            <input id="search-input" type="text" placeholder="Search" class="inline-block w-full bg-gray-100 lg:bg-white">
+            <span class="table-cell">
+                <button name="search tigger button" disabled>
+                    <i class="iconfont icon-search m-2"></i>
+                </button>
+            </span>
+        </div>
+    </form>
+        
+<div id="content-json" data-placeholder="Search" class="invisible hidden">/content.json</div>
+<script id="search-teamplate" type="text/html" data-path="/content.json">
+    <div>
+        <div class="search-header bg-gray-400">
+            <input id="actual-search-input" model="keyword" ref="input" class="inline-block w-full h-10 px-2 py-1" placeholder="Search" type="text">
+        </div>
+        <div class="search-result bg-gray-200">
+            {{#each searchPosts}}
+            <a href="/{{ path }}" class="result-item block px-2 pb-3 mb-1 pt-1 hover:bg-indigo-100">
+                <i class="iconfont icon-file"></i>
+                <h1 class="result-title inline font-medium text-lg">{{ title }}</h1>
+                <p class="result-content text-gray-600 text-sm">{{{ text }}}</p>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+</div>
+
+
+        <button name="menu toogle button" id="menu-toggle-btn" class="block sm:hidden p-3" role="button" aria-expanded="false">
+            <i class="iconfont icon-hamburger"></i>
+        </button>
+    </div>
+    <nav id="menu-nav" class="hidden sm:flex flex-col">
+        
+        
+            <div class="menu-item menu-home" role="menuitem">
+                <a href="/.">
+                    <i class="iconfont icon-home" aria-hidden="true"></i>
+                    <span class="menu-title">Home</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-archives" role="menuitem">
+                <a href="/archives">
+                    <i class="iconfont icon-archive" aria-hidden="true"></i>
+                    <span class="menu-title">Archives</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-categories" role="menuitem">
+                <a href="/categories">
+                    <i class="iconfont icon-folder" aria-hidden="true"></i>
+                    <span class="menu-title">Categories</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-tags" role="menuitem">
+                <a href="/tags">
+                    <i class="iconfont icon-tag" aria-hidden="true"></i>
+                    <span class="menu-title">Tags</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-repository" role="menuitem">
+                <a href="/repository">
+                    <i class="iconfont icon-project" aria-hidden="true"></i>
+                    <span class="menu-title">Repository</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-links" role="menuitem">
+                <a href="/links">
+                    <i class="iconfont icon-friend" aria-hidden="true"></i>
+                    <span class="menu-title">Links</span>
+                </a>
+            </div>
+        
+        
+            <div class="menu-item menu-about" role="menuitem">
+                <a href="/about">
+                    <i class="iconfont icon-cup" aria-hidden="true"></i>
+                    <span class="menu-title">About</span>
+                </a>
+            </div>
+        
+        
+<div class="social-links flex sm:flex-col lg:hidden mt-5">
+    
+        <span class="social-item text-center">
+            <a target="_blank" rel="noopener" href="https://github.com/LoveinSun">
+                <i class="iconfont social-icon icon-github"></i>
+                <span class="menu-title hidden lg:inline">menu.github</span>
+            </a>
+        </span>
+    
+        <span class="social-item text-center">
+            <a target="_blank" rel="noopener" href="https://t.me/fengkx">
+                <i class="iconfont social-icon icon-telegram"></i>
+                <span class="menu-title hidden lg:inline">menu.telegram</span>
+            </a>
+        </span>
+    
+        <span class="social-item text-center">
+            <a target="_blank" rel="noopener" href="https://twitter.com/example">
+                <i class="iconfont social-icon icon-twitter"></i>
+                <span class="menu-title hidden lg:inline">menu.twitter</span>
+            </a>
+        </span>
+    
+        <span class="social-item text-center">
+            <a href="/atom.xml">
+                <i class="iconfont social-icon icon-rss"></i>
+                <span class="menu-title hidden lg:inline">menu.rss</span>
+            </a>
+        </span>
+    
+</div>
+
+
+    </nav>
+</header>
+
+        <section class="main-section">
+            
+    <main class="flex-1 px-4 py-14 md:px-5 lg:px-8 lg:py-4 relative min-h-screen">
+    
+
+    <article class="content article article-archives article-type-list" itemscope="">
+        <header class="article-header">
+            
+    
+        <h1 class="article-title text-lg" itemprop="name">
+            Azure Service Bus 实现定时器以及按序执行任务
+        </h1>
+    
+
+
+
+            <p class="article-meta mb-3 text-xs">
+                <span class="article-date">
+    <i class="iconfont icon-calendar-check"></i>
+	<a href="/uncategorized/Azure-Service-Bus-%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8C%89%E5%BA%8F%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/" class="article-date">
+	  <time datetime="2022-03-22T10:50:13.000Z" itemprop="datePublished">Mar 22</time>
+	</a>
+</span>
+
+                
+
+                
+
+                <span class="_partial/post-comment"><i class="icon icon-comment"></i>
+                    <a href="/uncategorized/Azure-Service-Bus-%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8C%89%E5%BA%8F%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/#comments" class="article-comment-link">
+                        Comments
+                    </a>
+                </span>
+                
+    
+        <span class="post-wordcount" itemprop="wordCount">Word Count: 561(words)</span>
+    
+    
+        <span class="post-readcount" itemprop="timeRequired">Read Count: 3(minutes)</span>
+    
+
+
+            </p>
+        </header>
+        <div class="marked-body article-body">
+            <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Azure.Messaging.ServiceBus;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ServiceBusConsole</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// connection string to your Service Bus namespace</span></span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> connectionString = <span class="string">&quot;Endpoint=sb://&quot;</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// name of your Service Bus topic</span></span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> topicName = <span class="string">&quot;actieue&quot;</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">static</span> Queue&lt;<span class="built_in">string</span>&gt; a;</span><br><span class="line">        <span class="comment">// number of messages to be sent to the topic</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">const</span> <span class="built_in">int</span> taskNumber = <span class="number">8</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Random random = <span class="keyword">new</span> Random();</span><br><span class="line">            a = <span class="keyword">new</span> Queue&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; taskNumber; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                JObject jo = <span class="keyword">new</span> JObject();</span><br><span class="line">                jo[<span class="string">&quot;taskId&quot;</span>] = i;</span><br><span class="line">                jo[<span class="string">&quot;excutionTime&quot;</span>] = random.Next(<span class="number">10</span>);</span><br><span class="line">                a.Enqueue(jo.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">            ArrayList b = <span class="keyword">new</span> ArrayList();</span><br><span class="line">            b.Add(a.Dequeue());</span><br><span class="line">            sendMessage(b).Wait();</span><br><span class="line">            <span class="keyword">get</span>().Wait();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">sendMessage</span>(<span class="params">ArrayList msgs</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// the client that owns the connection and can be used to create senders and receivers</span></span><br><span class="line">            ServiceBusClient client;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// the sender used to publish messages to the topic</span></span><br><span class="line">            ServiceBusSender sender;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// The Service Bus client types are safe to cache and use as a singleton for the lifetime</span></span><br><span class="line">            <span class="comment">// of the application, which is best practice when messages are being published or read</span></span><br><span class="line">            <span class="comment">// regularly.</span></span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="comment">// Create the clients that we&#x27;ll use for sending and processing messages.</span></span><br><span class="line">            client = <span class="keyword">new</span> ServiceBusClient(connectionString);</span><br><span class="line">            sender = client.CreateSender(topicName);</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// create a batch </span></span><br><span class="line">            ServiceBusMessageBatch messageBatch = <span class="keyword">await</span> sender.CreateMessageBatchAsync();</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">foreach</span> (Object o <span class="keyword">in</span> msgs)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">string</span> msg = (<span class="built_in">string</span>)o;</span><br><span class="line">                <span class="comment">// try adding a message to the batch</span></span><br><span class="line">                ServiceBusMessage m = <span class="keyword">new</span> ServiceBusMessage(msg);</span><br><span class="line">                JObject j = JObject.Parse(msg);</span><br><span class="line">                <span class="built_in">double</span> d = <span class="built_in">double</span>.Parse(j[<span class="string">&quot;excutionTime&quot;</span>].ToString());</span><br><span class="line">                m.ScheduledEnqueueTime = DateTimeOffset.Now.AddSeconds(d);</span><br><span class="line">                <span class="keyword">if</span> (!messageBatch.TryAddMessage(m))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// if it is too large for the batch</span></span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">$&quot;The message msg is too large to fit in the batch.&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Use the producer client to send the batch of messages to the Service Bus topic</span></span><br><span class="line">                <span class="keyword">await</span> sender.SendMessagesAsync(messageBatch);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Calling DisposeAsync on client types is required to ensure that network</span></span><br><span class="line">                <span class="comment">// resources and other unmanaged objects are properly cleaned up.</span></span><br><span class="line">                messageBatch.Dispose();</span><br><span class="line">                <span class="keyword">await</span> sender.DisposeAsync();</span><br><span class="line">                <span class="keyword">await</span> client.DisposeAsync();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">get</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            ServiceBusClient client;</span><br><span class="line">            ServiceBusProcessor processor;</span><br><span class="line">            client = <span class="keyword">new</span> ServiceBusClient(connectionString);</span><br><span class="line">            processor = client.CreateProcessor(topicName, <span class="keyword">new</span> ServiceBusProcessorOptions());</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// add handler to process messages</span></span><br><span class="line">                processor.ProcessMessageAsync += MessageHandler;</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// add handler to process any errors</span></span><br><span class="line">                processor.ProcessErrorAsync += ErrorHandler;</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// start processing </span></span><br><span class="line">                <span class="keyword">await</span> processor.StartProcessingAsync();</span><br><span class="line"> </span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Start Task 0 is runing&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">$&quot;It is <span class="subst">&#123;DateTimeOffset.Now&#125;</span> now&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// stop processing </span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;\nStopping the receiver...&quot;</span>);</span><br><span class="line">                <span class="keyword">await</span> processor.StopProcessingAsync();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Stopped receiving messages&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Calling DisposeAsync on client types is required to ensure that network</span></span><br><span class="line">                <span class="comment">// resources and other unmanaged objects are properly cleaned up.</span></span><br><span class="line">                <span class="keyword">await</span> processor.DisposeAsync();</span><br><span class="line">                <span class="keyword">await</span> client.DisposeAsync();</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">MessageHandler</span>(<span class="params">ProcessMessageEventArgs args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            ArrayList c = <span class="keyword">new</span> ArrayList();</span><br><span class="line">            <span class="built_in">string</span> body = args.Message.Body.ToString();</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                c.Add(a.Dequeue());</span><br><span class="line">                sendMessage(c).Wait();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line"> </span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            Console.WriteLine(<span class="string">$&quot;At <span class="subst">&#123;DateTimeOffset.Now&#125;</span>,This task is finished:\nReceived: <span class="subst">&#123;body&#125;</span> &quot;</span>);</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// complete the message. messages is deleted from the subscription. </span></span><br><span class="line">            <span class="keyword">await</span> args.CompleteMessageAsync(args.Message);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// handle any errors when receiving messages</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> Task <span class="title">ErrorHandler</span>(<span class="params">ProcessErrorEventArgs args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(args.Exception.ToString());</span><br><span class="line">            <span class="keyword">return</span> Task.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+<blockquote class="copyright">
+    <p><strong>Link to this article : </strong><a class="permalink" href="http://juggler.fun/uncategorized/Azure-Service-Bus-%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8C%89%E5%BA%8F%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1/">http://juggler.fun/uncategorized/Azure-Service-Bus-实现定时器以及按序执行任务/</a></p>
+    <p><strong>This article is available under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a> License</strong></p>
+</blockquote>
+
+
+    </article>
+    
+    <section id="comments">
+        
+
+        
+    </section>
+
+
+    
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv"></span>  visits  |  </span>	
+	<span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span>  visitors</span>
+</main>
+
+
+<aside style="" id="sidebar" class="aside aside-fixture">
+    <div class="toc-sidebar">
+        <nav id="toc" class="article-toc">
+            <h3 class="toc-title">Catalogue</h3>
+            
+        </nav>
+    </div>
+</aside>
+
+
+
+
+
+
+        </section>
+        <footer class="hidden lg:block fixed bottom-0 left-0 sm:w-1/12 lg:w-1/6 bg-gray-100 z-40">
+    
+    <div class="footer-social-links">
+        
+            <a target="_blank" rel="noopener" href="https://github.com/LoveinSun">
+                <i class="iconfont icon-github"></i>
+            </a>
+        
+            <a target="_blank" rel="noopener" href="https://t.me/fengkx">
+                <i class="iconfont icon-telegram"></i>
+            </a>
+        
+            <a target="_blank" rel="noopener" href="https://twitter.com/example">
+                <i class="iconfont icon-twitter"></i>
+            </a>
+        
+            <a href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+            </a>
+        
+    </div>
+    
+    
+</footer>
+
+        <div id="mask" class="hidden mask fixed inset-0 bg-gray-900 opacity-75 z-40"></div>
+        <div id="search-view-container" class="hidden shadow-xl"></div>
+        
+<script src="/js/dom-event.min.js"></script>
+
+
+
+<script src="/js/local-search.min.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/gitalk@1.5.2/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '40e1002206dc11748978',
+        clientSecret: '027043262cdf608cfa6b1c20173bc245b1cff702',
+        repo: 'blog-comment',
+        owner: 'LoveinSun',
+        admin: ['LoveinSun'],
+	proxy: ['https://proxy.juggler.fun:9013/login/oauth/access_token'],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    })
+    gitalk.render('comments')
+</script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/js/lightgallery.min.js"></script>
+    
+<script src="/js/light-gallery.min.js"></script>
+
+
+
+
+
+
+    </body>
+</html>
