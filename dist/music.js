@@ -6,7 +6,7 @@ const ap = new APlayer({
 	 {
 		name: 'Five Hundred Miles',
 		artist: 'Justin Timberlake',
-		url: 'music.mp3',
+		url: 'music.flac',
 		cover: 'images/cover.jpg',
 	    lrc: '' 
 	 },
