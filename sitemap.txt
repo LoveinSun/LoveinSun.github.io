@@ -23,6 +23,7 @@ https://juggler.fun/C/Azure-Service-Bus-%E5%AE%9E%E7%8E%B0%E5%AE%9A%E6%97%B6%E5%
 https://juggler.fun/uncategorized/hello-world/
 https://juggler.fun/
 https://juggler.fun/tags/C/
+https://juggler.fun/tags/MQ/
 https://juggler.fun/tags/python/
 https://juggler.fun/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/
 https://juggler.fun/tags/data/
@@ -38,7 +39,7 @@ https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/
 https://juggler.fun/tags/janpanese/
 https://juggler.fun/tags/joy/
 https://juggler.fun/tags/docker/
-https://juggler.fun/tags/MQ/
+https://juggler.fun/categories/C/
 https://juggler.fun/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/
 https://juggler.fun/categories/data/
 https://juggler.fun/categories/NLP/
@@ -50,4 +51,3 @@ https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/
 https://juggler.fun/categories/language/
 https://juggler.fun/categories/ML/
 https://juggler.fun/categories/joy/
-https://juggler.fun/categories/C/
