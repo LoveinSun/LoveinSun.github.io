@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://juggler.fun/japanese/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/japanese/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    
+    <lastmod>2022-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/ML/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/</loc>
     
     <lastmod>2022-03-28</lastmod>
@@ -50,15 +68,6 @@
     <loc>https://juggler.fun/tags/index.html</loc>
     
     <lastmod>2022-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/language/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
-    
-    <lastmod>2022-03-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -309,14 +318,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://juggler.fun/tags/japanese/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/janpanese/</loc>
+    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -395,14 +404,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://juggler.fun/categories/japanese/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/language/</loc>
+    <loc>https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

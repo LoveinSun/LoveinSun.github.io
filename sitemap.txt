@@ -1,10 +1,11 @@
+https://juggler.fun/japanese/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/
+https://juggler.fun/japanese/%E6%97%A5%E6%9C%AC%E8%AA%9E/
 https://juggler.fun/ML/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/
 https://juggler.fun/sitemap/index.html
 https://juggler.fun/archives/index.html
 https://juggler.fun/schedule/index.html
 https://juggler.fun/categories/index.html
 https://juggler.fun/tags/index.html
-https://juggler.fun/language/%E6%97%A5%E6%9C%AC%E8%AA%9E/
 https://juggler.fun/data/Data/
 https://juggler.fun/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/
 https://juggler.fun/Unity/Unity-fake-parent/
@@ -35,8 +36,8 @@ https://juggler.fun/tags/nacos/
 https://juggler.fun/tags/js/
 https://juggler.fun/tags/MongoDB/
 https://juggler.fun/tags/azure/
+https://juggler.fun/tags/japanese/
 https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/
-https://juggler.fun/tags/janpanese/
 https://juggler.fun/tags/joy/
 https://juggler.fun/tags/docker/
 https://juggler.fun/categories/C/
@@ -47,7 +48,7 @@ https://juggler.fun/categories/python/
 https://juggler.fun/categories/Unity/
 https://juggler.fun/categories/nacos/
 https://juggler.fun/categories/js/
+https://juggler.fun/categories/japanese/
 https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/
-https://juggler.fun/categories/language/
 https://juggler.fun/categories/ML/
 https://juggler.fun/categories/joy/
