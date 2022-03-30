@@ -273,14 +273,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/NLP/</loc>
+    <loc>https://juggler.fun/tags/data/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/data/</loc>
+    <loc>https://juggler.fun/tags/NLP/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -329,14 +329,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/japanese/</loc>
+    <loc>https://juggler.fun/tags/azure/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/azure/</loc>
+    <loc>https://juggler.fun/tags/japanese/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/NLP/</loc>
+    <loc>https://juggler.fun/categories/data/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/data/</loc>
+    <loc>https://juggler.fun/categories/NLP/</loc>
     <lastmod>2022-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
