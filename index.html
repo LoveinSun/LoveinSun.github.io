@@ -136,13 +136,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -176,6 +176,97 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ComputerNetwork/OSC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ComputerNetwork/OSC/" class="post-title-link" itemprop="url">OSC</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 16:15:26 / Modified: 16:18:23" itemprop="dateCreated datePublished" datetime="2022-03-30T16:15:26+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ComputerNetwork/" itemprop="url" rel="index"><span itemprop="name">ComputerNetwork</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="OSC（open-sound-control）"><a href="#OSC（open-sound-control）" class="headerlink" title="OSC（open sound control）"></a>OSC（open sound control）</h1><h2 id="官网-："><a href="#官网-：" class="headerlink" title="官网 ："></a>官网 ：</h2><p><a target="_blank" rel="noopener" href="http://opensoundcontrol.org/">opensoundcontrol.org</a></p>
+<h2 id="大佬的C-实现代码："><a href="#大佬的C-实现代码：" class="headerlink" title="大佬的C# 实现代码："></a>大佬的C# 实现代码：</h2><p><a target="_blank" rel="noopener" href="https://github.com/keijiro/OscJack">https://github.com/keijiro/OscJack</a></p>
+<h2 id="知乎上的介绍："><a href="#知乎上的介绍：" class="headerlink" title="知乎上的介绍："></a>知乎上的介绍：</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/28809952">https://www.zhihu.com/question/28809952</a></p>
+<p>简单来说，OSC是一种 网络传输协议</p>
+<p>，和MIDI一样。可以定义任何东西，在一定的规则下把信息通过网络从一个设备传输到另一个设备。通常OSC信息都是通过UDP来传送的，也就是说任何接收设备只要与发送设备在同一个网络中，并且监听同一个端口，那就能收到这个信息。</p>
+<p>最初设计这个协议的目的是为了在音乐交互演出中使得各个乐器传输信息和控制器更为方便（这就是为何要叫Open Sound Control）。比起MIDI标准的工业框架和限定好的端口标准，OSC最大程度的诠释了“自定义”的概念。理论上来说你可以用它来传输任何的信息。到了后来，OSC的用途越来越广泛了，我个人最极端的例子是：用OSC把Java界面的前端信息传输给C++后端的程序进行各种底层控制。</p>
+<p>说得直白一点：open sound control一种自由度很高的网络传输协议，和midi与serial不一样的是，osc不用连接线，而通过网络来传输，所以信息、控制可以在远距离操作，也可以一对多。至于控制什么，那可以用户自己定义，它能够传输数字（上下限极大！但midi是0-127，serial是0-255）、字符。</p>
+<p>这类app、软件很多，比如你可以编辑好软件操作界面，比如放多少个按钮，按下去是1，不按是0，或者放几个推杆、旋钮，它们输出的数值范围是0.到26253.77575（随便定义），那就做好了一个简单的控制界面，这些0和1，26253.77575等数字就可以对应到接受osc信息的程序的音量、音高、是否mute音轨等等，那就是做成了一个乐器。</p>
+<p>你也可以用这些数字控制一个小球的x&#x2F;y&#x2F;z坐标或者这个球的半径，那就能操作图像。</p>
+<p>或者，你可以在一个图像软件中用osc，当一个小球从左至右碰到窗口右边的时候发出一个osc信息“&#x2F;1&#x2F;gogogo 1.”给另一个负责声音的软件，告诉它位置叫做&#x2F;1&#x2F;gogogo的那个“东西”，你收到“1.0”了哟，所以你应该响一声了！ 然后当小球弹开窗口右边时图形软件又发出“&#x2F;1&#x2F;gogogo 0.”给声音那边，刚才那个位置是“&#x2F;1&#x2F;gogogo”的“东西”又收到了“0.”，相当于说：0.来了啊，记得0.是不发声音的哦！</p>
+<p>这个东西使用很简单，怎么说都很抽象，用一次就明白了。</p>
+<p>Osc基于UDP.与TCPIP不一样，他只管发送你收没收到我不管～</p>
+<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><p>就开一个端口去监听消息，然后回调相应方法进行处理，预计我将大佬的代码用于VR环境下的游戏角色控制，似乎有特殊的问题导致unity普通的方法不太行，还没有完全接手，目前我的理解似乎到此就足够了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1351,85 +1442,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span>:</span><br><span class="line"> </span><br><span class="line">    FirstName = <span class="literal">None</span></span><br><span class="line">    LastName = <span class="literal">None</span></span><br><span class="line">    Email = <span class="literal">None</span></span><br><span class="line">    Password = <span class="literal">None</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,Email,Password,FirstName,LastName = <span class="string">&quot;&quot;</span></span>):</span><br><span class="line">        self.Email = Email</span><br><span class="line">        self.Password = Password</span><br><span class="line">        self.FirstName = FirstName</span><br><span class="line">        self.LastName = LastName</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">json</span>(<span class="params">self</span>):</span><br><span class="line">        json = &#123;</span><br><span class="line">                    <span class="string">&quot;Email&quot;</span>:self.Email,</span><br><span class="line">                    <span class="string">&quot;Password&quot;</span>:self.Password,</span><br><span class="line">                    <span class="string">&quot;FirstName&quot;</span>:self.FirstName,</span><br><span class="line">                    <span class="string">&quot;LastName&quot;</span>:self.LastName</span><br><span class="line">                &#125;</span><br><span class="line">        <span class="keyword">return</span> json</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">GameDB</span>:</span><br><span class="line"> </span><br><span class="line">    url = <span class="string">&quot;&quot;</span></span><br><span class="line">    client = <span class="literal">None</span></span><br><span class="line">    db = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,url = <span class="string">&quot;mongodb://jo:jokda@localhost&quot;</span></span>):</span><br><span class="line">        self.url = url</span><br><span class="line">        self.client = MongoClient(self.url)</span><br><span class="line">        self.db = self.client.game</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">insert</span>(<span class="params">self,user,flag=<span class="literal">False</span></span>):</span><br><span class="line">        <span class="keyword">if</span> flag:</span><br><span class="line">            self.db.inventory.insert_many(user)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        select = self.select(&#123;<span class="string">&quot;Email&quot;</span>:user.Email&#125;)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(select) != <span class="number">0</span> :</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        json_user = user.json()</span><br><span class="line">        self.db.inventory.insert_one(json_user)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">select</span>(<span class="params">self,condition=&#123;&#125;</span>):</span><br><span class="line">        cursor = self.db.inventory.find(condition)</span><br><span class="line">        result = [doc <span class="keyword">for</span> doc <span class="keyword">in</span> cursor]</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self,user:User,flag=<span class="literal">True</span></span>):</span><br><span class="line">        select = self.select(&#123;<span class="string">&quot;Email&quot;</span>:user.Email&#125;)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(select)&lt;<span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span> flag :</span><br><span class="line">            self.db.inventory.update_many(</span><br><span class="line">                &#123;<span class="string">&quot;Email&quot;</span>:user.Email&#125;,</span><br><span class="line">                &#123;<span class="string">&quot;$set&quot;</span>:&#123;</span><br><span class="line">                    <span class="string">&quot;Password&quot;</span>:user.Password,</span><br><span class="line">                    <span class="string">&quot;FirstName&quot;</span>:user.FirstName,</span><br><span class="line">                    <span class="string">&quot;LastName&quot;</span>:user.LastName</span><br><span class="line">                &#125;&#125;,</span><br><span class="line">            )</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"> </span><br><span class="line">        self.db.inventory.update_one(</span><br><span class="line">                &#123;<span class="string">&quot;Email&quot;</span>:user.Email&#125;,</span><br><span class="line">                &#123;<span class="string">&quot;$set&quot;</span>:&#123;</span><br><span class="line">                    <span class="string">&quot;$Password&quot;</span>:user.Password,</span><br><span class="line">                    <span class="string">&quot;$FirstName&quot;</span>:user.FirstName,</span><br><span class="line">                    <span class="string">&quot;$LastName&quot;</span>:user.LastName</span><br><span class="line">                &#125;&#125;,</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">delete</span>(<span class="params">self,condition,flag=<span class="literal">True</span></span>):</span><br><span class="line">        <span class="keyword">if</span> flag :</span><br><span class="line">            self.db.inventory.delete_many(condition)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.db.inventory.delete_one(condtion)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#user = User(&quot;19@qq.com&quot;,&quot;password&quot;,&quot;pa&quot;,&quot;zika&quot;)</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">#db = GameDB()</span></span><br><span class="line"><span class="comment">#db.add(user)</span></span><br><span class="line"><span class="comment">#db.printf()</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/python/python-LRUCache/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/python-LRUCache/" class="post-title-link" itemprop="url">python LRUCache</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-23 10:53:42 / Modified: 11:21:32" itemprop="dateCreated datePublished" datetime="2022-03-23T10:53:42+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LRUCache</span>(collections.OrderedDict):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, size=<span class="number">2</span></span>):</span><br><span class="line">        <span class="comment">#print(self.size)</span></span><br><span class="line"> </span><br><span class="line">        self.size = size,</span><br><span class="line">        <span class="built_in">print</span>(self.size)</span><br><span class="line">        self.cache = collections.OrderedDict()</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get</span>(<span class="params">self, key</span>):</span><br><span class="line">        <span class="comment">#if self.cache.has_key(key):</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.cache:</span><br><span class="line">            val = self.cache.pop(key)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            val = -<span class="number">1</span></span><br><span class="line"> </span><br><span class="line">        <span class="keyword">return</span> val</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set</span>(<span class="params">self, key, val</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;len <span class="subst">&#123;<span class="built_in">len</span>(self.cache)&#125;</span>,size<span class="subst">&#123;self.size&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="comment">#if self.cache.has_key(key):</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.cache:</span><br><span class="line">            val = self.cache.pop(key)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(self.cache) &gt;= self.size[<span class="number">0</span>]:</span><br><span class="line">                item = self.cache.popitem(last=<span class="literal">False</span>)</span><br><span class="line">                delete(item)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delete</span>(<span class="params">item</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;============================start delete=========================================&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br><span class="line">    <span class="comment">#del item[1]</span></span><br><span class="line">    path =<span class="string">&quot;/&quot;</span>.join(item[<span class="number">0</span>].split(<span class="string">&quot;/&quot;</span>)[:-<span class="number">3</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;delete path : &quot;</span>+path)</span><br><span class="line">    subprocess.run([<span class="string">&quot;rm&quot;</span>,<span class="string">&quot;-r&quot;</span>,path])</span><br><span class="line">    <span class="keyword">del</span> item</span><br><span class="line">    gc.collect()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;============================delete comlete=======================================&quot;</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>
