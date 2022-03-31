@@ -36,8 +36,8 @@ https://juggler.fun/tags/ML/
 https://juggler.fun/tags/fastapi/
 https://juggler.fun/tags/nacos/
 https://juggler.fun/tags/js/
-https://juggler.fun/tags/MongoDB/
 https://juggler.fun/tags/azure/
+https://juggler.fun/tags/MongoDB/
 https://juggler.fun/tags/japanese/
 https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/
 https://juggler.fun/tags/joy/
