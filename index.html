@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,106 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/" class="post-title-link" itemprop="url">四因数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-02 15:56:09 / Modified: 15:56:53" itemprop="dateCreated datePublished" datetime="2022-04-02T15:56:09+08:00">2022-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1390-四因数"><a href="#1390-四因数" class="headerlink" title="1390. 四因数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/four-divisors/">1390. 四因数</a></h1><p>给你一个整数数组 <code>nums</code>，请你返回该数组中恰有四个因数的这些整数的各因数之和。如果数组中不存在满足题意的整数，则返回 <code>0</code> 。</p>
+ <img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021541109.png" alt="image-20220402154140070" style="zoom: 67%;" />
+
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            sum += <span class="built_in">judge</span>(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">1</span> + num;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(num); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i == num / i) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                    res += i;</span><br><span class="line">                    res += num / i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
+</li>
+<li><p>空间复杂度：O(1)O(1)。</p>
+</li>
+</ul>
+<h3 id="错误："><a href="#错误：" class="headerlink" title="错误："></a>错误：</h3><p>没有考虑两个因数相等的情况，也就是18，19行</p>
+<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num: nums) &#123;</span><br><span class="line">            <span class="comment">// factor_cnt: 因数的个数</span></span><br><span class="line">            <span class="comment">// factor_sum: 因数的和</span></span><br><span class="line">            <span class="type">int</span> factor_cnt = <span class="number">0</span>, factor_sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i * i &lt;= num; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ++factor_cnt;</span><br><span class="line">                    factor_sum += i;</span><br><span class="line">                    <span class="keyword">if</span> (i * i != num) &#123;   <span class="comment">// 判断 i 和 num/i 是否相等，若不相等才能将 num/i 看成新的因数</span></span><br><span class="line">                        ++factor_cnt;</span><br><span class="line">                        factor_sum += num / i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (factor_cnt == <span class="number">4</span>) &#123;</span><br><span class="line">                ans += factor_sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
+</li>
+<li><p>空间复杂度：O(1)O(1)。</p>
+</li>
+</ul>
+<h3 id="提前用筛法，我选择爆炸，等接下来有时间了仔细看官方题解"><a href="#提前用筛法，我选择爆炸，等接下来有时间了仔细看官方题解" class="headerlink" title="提前用筛法，我选择爆炸，等接下来有时间了仔细看官方题解"></a>提前用筛法，我选择爆炸，等接下来有时间了仔细看官方题解</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1579,85 +1679,6 @@
 <blockquote>
 <p>没必要这么累，<strong>有些</strong>东西得不得的到的区别还是体现在想不想， 干的卖力当然重要，但是我不想，没人能让我想。如果需要的话，只能我自己开始这么想，吃亏是必然的，但是以我的经验不这么干还会吃很多白亏。</p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/js/js-promise-%E7%89%9B%E5%88%80%E5%B0%8F%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/js/js-promise-%E7%89%9B%E5%88%80%E5%B0%8F%E8%AF%95/" class="post-title-link" itemprop="url">js promise 牛刀小试</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-23 10:59:45 / Modified: 11:24:31" itemprop="dateCreated datePublished" datetime="2022-03-23T10:59:45+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fuck</span>:<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">timeOut</span>().<span class="title function_">then</span>(<span class="keyword">function</span> <span class="title function_">success</span>(<span class="params">value</span>)&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(value)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">timeOut</span>:<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span> (<span class="params">resolve, reject</span>)&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF&quot;</span>)</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF2&quot;</span>)</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;成功!&quot;</span>);<span class="comment">//代码正常执行！</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF3&quot;</span>)</span><br><span class="line">          &#125;<span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="title function_">reject</span>(e);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
 
       
     </div>
