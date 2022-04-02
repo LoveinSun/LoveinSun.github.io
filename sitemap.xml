@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/</loc>
+    
+    <lastmod>2022-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/Leetcode/</loc>
     
     <lastmod>2022-04-02</lastmod>
@@ -263,6 +272,20 @@
 
   
   <url>
+    <loc>https://juggler.fun/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/unfinished/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/C/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -292,13 +315,6 @@
   
   <url>
     <loc>https://juggler.fun/tags/data/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -347,14 +363,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/MongoDB/</loc>
+    <loc>https://juggler.fun/tags/azure/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/azure/</loc>
+    <loc>https://juggler.fun/tags/MongoDB/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -391,6 +407,13 @@
 
   
   <url>
+    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/C/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -406,13 +429,6 @@
   
   <url>
     <loc>https://juggler.fun/categories/data/</loc>
-    <lastmod>2022-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
