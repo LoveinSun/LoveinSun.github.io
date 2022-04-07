@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/unreviewed/%E6%97%8B%E8%BD%AC%E5%AD%90%E7%AC%A6%E4%B8%B2/</loc>
     
     <lastmod>2022-04-07</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A5%9D%E5%AE%89%E5%A5%BD/</loc>
-    
-    <lastmod>2022-04-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/</loc>
     
     <lastmod>2022-04-02</lastmod>
     
@@ -339,13 +339,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/Unity/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/ML/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,6 +347,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/NLP/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/Unity/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -381,13 +381,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/japanese/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/MongoDB/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -395,14 +388,21 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://juggler.fun/tags/azure/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/azure/</loc>
+    <loc>https://juggler.fun/tags/japanese/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -453,13 +453,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/python/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -496,6 +489,13 @@
   
   <url>
     <loc>https://juggler.fun/categories/japanese/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
