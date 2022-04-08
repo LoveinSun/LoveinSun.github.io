@@ -357,13 +357,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/NLP/</loc>
-    <lastmod>2022-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/Unity/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -372,6 +365,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/ML/</loc>
+    <lastmod>2022-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/NLP/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -406,14 +406,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/azure/</loc>
+    <loc>https://juggler.fun/tags/japanese/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/japanese/</loc>
+    <loc>https://juggler.fun/tags/azure/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -471,13 +471,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/NLP/</loc>
-    <lastmod>2022-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -486,6 +479,13 @@
   
   <url>
     <loc>https://juggler.fun/categories/python/</loc>
+    <lastmod>2022-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/NLP/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -534,14 +534,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ML/</loc>
+    <loc>https://juggler.fun/categories/joy/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/joy/</loc>
+    <loc>https://juggler.fun/categories/ML/</loc>
     <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
