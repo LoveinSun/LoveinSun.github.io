@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,90 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E9%9F%B3%E9%A2%91%E5%90%88%E6%88%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E9%9F%B3%E9%A2%91%E5%90%88%E6%88%90/" class="post-title-link" itemprop="url">音频合成</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-08 18:06:49 / Modified: 18:07:32" itemprop="dateCreated datePublished" datetime="2022-04-08T18:06:49+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="音频合成"><a href="#音频合成" class="headerlink" title="音频合成"></a>音频合成</h1><p>分别有  一秒钟  二秒钟   三秒钟  五秒钟的音频    问合成一条50秒钟的音频 有多少种方法 </p>
+<p>调到脑子炸也没调出来，用时也很成问题，所以也可能思路有问题？。。。。</p>
+<p>先把代码留下以后有心情或者涉及到了再接着做吧</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Leetcode.cpp : This file contains the &#x27;main&#x27; function. Program execution begins and ends there.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    TreeNode* left;</span><br><span class="line">    TreeNode* right;</span><br><span class="line">    <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode* left, TreeNode* right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findNumofWays</span><span class="params">(<span class="type">int</span> n,vector&lt;<span class="type">int</span>&gt; units)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">sort</span>(units.<span class="built_in">begin</span>(), units.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; tunits;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> size = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = units.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt; <span class="number">-1</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (n &lt; units[i]) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            tunits.<span class="built_in">push_back</span>(units[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (tunits.<span class="built_in">size</span>() == <span class="number">1</span>) &#123;</span><br><span class="line">            cout &lt;&lt;n&lt;&lt; <span class="string">&quot;*1 \n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> tl = n / tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (n % tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>] == <span class="number">0</span>&amp;&amp; tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>]!=<span class="number">1</span>&amp;&amp;n!= tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>]) &#123;</span><br><span class="line">            tl -= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;=tl; i++) &#123;</span><br><span class="line">            cout &lt;&lt; i &lt;&lt; <span class="string">&quot;*&quot;</span>&lt;&lt; tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                vector&lt;<span class="type">int</span>&gt; t;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; tunits.<span class="built_in">size</span>() - <span class="number">1</span>;k++) &#123;</span><br><span class="line">                    t.<span class="built_in">push_back</span>(tunits[k]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">int</span> tn = n - i * tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">                sum += <span class="built_in">findNumofWays</span>(tn,t);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="type">int</span> tn = n - i * tunits[tunits.<span class="built_in">size</span>() - <span class="number">1</span>];</span><br><span class="line">                sum += <span class="built_in">findNumofWays</span>(tn, tunits);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; edges&#123; vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">3</span>,<span class="number">0</span>&#125; ,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">1</span>,<span class="number">3</span>&#125; ,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">2</span>,<span class="number">3</span>&#125;,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">5</span>,<span class="number">4</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="built_in">Solution</span>().<span class="built_in">findNumofWays</span>(<span class="number">6</span>, vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>&#125;);</span><br><span class="line">    std::cout &lt;&lt; <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1107,510 +1191,6 @@
 <p>这个东西使用很简单，怎么说都很抽象，用一次就明白了。</p>
 <p>Osc基于UDP.与TCPIP不一样，他只管发送你收没收到我不管～</p>
 <h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><p>就开一个端口去监听消息，然后回调相应方法进行处理，预计我将大佬的代码用于VR环境下的游戏角色控制，似乎有特殊的问题导致unity普通的方法不太行，还没有完全接手，目前我的理解似乎到此就足够了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/japanese/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/japanese/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/" class="post-title-link" itemprop="url">五十音図</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-29 18:23:46 / Modified: 18:27:02" itemprop="dateCreated datePublished" datetime="2022-03-29T18:23:46+08:00">2022-03-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/japanese/" itemprop="url" rel="index"><span itemprop="name">japanese</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="清音"><a href="#清音" class="headerlink" title="清音"></a>清音</h3><table>
-<thead>
-<tr>
-<th align="center">あ</th>
-<th align="center">ア</th>
-<th align="center">a</th>
-<th align="center">い</th>
-<th align="center">イ</th>
-<th align="center">i</th>
-<th align="center">う</th>
-<th align="center">ウ</th>
-<th align="center">u</th>
-<th align="center">え</th>
-<th align="center">エ</th>
-<th align="center">e</th>
-<th align="center">お</th>
-<th align="center">オ</th>
-<th align="center">o</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">か</td>
-<td align="center">カ</td>
-<td align="center">ka</td>
-<td align="center">き</td>
-<td align="center">キ</td>
-<td align="center">ki</td>
-<td align="center">く</td>
-<td align="center">ク</td>
-<td align="center">ku</td>
-<td align="center">け</td>
-<td align="center">ケ</td>
-<td align="center">ke</td>
-<td align="center">こ</td>
-<td align="center">コ</td>
-<td align="center">ko</td>
-</tr>
-<tr>
-<td align="center">さ</td>
-<td align="center">サ</td>
-<td align="center">sa</td>
-<td align="center">し</td>
-<td align="center">シ</td>
-<td align="center">shi</td>
-<td align="center">す</td>
-<td align="center">ス</td>
-<td align="center">su</td>
-<td align="center">せ</td>
-<td align="center">セ</td>
-<td align="center">se</td>
-<td align="center">そ</td>
-<td align="center">ソ</td>
-<td align="center">so</td>
-</tr>
-<tr>
-<td align="center">た</td>
-<td align="center">タ</td>
-<td align="center">ta</td>
-<td align="center">ち</td>
-<td align="center">チ</td>
-<td align="center">chi</td>
-<td align="center">つ</td>
-<td align="center">ツ</td>
-<td align="center">tsu</td>
-<td align="center">て</td>
-<td align="center">テ</td>
-<td align="center">te</td>
-<td align="center">と</td>
-<td align="center">ト</td>
-<td align="center">to</td>
-</tr>
-<tr>
-<td align="center">な</td>
-<td align="center">ナ</td>
-<td align="center">na</td>
-<td align="center">に</td>
-<td align="center">二</td>
-<td align="center">ni</td>
-<td align="center">ぬ</td>
-<td align="center">ヌ</td>
-<td align="center">nu</td>
-<td align="center">ね</td>
-<td align="center">ネ</td>
-<td align="center">ne</td>
-<td align="center">の</td>
-<td align="center">ノ</td>
-<td align="center">no</td>
-</tr>
-<tr>
-<td align="center">は</td>
-<td align="center">ハ</td>
-<td align="center">ha</td>
-<td align="center">ひ</td>
-<td align="center">ヒ</td>
-<td align="center">hi</td>
-<td align="center">ふ</td>
-<td align="center">フ</td>
-<td align="center">fu</td>
-<td align="center">へ</td>
-<td align="center">ヘ</td>
-<td align="center">he</td>
-<td align="center">ほ</td>
-<td align="center">ホ</td>
-<td align="center">ho</td>
-</tr>
-<tr>
-<td align="center">ま</td>
-<td align="center">マ</td>
-<td align="center">ma</td>
-<td align="center">み</td>
-<td align="center">ミ</td>
-<td align="center">mi</td>
-<td align="center">む</td>
-<td align="center">ム</td>
-<td align="center">mu</td>
-<td align="center">め</td>
-<td align="center">メ</td>
-<td align="center">me</td>
-<td align="center">も</td>
-<td align="center">モ</td>
-<td align="center">mo</td>
-</tr>
-<tr>
-<td align="center">や</td>
-<td align="center">ヤ</td>
-<td align="center">ya</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">ゆ</td>
-<td align="center">ユ</td>
-<td align="center">yu</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">よ</td>
-<td align="center">ヨ</td>
-<td align="center">yo</td>
-</tr>
-<tr>
-<td align="center">ら</td>
-<td align="center">ラ</td>
-<td align="center">ra</td>
-<td align="center">り</td>
-<td align="center">リ</td>
-<td align="center">ri</td>
-<td align="center">る</td>
-<td align="center">ル</td>
-<td align="center">ru</td>
-<td align="center">れ</td>
-<td align="center">レ</td>
-<td align="center">re</td>
-<td align="center">ろ</td>
-<td align="center">ロ</td>
-<td align="center">ro</td>
-</tr>
-<tr>
-<td align="center">わ</td>
-<td align="center">ワ</td>
-<td align="center">wa</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">を</td>
-<td align="center">ヲ</td>
-<td align="center">wo</td>
-</tr>
-<tr>
-<td align="center">ん</td>
-<td align="center">ン</td>
-<td align="center">n</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h3 id="拗音"><a href="#拗音" class="headerlink" title="拗音"></a>拗音</h3><table>
-<thead>
-<tr>
-<th align="center">きゃ</th>
-<th align="center">キャ</th>
-<th align="center">kya</th>
-<th align="center">きゅ</th>
-<th align="center">キュ</th>
-<th align="center">kyu</th>
-<th align="center">きょ</th>
-<th align="center">キョ</th>
-<th align="center">kyo</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">ぎゃ</td>
-<td align="center">ギャ</td>
-<td align="center">gya</td>
-<td align="center">ぎゅ</td>
-<td align="center">ギュ</td>
-<td align="center">gyu</td>
-<td align="center">ぎょ</td>
-<td align="center">ギョ</td>
-<td align="center">gyo</td>
-</tr>
-<tr>
-<td align="center">しゃ</td>
-<td align="center">シャ</td>
-<td align="center">sha</td>
-<td align="center">しゅ</td>
-<td align="center">シュ</td>
-<td align="center">shu</td>
-<td align="center">しょ</td>
-<td align="center">ショ</td>
-<td align="center">sho</td>
-</tr>
-<tr>
-<td align="center">じや</td>
-<td align="center">ジヤ</td>
-<td align="center">jya</td>
-<td align="center">じゆ</td>
-<td align="center">ジユ</td>
-<td align="center">jyu</td>
-<td align="center">じよ</td>
-<td align="center">ジョ</td>
-<td align="center">jyo</td>
-</tr>
-<tr>
-<td align="center">ちゃ</td>
-<td align="center">チャ</td>
-<td align="center">cha</td>
-<td align="center">ちゅ</td>
-<td align="center">チュ</td>
-<td align="center">chu</td>
-<td align="center">ちょ</td>
-<td align="center">チョ</td>
-<td align="center">cho</td>
-</tr>
-<tr>
-<td align="center">にゃ</td>
-<td align="center">ニャ</td>
-<td align="center">nya</td>
-<td align="center">にゅ</td>
-<td align="center">ニュ</td>
-<td align="center">nyu</td>
-<td align="center">にょ</td>
-<td align="center">ニョ</td>
-<td align="center">nyo</td>
-</tr>
-<tr>
-<td align="center">ひゃ</td>
-<td align="center">ヒャ</td>
-<td align="center">hya</td>
-<td align="center">ひゅ</td>
-<td align="center">ヒュ</td>
-<td align="center">hyu</td>
-<td align="center">ひょ</td>
-<td align="center">ヒョ</td>
-<td align="center">hyo</td>
-</tr>
-<tr>
-<td align="center">びゃ</td>
-<td align="center">ビャ</td>
-<td align="center">bya</td>
-<td align="center">びゅ</td>
-<td align="center">ビュ</td>
-<td align="center">byu</td>
-<td align="center">びょ</td>
-<td align="center">ビョ</td>
-<td align="center">byo</td>
-</tr>
-<tr>
-<td align="center">ぴゃ</td>
-<td align="center">ピャ</td>
-<td align="center">pya</td>
-<td align="center">ぴゅ</td>
-<td align="center">ピュ</td>
-<td align="center">pyu</td>
-<td align="center">ぴょ</td>
-<td align="center">ピョ</td>
-<td align="center">pyo</td>
-</tr>
-<tr>
-<td align="center">みゃ</td>
-<td align="center">ミャ</td>
-<td align="center">mya</td>
-<td align="center">みゅ</td>
-<td align="center">ミュ</td>
-<td align="center">myu</td>
-<td align="center">みょ</td>
-<td align="center">ミョ</td>
-<td align="center">myo</td>
-</tr>
-<tr>
-<td align="center">りゃ</td>
-<td align="center">リャ</td>
-<td align="center">rya</td>
-<td align="center">りゅ</td>
-<td align="center">リュ</td>
-<td align="center">ryu</td>
-<td align="center">りょ</td>
-<td align="center">リョ</td>
-<td align="center">ryo</td>
-</tr>
-</tbody></table>
-<h3 id="浊音"><a href="#浊音" class="headerlink" title="浊音"></a>浊音</h3><table>
-<thead>
-<tr>
-<th align="center">が</th>
-<th align="center">ガ</th>
-<th align="center">ga</th>
-<th align="center">ぎ</th>
-<th align="center">ギ</th>
-<th align="center">gi</th>
-<th align="center">ぐ</th>
-<th align="center">グ</th>
-<th align="center">gu</th>
-<th align="center">げ</th>
-<th align="center">ゲ</th>
-<th align="center">ge</th>
-<th align="center">ご</th>
-<th align="center">ゴ</th>
-<th align="center">go</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">ざ</td>
-<td align="center">ザ</td>
-<td align="center">za</td>
-<td align="center">じ</td>
-<td align="center">ジ</td>
-<td align="center">ji</td>
-<td align="center">ず</td>
-<td align="center">ズ</td>
-<td align="center">zu</td>
-<td align="center">ぜ</td>
-<td align="center">ゼ</td>
-<td align="center">ze</td>
-<td align="center">ぞ</td>
-<td align="center">ゾ</td>
-<td align="center">zo</td>
-</tr>
-<tr>
-<td align="center">だ</td>
-<td align="center">ダ</td>
-<td align="center">da</td>
-<td align="center">ぢ</td>
-<td align="center">ヂ</td>
-<td align="center">ji</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">で</td>
-<td align="center">デ</td>
-<td align="center">de</td>
-<td align="center">ど</td>
-<td align="center">ド</td>
-<td align="center">do</td>
-</tr>
-<tr>
-<td align="center">ば</td>
-<td align="center">バ</td>
-<td align="center">ba</td>
-<td align="center">び</td>
-<td align="center">ビ</td>
-<td align="center">bi</td>
-<td align="center">ぶ</td>
-<td align="center">ブ</td>
-<td align="center">bu</td>
-<td align="center">べ</td>
-<td align="center">ベ</td>
-<td align="center">be</td>
-<td align="center">ぼ</td>
-<td align="center">ボ</td>
-<td align="center">bo</td>
-</tr>
-</tbody></table>
-<h3 id="半浊音"><a href="#半浊音" class="headerlink" title="半浊音"></a>半浊音</h3><table>
-<thead>
-<tr>
-<th align="center">ぱ</th>
-<th align="center">パ</th>
-<th align="center">pa</th>
-<th align="center">ぴ</th>
-<th align="center">ピ</th>
-<th align="center">pi</th>
-<th align="center">ぷ</th>
-<th align="center">プ</th>
-<th align="center">pu</th>
-<th align="center">ペ</th>
-<th align="center">ぺ</th>
-<th align="center">pe</th>
-<th align="center">ぽ</th>
-<th align="center">ポ</th>
-<th align="center">po</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
 
       
     </div>
