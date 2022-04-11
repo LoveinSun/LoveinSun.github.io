@@ -1,3 +1,5 @@
+https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/
+https://juggler.fun/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/
 https://juggler.fun/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/
 https://juggler.fun/%E7%AE%97%E6%B3%95/%E9%9F%B3%E9%A2%91%E5%90%88%E6%88%90/
 https://juggler.fun/%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/
@@ -8,7 +10,6 @@ https://juggler.fun/%E7%AE%97%E6%B3%95/unreviewed/%E6%97%8B%E8%BD%AC%E5%AD%90%E7
 https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A5%9D%E5%AE%89%E5%A5%BD/
 https://juggler.fun/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/
 https://juggler.fun/%E7%AE%97%E6%B3%95/Leetcode/
-https://juggler.fun/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/
 https://juggler.fun/japanese/%E6%97%A5%E6%9C%AC%E8%AA%9E/
 https://juggler.fun/NLP/RNN-LSTM-BERT%E8%B5%84%E6%96%99/
 https://juggler.fun/ComputerNetwork/OSC/
@@ -21,7 +22,6 @@ https://juggler.fun/categories/index.html
 https://juggler.fun/tags/index.html
 https://juggler.fun/data/Data/
 https://juggler.fun/Unity/Unity-fake-parent/
-https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/
 https://juggler.fun/nacos/fastapi-nacos/
 https://juggler.fun/joy/%E9%A5%A5%E8%8D%92%E6%9C%8D%E5%8A%A1%E5%99%A8-docker-compose/
 https://juggler.fun/%E5%AF%86%E7%A0%81%E5%AD%A6/C-AES%E5%8A%A0%E7%9B%90%E5%8A%A0%E5%AF%86-python-AES%E5%8A%A0%E7%9B%90%E8%A7%A3%E5%AF%86/
@@ -42,8 +42,8 @@ https://juggler.fun/tags/python/
 https://juggler.fun/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/
 https://juggler.fun/tags/data/
 https://juggler.fun/tags/NLP/
-https://juggler.fun/tags/ML/
 https://juggler.fun/tags/Unity/
+https://juggler.fun/tags/ML/
 https://juggler.fun/tags/fastapi/
 https://juggler.fun/tags/nacos/
 https://juggler.fun/tags/js/
@@ -58,8 +58,8 @@ https://juggler.fun/categories/C/
 https://juggler.fun/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/
 https://juggler.fun/categories/data/
 https://juggler.fun/categories/NLP/
-https://juggler.fun/categories/python/
 https://juggler.fun/categories/ComputerNetwork/
+https://juggler.fun/categories/python/
 https://juggler.fun/categories/Unity/
 https://juggler.fun/categories/nacos/
 https://juggler.fun/categories/js/
