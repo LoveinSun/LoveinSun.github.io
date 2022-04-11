@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,115 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">统计各位数字都不同的数字个数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-11 11:09:13 / Modified: 11:10:03" itemprop="dateCreated datePublished" datetime="2022-04-11T11:09:13+08:00">2022-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="357-统计各位数字都不同的数字个数"><a href="#357-统计各位数字都不同的数字个数" class="headerlink" title="357. 统计各位数字都不同的数字个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-numbers-with-unique-digits/">357. 统计各位数字都不同的数字个数</a></h1><p>给你一个整数 <code>n</code> ，统计并返回各位数字都不同的数字 <code>x</code> 的个数，其中 <code>0 &lt;= x &lt; 10n</code> 。</p>
+<p><strong>示例1：</strong></p>
+<blockquote>
+<p><strong>输入：</strong> n &#x3D; 2</p>
+<p><strong>输出：</strong>91</p>
+<p><strong>解释：</strong>答案应为除去 11、22、33、44、55、66、77、88、99 外，在 0 ≤ x &lt; 100 范围内的所有数字。 </p>
+</blockquote>
+<p><strong>示例2：</strong></p>
+<blockquote>
+<p><strong>输入：</strong>n&#x3D;0</p>
+<p><strong>输出：</strong>1</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= n &lt;=8</code></li>
+</ul>
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><p>先求有9位不以零开头的，再把没加上的依次加上，典型的有000 010 001</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> dontStartWithZero = <span class="built_in">A</span>(<span class="number">9</span>,<span class="number">10</span>, <span class="number">11</span> - n);</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            temp += <span class="built_in">A</span>(<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>-i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dontStartWithZero + temp;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">A</span><span class="params">(<span class="type">int</span> start,<span class="type">int</span> foot,<span class="type">int</span> head)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = foot<span class="number">-1</span>; i &gt;= head; i--) &#123;</span><br><span class="line">            res *= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="built_in">Solution</span>().<span class="built_in">countNumbersWithUniqueDigits</span>(<span class="number">2</span>);</span><br><span class="line">    std::cout &lt;&lt; sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">10</span>, cur = <span class="number">9</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">            cur *= <span class="number">9</span> - i;</span><br><span class="line">            ans += cur;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><p>找规律，除了n&#x3D;&#x3D;0的情况，其他位数的数字数就是<code>9*A(9)(n-1)</code>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@可爱抱抱呀</span></span><br><span class="line"><span class="comment">执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</span></span><br><span class="line"><span class="comment">内存消耗：37.9 MB, 在所有 Java 提交中击败了67.75%的用户</span></span><br><span class="line"><span class="comment">2022年4月8日 16:43</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">        <span class="type">int</span> count=<span class="number">9</span>,ans=<span class="number">9</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            count*=(<span class="number">11</span>-i);</span><br><span class="line">            ans+=count;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="趣解"><a href="#趣解" class="headerlink" title="趣解"></a>趣解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">func <span class="title">countNumbersWithUniqueDigits</span><span class="params">(n <span class="type">int</span>)</span> <span class="type">int</span> </span>&#123;</span><br><span class="line">	res := []<span class="type">int</span>&#123;<span class="number">1</span>,<span class="number">10</span>,<span class="number">91</span>,<span class="number">739</span>,<span class="number">5275</span>,<span class="number">32491</span>,<span class="number">168571</span>,<span class="number">712891</span>,<span class="number">2345851</span>&#125;</span><br><span class="line">	<span class="keyword">return</span> res[n]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1100,97 +1209,6 @@
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41089007/article/details/96474760">RNN,LSTM,Transformer,BERT介绍</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_28168421/article/details/109302062">Transformer</a></p>
 <p>感觉第二个总结的很全面,这些东西很重要，留待后来复习,补充，</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ComputerNetwork/OSC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/ComputerNetwork/OSC/" class="post-title-link" itemprop="url">OSC</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-30 16:15:26 / Modified: 16:18:23" itemprop="dateCreated datePublished" datetime="2022-03-30T16:15:26+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ComputerNetwork/" itemprop="url" rel="index"><span itemprop="name">ComputerNetwork</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="OSC（open-sound-control）"><a href="#OSC（open-sound-control）" class="headerlink" title="OSC（open sound control）"></a>OSC（open sound control）</h1><h2 id="官网-："><a href="#官网-：" class="headerlink" title="官网 ："></a>官网 ：</h2><p><a target="_blank" rel="noopener" href="http://opensoundcontrol.org/">opensoundcontrol.org</a></p>
-<h2 id="大佬的C-实现代码："><a href="#大佬的C-实现代码：" class="headerlink" title="大佬的C# 实现代码："></a>大佬的C# 实现代码：</h2><p><a target="_blank" rel="noopener" href="https://github.com/keijiro/OscJack">https://github.com/keijiro/OscJack</a></p>
-<h2 id="知乎上的介绍："><a href="#知乎上的介绍：" class="headerlink" title="知乎上的介绍："></a>知乎上的介绍：</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/28809952">https://www.zhihu.com/question/28809952</a></p>
-<p>简单来说，OSC是一种 网络传输协议</p>
-<p>，和MIDI一样。可以定义任何东西，在一定的规则下把信息通过网络从一个设备传输到另一个设备。通常OSC信息都是通过UDP来传送的，也就是说任何接收设备只要与发送设备在同一个网络中，并且监听同一个端口，那就能收到这个信息。</p>
-<p>最初设计这个协议的目的是为了在音乐交互演出中使得各个乐器传输信息和控制器更为方便（这就是为何要叫Open Sound Control）。比起MIDI标准的工业框架和限定好的端口标准，OSC最大程度的诠释了“自定义”的概念。理论上来说你可以用它来传输任何的信息。到了后来，OSC的用途越来越广泛了，我个人最极端的例子是：用OSC把Java界面的前端信息传输给C++后端的程序进行各种底层控制。</p>
-<p>说得直白一点：open sound control一种自由度很高的网络传输协议，和midi与serial不一样的是，osc不用连接线，而通过网络来传输，所以信息、控制可以在远距离操作，也可以一对多。至于控制什么，那可以用户自己定义，它能够传输数字（上下限极大！但midi是0-127，serial是0-255）、字符。</p>
-<p>这类app、软件很多，比如你可以编辑好软件操作界面，比如放多少个按钮，按下去是1，不按是0，或者放几个推杆、旋钮，它们输出的数值范围是0.到26253.77575（随便定义），那就做好了一个简单的控制界面，这些0和1，26253.77575等数字就可以对应到接受osc信息的程序的音量、音高、是否mute音轨等等，那就是做成了一个乐器。</p>
-<p>你也可以用这些数字控制一个小球的x&#x2F;y&#x2F;z坐标或者这个球的半径，那就能操作图像。</p>
-<p>或者，你可以在一个图像软件中用osc，当一个小球从左至右碰到窗口右边的时候发出一个osc信息“&#x2F;1&#x2F;gogogo 1.”给另一个负责声音的软件，告诉它位置叫做&#x2F;1&#x2F;gogogo的那个“东西”，你收到“1.0”了哟，所以你应该响一声了！ 然后当小球弹开窗口右边时图形软件又发出“&#x2F;1&#x2F;gogogo 0.”给声音那边，刚才那个位置是“&#x2F;1&#x2F;gogogo”的“东西”又收到了“0.”，相当于说：0.来了啊，记得0.是不发声音的哦！</p>
-<p>这个东西使用很简单，怎么说都很抽象，用一次就明白了。</p>
-<p>Osc基于UDP.与TCPIP不一样，他只管发送你收没收到我不管～</p>
-<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><p>就开一个端口去监听消息，然后回调相应方法进行处理，预计我将大佬的代码用于VR环境下的游戏角色控制，似乎有特殊的问题导致unity普通的方法不太行，还没有完全接手，目前我的理解似乎到此就足够了。</p>
 
       
     </div>
