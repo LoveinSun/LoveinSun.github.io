@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,131 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/Leetcode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/Leetcode/" class="post-title-link" itemprop="url">从根节点到叶节点的路径数字之和&最大连续 1 的个数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-02 14:38:09 / Modified: 16:06:28" itemprop="dateCreated datePublished" datetime="2022-04-02T14:38:09+08:00">2022-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="剑指-Offer-II-049-从根节点到叶节点的路径数字之和"><a href="#剑指-Offer-II-049-从根节点到叶节点的路径数字之和" class="headerlink" title="剑指 Offer II 049. 从根节点到叶节点的路径数字之和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/3Etpl5/">剑指 Offer II 049. 从根节点到叶节点的路径数字之和</a></h1><p>给定一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。</p>
+<p>每条从根节点到叶节点的路径都代表一个数字：</p>
+<ul>
+<li>例如，从根节点到叶节点的路径 1 -&gt; 2 -&gt; 3 表示数字 123 。</li>
+</ul>
+<p>计算从根节点到叶节点生成的 所有数字之和 。</p>
+<p>叶节点 是指没有子节点的节点。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021442746.png" alt="image-20220402144256687" style="zoom:50%;" /><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021443997.png" alt="image-20220402144311958" style="zoom:50%;" /></p>
+<p><strong>提示：</strong></p>
+<ul>
+<li>树中节点的数目在范围 <code>[1, 1000]</code> 内</li>
+<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+<li>树的深度不超过 <code>10</code></li>
+</ul>
+<h2 id="我解："><a href="#我解：" class="headerlink" title="我解："></a>我解：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="built_in">display</span>(<span class="number">0</span>, root);</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">display</span><span class="params">(<span class="type">int</span> val, TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            left =  <span class="built_in">display</span>(<span class="number">10</span>*val + root-&gt;val, root-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;right != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            right =  <span class="built_in">display</span>(<span class="number">10</span>*val + root-&gt;val, root-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10</span>*val + root-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> res = left + right;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为 <span class="built_in">O</span>(n)。</span><br></pre></td></tr></table></figure>
+
+<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><h3 id="深度优先"><a href="#深度优先" class="headerlink" title="深度优先"></a>深度优先</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(TreeNode* root, <span class="type">int</span> prevSum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = prevSum * <span class="number">10</span> + root-&gt;val;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">dfs</span>(root-&gt;left, sum) + <span class="built_in">dfs</span>(root-&gt;right, sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">dfs</span>(root, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为 <span class="built_in">O</span>(n)。</span><br></pre></td></tr></table></figure>
+
+<h3 id="广度优先"><a href="#广度优先" class="headerlink" title="广度优先"></a>广度优先</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        queue&lt;TreeNode*&gt; nodeQueue;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; numQueue;</span><br><span class="line">        nodeQueue.<span class="built_in">push</span>(root);</span><br><span class="line">        numQueue.<span class="built_in">push</span>(root-&gt;val);</span><br><span class="line">        <span class="keyword">while</span> (!nodeQueue.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = nodeQueue.<span class="built_in">front</span>();</span><br><span class="line">            <span class="type">int</span> num = numQueue.<span class="built_in">front</span>();</span><br><span class="line">            nodeQueue.<span class="built_in">pop</span>();</span><br><span class="line">            numQueue.<span class="built_in">pop</span>();</span><br><span class="line">            TreeNode* left = node-&gt;left;</span><br><span class="line">            TreeNode* right = node-&gt;right;</span><br><span class="line">            <span class="keyword">if</span> (left == <span class="literal">nullptr</span> &amp;&amp; right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                sum += num;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    nodeQueue.<span class="built_in">push</span>(left);</span><br><span class="line">                    numQueue.<span class="built_in">push</span>(num * <span class="number">10</span> + left-&gt;val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    nodeQueue.<span class="built_in">push</span>(right);</span><br><span class="line">                    numQueue.<span class="built_in">push</span>(num * <span class="number">10</span> + right-&gt;val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于队列，每个队列中的元素个数不会超过 n。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="485-最大连续-1-的个数"><a href="#485-最大连续-1-的个数" class="headerlink" title="485. 最大连续 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/max-consecutive-ones/">485. 最大连续 1 的个数</a></h1><p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
+<p><strong>示例1</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,1,0,1,1,1]</span><br><span class="line">输出：3</span><br><span class="line">解释：开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个数是 3.</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例2</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,0,1,1,0,1]</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code>.</li>
+</ul>
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = nums.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (temp &gt; max) &#123;</span><br><span class="line">                    max = temp;</span><br><span class="line">                &#125;</span><br><span class="line">                temp = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (temp &gt; max) &#123;</span><br><span class="line">            max = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O(n)，其中 n 是数组的长度。需要遍历数组一次。</li>
+<li>空间复杂度：<em>O</em>(1)。</li>
+</ul>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误:"></a>错误:</h3><p>没有考虑循环从最长的1出去的情况，也就是少写了20-22</p>
+<h2 id="他解-1"><a href="#他解-1" class="headerlink" title="他解"></a>他解</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">int</span> findMaxConsecutiveOnes(vector&lt;<span class="built_in">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">int</span> maxCount = <span class="number">0</span>, count = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                maxCount = <span class="built_in">max</span>(maxCount, count);</span><br><span class="line">                count = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        maxCount = <span class="built_in">max</span>(maxCount, count);</span><br><span class="line">        <span class="keyword">return</span> maxCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O(n)，其中 n 是数组的长度。需要遍历数组一次。</li>
+<li>空间复杂度：<em>O</em>(1)。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1542,85 +1667,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fuck</span>:<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">timeOut</span>().<span class="title function_">then</span>(<span class="keyword">function</span> <span class="title function_">success</span>(<span class="params">value</span>)&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(value)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">timeOut</span>:<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span> (<span class="params">resolve, reject</span>)&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF&quot;</span>)</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF2&quot;</span>)</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;成功!&quot;</span>);<span class="comment">//代码正常执行！</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF3&quot;</span>)</span><br><span class="line">          &#125;<span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="title function_">reject</span>(e);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/python/python-%E5%88%A9%E7%94%A8azcopy-%E4%BB%8Eazure-storage-%E4%B8%8A%E4%B8%8B%E8%BD%BD%E5%86%85%E5%AE%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python/python-%E5%88%A9%E7%94%A8azcopy-%E4%BB%8Eazure-storage-%E4%B8%8A%E4%B8%8B%E8%BD%BD%E5%86%85%E5%AE%B9/" class="post-title-link" itemprop="url">python 利用azcopy 从azure storage 上下载内容</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-23 10:56:20 / Modified: 11:22:05" itemprop="dateCreated datePublished" datetime="2022-03-23T10:56:20+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> LRUCache <span class="keyword">import</span> LRUCache</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_model</span>(<span class="params">model_path</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;get model&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> model_path == <span class="string">&quot;&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span>;</span><br><span class="line">    model = cache.get(model_path)</span><br><span class="line">    <span class="keyword">if</span> model!=-<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> model</span><br><span class="line"> </span><br><span class="line">    local_path = head+model_path.split(<span class="string">&quot;/&quot;</span>)[-<span class="number">1</span>]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;input model_path:<span class="subst">&#123;model_path&#125;</span>\nlocal_path:<span class="subst">&#123;local_path&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line">    cmd_ret = <span class="literal">None</span></span><br><span class="line">    <span class="built_in">print</span>(os.path.exists(local_path))</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(local_path):</span><br><span class="line">        index_cmd_return = subprocess.run([<span class="string">&quot;./azcopy&quot;</span>, <span class="string">&quot;copy&quot;</span>, url_template.<span class="built_in">format</span>(model_path),head,<span class="string">&quot;--recursive&quot;</span>])</span><br><span class="line">    model = load_model(local_path)</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">2</span>)</span><br><span class="line">    cache.<span class="built_in">set</span>(model_path,model)</span><br><span class="line">    <span class="keyword">return</span> model</span><br><span class="line"> </span><br><span class="line">get_model(<span class="string">&quot;ao/als/aia-tra/b/model_epoch5-it235-loss1.514&quot;</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>

@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,903 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ML/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ML/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/" class="post-title-link" itemprop="url">李宏毅-機器學習</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-03-22 10:41:31" itemprop="dateCreated datePublished" datetime="2022-03-22T10:41:31+08:00">2022-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-03-28 19:03:28" itemprop="dateModified" datetime="2022-03-28T19:03:28+08:00">2022-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[toc]</p>
+<p><a target="_blank" rel="noopener" href="https://speech.ee.ntu.edu.tw//~hylee/ml/2021-spring.php">https://speech.ee.ntu.edu.tw/\~hylee/ml/2021-spring.php</a></p>
+<h1 id="預測本頻道觀看人數-上-機器學習基本概念簡介"><a href="#預測本頻道觀看人數-上-機器學習基本概念簡介" class="headerlink" title="預測本頻道觀看人數 (上) - 機器學習基本概念簡介"></a>預測本頻道觀看人數 (上) - 機器學習基本概念簡介</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/Ye018rCVvOo?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h2><p>机器学习就是让机器具备找一个函数的能力。</p>
+<p>例子：</p>
+<ul>
+<li>语音识别</li>
+<li>图像识别</li>
+<li>α GO</li>
+</ul>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031514843.png" alt="image-20220303151401751"></p>
+<h2 id="不同类型的函数"><a href="#不同类型的函数" class="headerlink" title="不同类型的函数"></a>不同类型的函数</h2><ul>
+<li>Regression: The function outputs a scalar.</li>
+<li>Classification: Given options(classes),the function outputs the correct one,</li>
+<li>Structured Learning, create something with structure(image,document)</li>
+</ul>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031517026.png" alt="image-20220303151702930"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031518554.png" alt="image-20220303151817393"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031520115.png" alt="image-20220303152026894"></p>
+<h2 id="How-to-find-a-function-A-Case-Study"><a href="#How-to-find-a-function-A-Case-Study" class="headerlink" title="How to find a function? A Case Study"></a>How to find a function? A Case Study</h2><p><strong>输入Youtube历史资料输出是第二天的浏览人数</strong></p>
+<ul>
+<li>Function with Unknown Parameters</li>
+<li>Define Loss from Training Data</li>
+<li>Optimization</li>
+</ul>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031527089.png" alt="image-20220303152741986"> i</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031535689.png" alt="image-20220303153527593"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031536619.png" alt="image-20220303153641363"></p>
+<p>这个图是error surface</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031542558.png" alt="image-20220303154220441"></p>
+<p>步伐取决于斜率和learningrate</p>
+<p>Hyperparameters 超参数</p>
+<p><strong>Gradient descent</strong>并不是总能停在global minima 而是停在了local minima.</p>
+<p>该问题可以被解决，并不是gradient descent真正的通点(插眼，我猜是计算量太大，引出随机梯度下降)</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031551963.png" alt="image-20220303155114875"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031554659.png" alt="image-20220303155404537"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031559165.png" alt="image-20220303155902077"></p>
+<h3 id="写一个新的函数，使得预测函数更加复杂更加符合实际（一周为周期）"><a href="#写一个新的函数，使得预测函数更加复杂更加符合实际（一周为周期）" class="headerlink" title="写一个新的函数，使得预测函数更加复杂更加符合实际（一周为周期）"></a>写一个新的函数，使得预测函数更加复杂更加符合实际（一周为周期）</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031606327.png" alt="image-20220303160601224"></p>
+<p>似乎观看人数的循环规律止于7之28天之间</p>
+<h1 id="預測本頻道觀看人數-下-深度學習基本概念簡介"><a href="#預測本頻道觀看人數-下-深度學習基本概念簡介" class="headerlink" title="預測本頻道觀看人數 (下) - 深度學習基本概念簡介"></a>預測本頻道觀看人數 (下) - 深度學習基本概念簡介</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/bHcJCp2Fyxs?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="线性model太简单了"><a href="#线性model太简单了" class="headerlink" title="线性model太简单了"></a>线性model太简单了</h2><p>这种情况叫做Model Bias</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031619385.png" alt="image-20220303161928270"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031626802.png" alt="image-20220303162651714"></p>
+<h2 id="Sigmoid-Function"><a href="#Sigmoid-Function" class="headerlink" title="Sigmoid Function"></a>Sigmoid Function</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031628608.png" alt="image-20220303162856520"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031630037.png" alt="image-20220303162959828"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031632307.png" alt="image-20220303163216198"></p>
+<p>用多个feature加到一起去近似</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031634320.png" alt="image-20220303163431237"></p>
+<p>引入离散数学：</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031641696.png" alt="image-20220303164128593"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031641091.png" alt="image-20220303164146976"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031643189.png" alt="image-20220303164345044"></p>
+<p>最终得到<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031644291.png" alt="image-20220303164410178"></p>
+<h2 id="重新定义一些符号。。。"><a href="#重新定义一些符号。。。" class="headerlink" title="重新定义一些符号。。。"></a>重新定义一些符号。。。</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031646522.png" alt="image-20220303164649426"></p>
+<h2 id="至此我们改进了前面提到的机器学习框架的第一步：Function-with-unknown"><a href="#至此我们改进了前面提到的机器学习框架的第一步：Function-with-unknown" class="headerlink" title="至此我们改进了前面提到的机器学习框架的第一步：Function with unknown"></a>至此我们改进了前面提到的机器学习框架的第一步：Function with unknown</h2><p>课外知识：Hard Sigmoid</p>
+<h2 id="Loss"><a href="#Loss" class="headerlink" title="Loss"></a>Loss</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031653085.png" alt="image-20220303165346995"></p>
+<p>先随机找一组θ初始值，以后可以有更好的方法，而不是随机的。之后根据梯度不断更新。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031657021.png" alt="image-20220303165751938"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031658809.png" alt="image-20220303165812728"></p>
+<h2 id="Batch"><a href="#Batch" class="headerlink" title="Batch"></a>Batch</h2><p>将data随机分为多个batch，每次学习一个batch</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031700638.png" alt="image-20220303170034535"></p>
+<p>每更新一次参数（学习一个batch）叫一次update，每更新完一轮data（学习了多个batch）叫一个epoch。</p>
+<h2 id="ReLU"><a href="#ReLU" class="headerlink" title="ReLU"></a>ReLU</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031706785.png" alt="image-20220303170611709"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031706753.png" alt="image-20220303170642672"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031706502.png" alt="image-20220303170650433"></p>
+<h2 id="实战效果"><a href="#实战效果" class="headerlink" title="实战效果"></a>实战效果</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031708375.png" alt="image-20220303170853283"></p>
+<h2 id="多层神经网络"><a href="#多层神经网络" class="headerlink" title="多层神经网络"></a>多层神经网络</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031709367.png" alt="image-20220303170931236"></p>
+<h3 id="实战效果-1"><a href="#实战效果-1" class="headerlink" title="实战效果"></a>实战效果</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031711887.png" alt="image-20220303171108801"></p>
+<h2 id="此即深度学习"><a href="#此即深度学习" class="headerlink" title="此即深度学习"></a>此即深度学习</h2><p>Deep &#x3D; Many hidden layers</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031716390.png" alt="image-20220303171659257"></p>
+<h2 id="为什么不将网络变胖而是把它变深，-留待讲解，插眼。"><a href="#为什么不将网络变胖而是把它变深，-留待讲解，插眼。" class="headerlink" title="为什么不将网络变胖而是把它变深， 留待讲解，插眼。"></a>为什么不将网络变胖而是把它变深， 留待讲解，插眼。</h2><h2 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting"></a>Overfitting</h2><p>训练数据loss减少，测试数据loss增大</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031720430.png" alt="image-20220303172014330"></p>
+<h1 id="機器學習任務攻略"><a href="#機器學習任務攻略" class="headerlink" title="機器學習任務攻略"></a>機器學習任務攻略</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/WeHM2xpYQpw?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="Framework-of-ML"><a href="#Framework-of-ML" class="headerlink" title="Framework of ML"></a>Framework of ML</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031738785.png" alt="image-20220303173837677"></p>
+<h2 id="General-Guide"><a href="#General-Guide" class="headerlink" title="General Guide"></a>General Guide</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031739014.png" alt="image-20220303173913887"></p>
+<h2 id="Model-bias"><a href="#Model-bias" class="headerlink" title="Model bias"></a>Model bias</h2><p>函数弹性不够大</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031742234.png" alt="image-20220303174220131"></p>
+<h2 id="Optimization-Issue"><a href="#Optimization-Issue" class="headerlink" title="Optimization Issue"></a>Optimization Issue</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031744637.png" alt="image-20220303174412541"></p>
+<h2 id="如何判断是model-Bias-还是Optimization-Issue的原因？"><a href="#如何判断是model-Bias-还是Optimization-Issue的原因？" class="headerlink" title="如何判断是model Bias 还是Optimization Issue的原因？"></a>如何判断是model Bias 还是Optimization Issue的原因？</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031746633.png" alt="image-20220303174638510"></p>
+<p><strong>注意training data上的效果， 多出来的层数不进行操作都可以达到20层的效果，弹性应该比他大得多， 说明优化有问题</strong></p>
+<p><strong>test data上出现这种情况可能是由于过拟合，但一定要在training data上验证了才可以确定</strong></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031752014.png" alt="image-20220303175225883"></p>
+<h2 id="Overfitting-1"><a href="#Overfitting-1" class="headerlink" title="Overfitting"></a>Overfitting</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031755366.png" alt="image-20220303175509274"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031756385.png" alt="image-20220303175647299"></p>
+<p>测试数据过少，模型预测函数的自由度太大（由于弹性太大）。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
+<li>增加训练资料</li>
+<li>Data augmentation<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031800246.png" alt="image-20220303180005066"></li>
+<li>Constrained model(根据实际情况降低model的弹性)，限制要适量，过度的话就拟合不出来了。<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031808217.png" alt="image-20220303180822114"></li>
+</ol>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031809367.png" alt="image-20220303180949271"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031816811.png" alt="image-20220303181623713"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031820371.png" alt="image-20220303182048257"></p>
+<p>选mse最低的不一定就是最好的model</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031824145.png" alt="image-20220303182438942"></p>
+<h2 id="Cross-Validation"><a href="#Cross-Validation" class="headerlink" title="Cross Validation"></a>Cross Validation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031830775.png" alt="image-20220303183009660"></p>
+<h2 id="N-fold-Cross-Validation"><a href="#N-fold-Cross-Validation" class="headerlink" title="N-fold Cross Validation"></a>N-fold Cross Validation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031833724.png" alt="image-20220303183314584"></p>
+<h2 id="Mismatch"><a href="#Mismatch" class="headerlink" title="Mismatch"></a>Mismatch</h2><p>由于没有将一些情况考虑进去，比如春节，data中不包含春节的经验，所以模型在考虑结果时当然不会考虑到春节的影响。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031837920.png" alt="image-20220303183747747"></p>
+<h1 id="類神經網路訓練不起來怎麼辦-一-：-局部最小值-local-minima-與鞍點-saddle-point"><a href="#類神經網路訓練不起來怎麼辦-一-：-局部最小值-local-minima-與鞍點-saddle-point" class="headerlink" title="類神經網路訓練不起來怎麼辦 (一)： 局部最小值 (local minima) 與鞍點 (saddle point)"></a>類神經網路訓練不起來怎麼辦 (一)： 局部最小值 (local minima) 與鞍點 (saddle point)</h1><p>Optimization Fails because……</p>
+<h2 id="当-gradient-接近零，学习速度也就接近0，其原因有可能为："><a href="#当-gradient-接近零，学习速度也就接近0，其原因有可能为：" class="headerlink" title="当 gradient 接近零，学习速度也就接近0，其原因有可能为："></a>当 gradient 接近零，学习速度也就接近0，其原因有可能为：</h2><ol>
+<li>local minima</li>
+<li>saddle point</li>
+<li>critical point</li>
+</ol>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031858346.png" alt="image-20220303185828184"></p>
+<h2 id="如何确定到底是哪个原因？"><a href="#如何确定到底是哪个原因？" class="headerlink" title="如何确定到底是哪个原因？"></a>如何确定到底是哪个原因？</h2><h3 id="Tayler-Series-Approximation"><a href="#Tayler-Series-Approximation" class="headerlink" title="Tayler Series Approximation"></a>Tayler Series Approximation</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031902082.png" alt="image-20220303190237983"></p>
+<p>可以根据二阶导数来判断：[ToL]</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031903553.png" alt="image-20220303190333409"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031906974.png" alt="image-20220303190611878"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031907993.png" alt="image-20220303190754882"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031921036.png" alt="image-20220303192157924"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031923676.png" alt="image-20220303192301531"></p>
+<p><strong>实际上用到的机会少，因为随着模型规模的增大，二阶倒数太难算了</strong></p>
+<h2 id="Saddle-Point-v-s-Local-Minima"><a href="#Saddle-Point-v-s-Local-Minima" class="headerlink" title="Saddle Point v.s. Local Minima"></a>Saddle Point v.s. Local Minima</h2><p>低维的local minima很有可能是高维的saddle point</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203031930955.png" alt="image-20220303193046843"></p>
+<p>Eigen value 为负的话还是有路可以降低loss</p>
+<h1 id="類神經網路訓練不起來怎麼辦-二-：-批次-batch-與動量-momentum"><a href="#類神經網路訓練不起來怎麼辦-二-：-批次-batch-與動量-momentum" class="headerlink" title="類神經網路訓練不起來怎麼辦 (二)： 批次 (batch) 與動量 (momentum)"></a>類神經網路訓練不起來怎麼辦 (二)： 批次 (batch) 與動量 (momentum)</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/zzbr1h9sF54?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041030179.png" alt="image-20220304103024053"></p>
+<p>每次epoch重新分batch，每次这样的操作叫一次epoch</p>
+<h2 id="Small-Batch-vs-Large-Batch"><a href="#Small-Batch-vs-Large-Batch" class="headerlink" title="Small Batch vs Large Batch"></a>Small Batch vs Large Batch</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041033664.png" alt="image-20220304103318420"></p>
+<h2 id="考虑到GPU平行运算的问题更大的batch不一定就比小的batch花的时间多"><a href="#考虑到GPU平行运算的问题更大的batch不一定就比小的batch花的时间多" class="headerlink" title="考虑到GPU平行运算的问题更大的batch不一定就比小的batch花的时间多"></a>考虑到GPU平行运算的问题更大的batch不一定就比小的batch花的时间多</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041046728.png" alt="image-20220304104656601"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041048088.png" alt="image-20220304104858844"></p>
+<h2 id="更新参数所拥有的数据越多，更新越精准，batch越多，更新一次batch的数据越少，噪音越大，然而效果反而更好。"><a href="#更新参数所拥有的数据越多，更新越精准，batch越多，更新一次batch的数据越少，噪音越大，然而效果反而更好。" class="headerlink" title="更新参数所拥有的数据越多，更新越精准，batch越多，更新一次batch的数据越少，噪音越大，然而效果反而更好。"></a>更新参数所拥有的数据越多，更新越精准，batch越多，更新一次batch的数据越少，噪音越大，然而效果反而更好。</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041054516.png" alt="image-20220304105415406"></p>
+<h2 id="即使train-data效果差不多，在test-data里小的batch-size也会得到更好的效果。"><a href="#即使train-data效果差不多，在test-data里小的batch-size也会得到更好的效果。" class="headerlink" title="即使train data效果差不多，在test data里小的batch size也会得到更好的效果。"></a>即使train data效果差不多，在test data里小的batch size也会得到更好的效果。</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041059093.png" alt="image-20220304105932975"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041101148.png" alt="image-20220304110100032"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041101633.png" alt="image-20220304110140510"></p>
+<h2 id="Momentum"><a href="#Momentum" class="headerlink" title="Momentum"></a>Momentum</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041103317.png" alt="image-20220304110343178"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041129131.png" alt="image-20220304112920970"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041129992.png" alt="image-20220304112957929"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041131368.png" alt="image-20220304113126319"></p>
+<p>所以有种说法说惯性受过去所有运动的影响。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041133673.png" alt="image-20220304113311573"></p>
+<h1 id="類神經網路訓練不起來怎麼辦-三-：自動調整學習速率-Learning-Rate"><a href="#類神經網路訓練不起來怎麼辦-三-：自動調整學習速率-Learning-Rate" class="headerlink" title="類神經網路訓練不起來怎麼辦 (三)：自動調整學習速率 (Learning Rate)"></a>類神經網路訓練不起來怎麼辦 (三)：自動調整學習速率 (Learning Rate)</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/HYUXEeh3kwY?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="训练卡住了，loss不再下降，并不意味着到了local-minima-或者鞍点之类的"><a href="#训练卡住了，loss不再下降，并不意味着到了local-minima-或者鞍点之类的" class="headerlink" title="训练卡住了，loss不再下降，并不意味着到了local minima 或者鞍点之类的"></a>训练卡住了，loss不再下降，并不意味着到了local minima 或者鞍点之类的</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041136807.png" alt="image-20220304113647688"></p>
+<p>这样的点叫Critical point</p>
+<h2 id="But-training-can-be-difficult-even-without-critical-points"><a href="#But-training-can-be-difficult-even-without-critical-points" class="headerlink" title="But training can be difficult even without critical points"></a>But training can be difficult even without critical points</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041142539.png" alt="image-20220304114234366"></p>
+<p>步伐(Learning rite)太大会在两边回荡，即critical point, 但是步伐太小又会使学习缓慢</p>
+<h2 id="Different-Parameters-needs-different-learning-rate"><a href="#Different-Parameters-needs-different-learning-rate" class="headerlink" title="Different Parameters needs different learning rate"></a>Different Parameters needs different learning rate</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041148187.png" alt="image-20220304114813007"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041151498.png" alt="image-20220304115102390"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041151816.png" alt="image-20220304115136720"></p>
+<h2 id="RMSProp"><a href="#RMSProp" class="headerlink" title="RMSProp"></a>RMSProp</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041155229.png" alt="image-20220304115536101"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041357009.png" alt="image-20220304135729901"></p>
+<h2 id="Adam"><a href="#Adam" class="headerlink" title="Adam"></a>Adam</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041445576.png" alt="image-20220304144525383"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041450266.png" alt="image-20220304145033090"></p>
+<h2 id="Learning-Rate-Scheduling"><a href="#Learning-Rate-Scheduling" class="headerlink" title="Learning Rate Scheduling"></a>Learning Rate Scheduling</h2><p>随着终点的临近让学习率下降（Learning rate decay）</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041452632.png" alt="image-20220304145205529"></p>
+<h2 id="Residual-Network"><a href="#Residual-Network" class="headerlink" title="Residual Network"></a>Residual Network</h2><p>在transformer中引用了warm up的方法</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041501503.png" alt="image-20220304150125342"></p>
+<h2 id="Summary-of-Optimization"><a href="#Summary-of-Optimization" class="headerlink" title="Summary of Optimization"></a>Summary of Optimization</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041505473.png" alt="image-20220304150534374"></p>
+<p>两个都考虑所有历史，但是一个更注重方向，一个只注重大小。</p>
+<h2 id="Next-Time"><a href="#Next-Time" class="headerlink" title="Next Time"></a>Next Time</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041509834.png" alt="image-20220304150952610"></p>
+<h1 id="類神經網路訓練不起來怎麼辦-四-：損失函數-Loss-也可能有影響"><a href="#類神經網路訓練不起來怎麼辦-四-：損失函數-Loss-也可能有影響" class="headerlink" title="類神經網路訓練不起來怎麼辦 (四)：損失函數 (Loss) 也可能有影響"></a>類神經網路訓練不起來怎麼辦 (四)：損失函數 (Loss) 也可能有影響</h1><h2 id="To-learn-more"><a href="#To-learn-more" class="headerlink" title="To learn more"></a>To learn more</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041510324.png" alt="image-20220304151032225"></p>
+<h2 id="Classification-as-Regression"><a href="#Classification-as-Regression" class="headerlink" title="Classification as Regression?"></a>Classification as Regression?</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041516201.png" alt="image-20220304151647092"></p>
+<p>暗示12关系比较近，13比较远，所以不是很可行，所以选择one-hot编码。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041518549.png" alt="image-20220304151854421"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041520094.png" alt="image-20220304152006992"></p>
+<p>SoftMax 将可以为任何值的数值映射到0～1之间</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041523578.png" alt="image-20220304152306438"></p>
+<p>当只有两类时softmax和sigmoid是相同的 （插眼，没太懂）</p>
+<h2 id="Loss-of-Classification"><a href="#Loss-of-Classification" class="headerlink" title="Loss of Classification"></a>Loss of Classification</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041526528.png" alt="image-20220304152656424"></p>
+<p><strong>Minimizing cross-entropy is equivalent to maximizing likelihood.</strong></p>
+<p>Pytorch Cross-entropy 内含Softmax</p>
+<h2 id="为什么相较于MSE-Cross-entropy更常被用到"><a href="#为什么相较于MSE-Cross-entropy更常被用到" class="headerlink" title="为什么相较于MSE Cross-entropy更常被用到"></a>为什么相较于MSE Cross-entropy更常被用到</h2><p>MSE计算loss不容易从loss大的地方走下来，因为那里梯度太小了</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041535884.png" alt="image-20220304153548703"></p>
+<h1 id="類神經網路訓練不起來怎麼辦-五-：-批次標準化-Batch-Normalization-簡介"><a href="#類神經網路訓練不起來怎麼辦-五-：-批次標準化-Batch-Normalization-簡介" class="headerlink" title="類神經網路訓練不起來怎麼辦 (五)： 批次標準化 (Batch Normalization) 簡介"></a>類神經網路訓練不起來怎麼辦 (五)： 批次標準化 (Batch Normalization) 簡介</h1><iframe width="936" height="702" src="https://www.youtube.com/embed/BABPWOkSbLE?list=PLJV\_el3uVTsMhtt7\_Y6sgTHGHp1Vb2P2J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="Changing-Landscape"><a href="#Changing-Landscape" class="headerlink" title="Changing Landscape"></a>Changing Landscape</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041546974.png" alt="image-20220304154632827"></p>
+<p>上图很6</p>
+<h2 id="Feature-Normalization"><a href="#Feature-Normalization" class="headerlink" title="Feature Normalization"></a>Feature Normalization</h2><p>Feature Normalization是上图的解决办法，以下是Feature Normalization的一种方法</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041551595.png" alt="image-20220304155117462"></p>
+<p>In general, feature normalization makes gradient scent converge faster.</p>
+<h2 id="Considering-Deep-Learning"><a href="#Considering-Deep-Learning" class="headerlink" title="Considering Deep Learning"></a>Considering Deep Learning</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041558809.png" alt="image-20220304155830694"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041600231.png" alt="image-20220304160019106"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041603772.png" alt="image-20220304160308639"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041607876.png" alt="image-20220304160723726"></p>
+<h2 id="Batch-Normalization-插眼，没看太懂"><a href="#Batch-Normalization-插眼，没看太懂" class="headerlink" title="Batch Normalization[插眼，没看太懂]"></a>Batch Normalization[插眼，没看太懂]</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041610821.png" alt="image-20220304161028697"></p>
+<h3 id="BN-in-Test"><a href="#BN-in-Test" class="headerlink" title="BN in Test"></a>BN in Test</h3><p>在训练时先将测试时没有的参数算出来</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041612417.png" alt="image-20220304161252307"></p>
+<h2 id="Internal-Covariate-Shift"><a href="#Internal-Covariate-Shift" class="headerlink" title="Internal Covariate Shift?"></a>Internal Covariate Shift?</h2><p><strong>How Does Batch Normalization help Optimization</strong></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041618922.png" alt="image-20220304161800822"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041621787.png" alt="image-20220304162115627"></p>
+<h1 id="卷積神經網路-Convolutional-Neural-Networks-CNN"><a href="#卷積神經網路-Convolutional-Neural-Networks-CNN" class="headerlink" title="卷積神經網路 (Convolutional Neural Networks, CNN)"></a>卷積神經網路 (Convolutional Neural Networks, CNN)</h1><h2 id="Image-Classification"><a href="#Image-Classification" class="headerlink" title="Image Classification"></a>Image Classification</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041626754.png" alt="image-20220304162622583"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041627457.png" alt="image-20220304162756344"></p>
+<h2 id="Observation-1-x2F-x2F-引出receptive-field"><a href="#Observation-1-x2F-x2F-引出receptive-field" class="headerlink" title="Observation 1 &#x2F;&#x2F;引出receptive field"></a>Observation 1 &#x2F;&#x2F;引出receptive field</h2><p>y隐藏层一个节点观测图片的一小部分</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041630573.png" alt="image-20220304163005423"></p>
+<h2 id="Simplification-1"><a href="#Simplification-1" class="headerlink" title="Simplification 1"></a>Simplification 1</h2><h3 id="receptive-field"><a href="#receptive-field" class="headerlink" title="receptive field"></a>receptive field</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041634243.png" alt="image-20220304163438134"></p>
+<ul>
+<li>Can different neurons have different sizes of receptive field?</li>
+<li>Cover only some channels.</li>
+<li>Not square receptive field?</li>
+</ul>
+<h3 id="Typical-Setting"><a href="#Typical-Setting" class="headerlink" title="Typical Setting"></a>Typical Setting</h3><p><strong>Kernel size</strong></p>
+<p><strong>stride</strong></p>
+<p><strong>overlap</strong></p>
+<p><strong>padding</strong></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041643682.png" alt="image-20220304164301547"></p>
+<h2 id="Observation-2-x2F-x2F-引出filter"><a href="#Observation-2-x2F-x2F-引出filter" class="headerlink" title="Observation 2 &#x2F;&#x2F;引出filter"></a>Observation 2 &#x2F;&#x2F;引出filter</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041644756.png" alt="image-20220304164435601"></p>
+<h2 id="Simplification-2"><a href="#Simplification-2" class="headerlink" title="Simplification 2"></a>Simplification 2</h2><p>两个节点照顾的位置不一样，但是参数是一样的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041647931.png" alt="image-20220304164731795"></p>
+<h3 id="Typical-Setting-1"><a href="#Typical-Setting-1" class="headerlink" title="Typical Setting"></a>Typical Setting</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041649596.png" alt="image-20220304164923467"></p>
+<h2 id="Benefit-of-Convolutional-Layer"><a href="#Benefit-of-Convolutional-Layer" class="headerlink" title="Benefit of Convolutional Layer"></a>Benefit of Convolutional Layer</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041651892.png" alt="image-20220304165101777"></p>
+<p>弹性逐渐减小</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041651701.png" alt="image-20220304165134571"></p>
+<h2 id="Convolutional-layer-x2F-x2F-另一种说法"><a href="#Convolutional-layer-x2F-x2F-另一种说法" class="headerlink" title="Convolutional layer &#x2F;&#x2F;另一种说法"></a>Convolutional layer &#x2F;&#x2F;另一种说法</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041656607.png" alt="image-20220304165611474"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041656649.png" alt="image-20220304165653532"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041657119.png" alt="image-20220304165700992"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041658075.png" alt="image-20220304165828912"></p>
+<p>虽然只有3*3，但是后面的层的节点考虑到的会更大</p>
+<h2 id="Comparison-of-Two-Stories"><a href="#Comparison-of-Two-Stories" class="headerlink" title="Comparison of Two Stories"></a>Comparison of Two Stories</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041701162.png" alt="image-20220304170144042"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041702290.png" alt="image-20220304170236195"></p>
+<h2 id="Observation-3-x2F-x2F-引出pooling"><a href="#Observation-3-x2F-x2F-引出pooling" class="headerlink" title="Observation 3 &#x2F;&#x2F;引出pooling"></a>Observation 3 &#x2F;&#x2F;引出pooling</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041704770.png" alt="image-20220304170412626"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041705375.png" alt="image-20220304170500275"></p>
+<p>Pooling 把图片变小</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041705189.png" alt="image-20220304170540035"></p>
+<p>最主要的理由是减少运算量</p>
+<h2 id="The-Whole-CNN"><a href="#The-Whole-CNN" class="headerlink" title="The Whole CNN"></a>The Whole CNN</h2><h3 id="Flatten-把所有数值拉直变成向量"><a href="#Flatten-把所有数值拉直变成向量" class="headerlink" title="Flatten 把所有数值拉直变成向量"></a>Flatten 把所有数值拉直变成向量</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041707777.png" alt="image-20220304170715646"></p>
+<h2 id="Application-Playing-Go"><a href="#Application-Playing-Go" class="headerlink" title="Application: Playing Go"></a>Application: Playing Go</h2><p>下围棋是一个分类的问题</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041709589.png" alt="image-20220304170916451"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041710880.png" alt="image-20220304171007739"></p>
+<p>α Go每个棋盘上的位置都有48个属性</p>
+<h2 id="Why-CNN-for-GO-playing"><a href="#Why-CNN-for-GO-playing" class="headerlink" title="Why CNN for GO playing"></a>Why CNN for GO playing</h2><p>上面讲的observation跟围棋有相似性。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041712147.png" alt="image-20220304171251950"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041713448.png" alt="image-20220304171339209"></p>
+<p>但要注意下围棋不适合用pooling</p>
+<h2 id="More-Applications"><a href="#More-Applications" class="headerlink" title="More Applications"></a>More Applications</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041714210.png" alt="image-20220304171414066"></p>
+<h2 id="To-learn-more-1"><a href="#To-learn-more-1" class="headerlink" title="To learn more"></a>To learn more</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203041714142.png" alt="image-20220304171451982"></p>
+<h1 id="自注意力機制-Self-attention-上"><a href="#自注意力機制-Self-attention-上" class="headerlink" title="自注意力機制 (Self-attention) (上)"></a>自注意力機制 (Self-attention) (上)</h1><p>regression输出是一个数值 输入是一个向量</p>
+<p>classification 输出是一个类别 输入是一个向量</p>
+<p>如果更复杂？</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071043556.png" alt="image-20220307104316456"></p>
+<h2 id="Vector-as-Input"><a href="#Vector-as-Input" class="headerlink" title="Vector as Input"></a>Vector as Input</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071045288.png" alt="image-20220307104507177"></p>
+<p>语音，社交网络，分子结构等可以转化为多个向量作为输入</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071047811.png" alt="image-20220307104723704"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071047867.png" alt="image-20220307104742682"></p>
+<h2 id="What-is-the-output"><a href="#What-is-the-output" class="headerlink" title="What is the output?"></a>What is the output?</h2><h3 id="输入数量与输出数量一致"><a href="#输入数量与输出数量一致" class="headerlink" title="输入数量与输出数量一致"></a>输入数量与输出数量一致</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071051455.png" alt="image-20220307105157313"></p>
+<h3 id="输入输出数量不一致"><a href="#输入输出数量不一致" class="headerlink" title="输入输出数量不一致"></a>输入输出数量不一致</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071054236.png" alt="image-20220307105424097"></p>
+<h2 id="Sequence-Labeling"><a href="#Sequence-Labeling" class="headerlink" title="Sequence Labeling"></a>Sequence Labeling</h2><p>输入与输出一样多</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071058945.png" alt="image-20220307105846809"></p>
+<p><strong>I saw a saw</strong></p>
+<p>不能用fully-connected network，因为同一个词汇出现两次对于fully-connected network 来说是一样的,所以要用窗口，</p>
+<p>但是由于输入长度不一定，窗口也就不一定，由此引出self -attention</p>
+<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071111335.png" alt="image-20220307111131085"></p>
+<h2 id="Part-of-attention-network"><a href="#Part-of-attention-network" class="headerlink" title="Part of attention network"></a>Part of attention network</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071117302.png" alt="image-20220307111704195"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071125941.png" alt="image-20220307112506872"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071125982.png" alt="image-20220307112523817"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071127259.png" alt="image-20220307112724128"></p>
+<p>谁的关联性更大，其向量就会更占支配地位，b1就会更像谁</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071131405.png" alt="image-20220307113107052"></p>
+<h1 id="自注意力機制-Self-attention-下"><a href="#自注意力機制-Self-attention-下" class="headerlink" title="自注意力機制 (Self-attention) (下)"></a>自注意力機制 (Self-attention) (下)</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071137892.png" alt="image-20220307113754724"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071146043.png" alt="image-20220307114609872"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071149976.png" alt="image-20220307114954832"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071354645.png" alt="image-20220307135416518"></p>
+<h2 id="Multi-head-self-attention"><a href="#Multi-head-self-attention" class="headerlink" title="Multi-head self-attention"></a>Multi-head self-attention</h2><p>得到q<sup>i</sup>,k<sup>i</sup>,v<sup>i</sup>后再乘两个矩阵得到两个结果。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071400284.png" alt="image-20220307140025135"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071401579.png" alt="image-20220307140123414"></p>
+<h2 id="Positional-Encoding"><a href="#Positional-Encoding" class="headerlink" title="Positional Encoding"></a>Positional Encoding</h2><p>之前的公式没有结合位置信息</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071408609.png" alt="image-20220307140832441"></p>
+<p>这里每个位置的向量是订好的</p>
+<p>后来有了新的动态生成的办法</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071410740.png" alt="image-20220307141038425"></p>
+<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071411275.png" alt="image-20220307141125110"></p>
+<h3 id="Speech"><a href="#Speech" class="headerlink" title="Speech"></a>Speech</h3><p>用于语音识别时要有所更改，因为语音识别所生成的向量太大了，如果结合所有输入的话计算量可能接受不了。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071414502.png" alt="image-20220307141400333"></p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071415634.png" alt="image-20220307141521417"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071415451.png" alt="image-20220307141535227"></p>
+<h3 id="Self-attention-for-Graph"><a href="#Self-attention-for-Graph" class="headerlink" title="Self-attention for Graph"></a>Self-attention for Graph</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071433516.png" alt="image-20220307143348377"></p>
+<h4 id="To-Learn-more-about-GNN"><a href="#To-Learn-more-about-GNN" class="headerlink" title="To Learn more about GNN"></a>To Learn more about GNN</h4><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071434204.png" alt="image-20220307143445063"></p>
+<h2 id="Self-attention-v-s-CNN"><a href="#Self-attention-v-s-CNN" class="headerlink" title="Self-attention v.s. CNN"></a>Self-attention v.s. CNN</h2><p>CNN 可以看作Self-attention的子集，</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071418941.png" alt="image-20220307141830783"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071418164.png" alt="image-20220307141815004"></p>
+<p>资料少时用CNN，多时用self-attention，因为self-attention弹性更大（插眼，为啥？），需要的资料更多。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071421128.png" alt="image-20220307142129968"></p>
+<h2 id="Self-attention-vs-RNN"><a href="#Self-attention-vs-RNN" class="headerlink" title="Self-attention vs RNN"></a>Self-attention vs RNN</h2><p>RNN：</p>
+<ul>
+<li>很难考虑远处的信息</li>
+<li>不是平行的</li>
+</ul>
+<p>self-attention:</p>
+<ul>
+<li>相反</li>
+</ul>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071430856.png" alt="image-20220307143053684"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071431403.png" alt="image-20220307143107347"></p>
+<h3 id="To-learn-more-about-RNN"><a href="#To-learn-more-about-RNN" class="headerlink" title="To learn more about RNN"></a>To learn more about RNN</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071431895.png" alt="image-20220307143122783"></p>
+<h2 id="To-Learn-More"><a href="#To-Learn-More" class="headerlink" title="To Learn More"></a>To Learn More</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071435335.png" alt="image-20220307143509187"></p>
+<h1 id="Transformer-上-Encoder"><a href="#Transformer-上-Encoder" class="headerlink" title="Transformer(上) Encoder"></a>Transformer(上) Encoder</h1><h2 id="Sequence-to-sequence’s-application"><a href="#Sequence-to-sequence’s-application" class="headerlink" title="Sequence-to-sequence’s application"></a>Sequence-to-sequence’s application</h2><p>transformer 是一个Sequence-to-sequence(Swq2seq) model</p>
+<p>输出长度是由模型决定的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071509244.png" alt="image-20220307150909089"></p>
+<p>由闽南语音直接转为汉字</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071510052.png" alt="image-20220307151048819"></p>
+<p>在翻译倒装句时错误率会更高</p>
+<h3 id="Seq2seq-for-Chatbot"><a href="#Seq2seq-for-Chatbot" class="headerlink" title="Seq2seq for Chatbot"></a>Seq2seq for Chatbot</h3><p>Question Answering 可以理解为Seq2seq model 的问题</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071519000.png" alt="image-20220307151925810"></p>
+<h3 id="Seq2seq-for-Syntactic-parsing"><a href="#Seq2seq-for-Syntactic-parsing" class="headerlink" title="Seq2seq for Syntactic parsing"></a>Seq2seq for Syntactic parsing</h3><p>输入句子输出文法分析树</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071523121.png" alt="image-20220307152313995"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071523984.png" alt="image-20220307152348890"></p>
+<p>将文法视作一种语言用翻译的模型得到结果</p>
+<h3 id="seq2seq-for-multi-label-classification"><a href="#seq2seq-for-multi-label-classification" class="headerlink" title="seq2seq for multi-label classification"></a>seq2seq for multi-label classification</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071527897.png" alt="image-20220307152715773"></p>
+<h3 id="Seq2Seq-for-Object-Detection"><a href="#Seq2Seq-for-Object-Detection" class="headerlink" title="Seq2Seq for Object Detection"></a>Seq2Seq for Object Detection</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071527752.png" alt="image-20220307152749508"></p>
+<h2 id="Seq2seq"><a href="#Seq2seq" class="headerlink" title="Seq2seq"></a>Seq2seq</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071529867.png" alt="image-20220307152903671"></p>
+<h3 id="Encoder"><a href="#Encoder" class="headerlink" title="Encoder"></a>Encoder</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071530886.png" alt="image-20220307153008711"></p>
+<p>先讲个其他的，再回来进行比对</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071531592.png" alt="image-20220307153109367"></p>
+<p>Block原来更加复杂：</p>
+<p>batch normalization:对不同example 不同feature同一dimension 计算mean 和 standard deviation，在这里没有用到，用到的是layer normalization,他是对不同统一example 同一feature的不同dimension计算mean 和standard deviation.</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071540252.png" alt="image-20220307154059043"></p>
+<p>最后回到encoder的结构，其实是一样的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071542817.png" alt="image-20220307154250587"></p>
+<h2 id="To-learn-more-2"><a href="#To-learn-more-2" class="headerlink" title="To learn more"></a>To learn more</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071543029.png" alt="image-20220307154339897"></p>
+<h1 id="Transformer-下-Decoder"><a href="#Transformer-下-Decoder" class="headerlink" title="Transformer (下) Decoder"></a>Transformer (下) Decoder</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071545979.png" alt="image-20220307154510783"></p>
+<h2 id="Autoregressive-Speech-Recognition-as-example-AT"><a href="#Autoregressive-Speech-Recognition-as-example-AT" class="headerlink" title="Autoregressive(Speech Recognition as example)(AT)"></a>Autoregressive(Speech Recognition as example)(AT)</h2><p>一步错步步错</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071602817.png" alt="image-20220307160214593"></p>
+<h2 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071602020.png" alt="image-20220307160257798"></p>
+<p>除了篮框这部分其他的和encoder很像，除了multi-attention 加了mask</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071604306.png" alt="image-20220307160410167"></p>
+<h3 id="Masked-multi-head-attention"><a href="#Masked-multi-head-attention" class="headerlink" title="Masked multi-head attention"></a>Masked multi-head attention</h3><p>在计算b2时没办法把考虑a3，a4，因为还没生成出来，模型是从左至右计算的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071607166.png" alt="image-20220307160750850"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071608463.png" alt="image-20220307160804347"></p>
+<h3 id="Stop-Token-We-don’t-know-the-correct-output-length"><a href="#Stop-Token-We-don’t-know-the-correct-output-length" class="headerlink" title="Stop Token: We don’t know the correct output length"></a>Stop Token: We don’t know the correct output length</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071614100.png" alt="image-20220307161457882"></p>
+<h2 id="Non-autoregressive-NAT"><a href="#Non-autoregressive-NAT" class="headerlink" title="Non-autoregressive(NAT)"></a>Non-autoregressive(NAT)</h2><p>优势在于平行输出，所以时间会变快。而且可以控制输出长度。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071621756.png" alt="image-20220307162150521"></p>
+<h3 id="To-learn-more-about-nat"><a href="#To-learn-more-about-nat" class="headerlink" title="To learn more about nat"></a>To learn more about nat</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071622824.png" alt="image-20220307162208729"></p>
+<h2 id="Encode-Decoder"><a href="#Encode-Decoder" class="headerlink" title="Encode-Decoder"></a>Encode-Decoder</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071623270.png" alt="image-20220307162308131"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071627857.png" alt="image-20220307162714666"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071629321.png" alt="image-20220307162926098"></p>
+<h3 id="Cross-Attention"><a href="#Cross-Attention" class="headerlink" title="Cross Attention"></a>Cross Attention</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071634484.png" alt="image-20220307163404206"></p>
+<h3 id="train"><a href="#train" class="headerlink" title="train"></a>train</h3><p>使用已经有结果的数据</p>
+<p>给正确答案，希望输出越接近越好</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071643365.png" alt="image-20220307164309157"></p>
+<h3 id="Teacher-Forcing"><a href="#Teacher-Forcing" class="headerlink" title="Teacher Forcing"></a>Teacher Forcing</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071729215.png" alt="image-20220307172946935"></p>
+<h2 id="tips-about-train-seq2seq"><a href="#tips-about-train-seq2seq" class="headerlink" title="tips about train seq2seq"></a>tips about train seq2seq</h2><h3 id="Copy-Mechanism"><a href="#Copy-Mechanism" class="headerlink" title="Copy Mechanism"></a>Copy Mechanism</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071732280.png" alt="image-20220307173231148"></p>
+<h4 id="To-learn-more-3"><a href="#To-learn-more-3" class="headerlink" title="To learn more"></a>To learn more</h4><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071734723.png" alt="image-20220307173455607"></p>
+<h3 id="Summarization"><a href="#Summarization" class="headerlink" title="Summarization"></a>Summarization</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071733236.png" alt="image-20220307173304080"></p>
+<h3 id="Guided-Attention"><a href="#Guided-Attention" class="headerlink" title="Guided Attention"></a>Guided Attention</h3><p>强迫attention有一定固定的行为，比如语音识别必须由左向右</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071743328.png" alt="image-20220307174338215"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071745616.png" alt="image-20220307174550435"></p>
+<h2 id="Beam-Search"><a href="#Beam-Search" class="headerlink" title="Beam Search"></a>Beam Search</h2><p>尝试多种可能性</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203071754641.png" alt="image-20220307175417463"></p>
+<p>有争议，很多人说很烂</p>
+<p>因为有可能说重复的话，但是加入一点杂音反而会好很多，说明分数最高的路不一定就是最好的答案。</p>
+<p>有明确答案的任务效果更好，需要发散思路的问题可能更需要加入杂音。</p>
+<p>另外，tts需要加入杂音才能更好的产生结果</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101537685.png" alt="image-20220310153700434"></p>
+<h2 id="Optimizing-Evaluation-Metrics"><a href="#Optimizing-Evaluation-Metrics" class="headerlink" title="Optimizing Evaluation Metrics?"></a>Optimizing Evaluation Metrics?</h2><p>训练用Cross entry评价用BLEU score.</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101540023.png" alt="image-20220310154040833"></p>
+<h2 id="训练和测试不一致（Exposure-bias）"><a href="#训练和测试不一致（Exposure-bias）" class="headerlink" title="训练和测试不一致（Exposure bias）"></a>训练和测试不一致（Exposure bias）</h2><p>训练永远看到的是正确的东西,测试会有错的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101546322.png" alt="image-20220310154657069"></p>
+<h3 id="Scheduled-Sampling"><a href="#Scheduled-Sampling" class="headerlink" title="Scheduled Sampling"></a>Scheduled Sampling</h3><p>训练时给点错误的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101547120.png" alt="image-20220310154734903"></p>
+<h1 id="生成式對抗網路-Generative-Adversarial-Network-GAN-一-–-基本概念介紹"><a href="#生成式對抗網路-Generative-Adversarial-Network-GAN-一-–-基本概念介紹" class="headerlink" title="生成式對抗網路 (Generative Adversarial Network, GAN) (一) – 基本概念介紹"></a>生成式對抗網路 (Generative Adversarial Network, GAN) (一) – 基本概念介紹</h1><h2 id="Network-as-Generator"><a href="#Network-as-Generator" class="headerlink" title="Network as Generator"></a>Network as Generator</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101610056.png" alt="image-20220310161015930"></p>
+<p>两个结合输出一个新的分布。</p>
+<h2 id="为什么要输出一个分布？"><a href="#为什么要输出一个分布？" class="headerlink" title="为什么要输出一个分布？"></a>为什么要输出一个分布？</h2><p>由于问题的发散产生了分支（过于发散），这时往往会需要输出一个分支</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101614894.png" alt="image-20220310161428703"></p>
+<p>训练中可能会出现同时向左向右转的现象</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101616626.png" alt="image-20220310161619452"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101619793.png" alt="image-20220310161925614"></p>
+<h2 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h2><h3 id="Anime-Face-Generation"><a href="#Anime-Face-Generation" class="headerlink" title="Anime Face Generation"></a>Anime Face Generation</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101623774.png" alt="image-20220310162322633"></p>
+<h3 id="Discriminator"><a href="#Discriminator" class="headerlink" title="Discriminator"></a>Discriminator</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101625320.png" alt="image-20220310162507160"></p>
+<h3 id="Basic-Idea-of-GAN"><a href="#Basic-Idea-of-GAN" class="headerlink" title="Basic Idea of GAN"></a>Basic Idea of GAN</h3><p>两相竞争</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101630765.png" alt="image-20220310163007559"></p>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>discriminator不断的将生成的和实际的图片分类出来，generator为了不被分辨出来儿不断进步</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101633177.png" alt="image-20220310163311970"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101637180.png" alt="image-20220310163731041"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101639482.png" alt="image-20220310163904307"></p>
+<h2 id="Progressive-GAN"><a href="#Progressive-GAN" class="headerlink" title="Progressive GAN"></a>Progressive GAN</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203101644579.png" alt="image-20220310164410293"></p>
+<h1 id="生成式對抗網路-Generative-Adversarial-Network-GAN-二-–-理論介紹與WGAN"><a href="#生成式對抗網路-Generative-Adversarial-Network-GAN-二-–-理論介紹與WGAN" class="headerlink" title="生成式對抗網路 (Generative Adversarial Network, GAN) (二) – 理論介紹與WGAN"></a>生成式對抗網路 (Generative Adversarial Network, GAN) (二) – 理論介紹與WGAN</h1><h2 id="Our-Objective"><a href="#Our-Objective" class="headerlink" title="Our Objective"></a>Our Objective</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111401553.png" alt="image-20220311140158414"></p>
+<p><strong>But it is too hard to compute the divergence</strong></p>
+<h2 id="How-to-solve-the-problem-of-divergency-sample-and-discriminator"><a href="#How-to-solve-the-problem-of-divergency-sample-and-discriminator" class="headerlink" title="How to solve the problem of divergency(sample and discriminator)"></a>How to solve the problem of divergency(sample and discriminator)</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111407430.png" alt="image-20220311140722260"></p>
+<h3 id="Discriminator-1"><a href="#Discriminator-1" class="headerlink" title="Discriminator"></a>Discriminator</h3><p>D<sup>*</sup> 与divergence 相关</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111414252.png" alt="image-20220311141404996"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111417233.png" alt="image-20220311141710097"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111419204.png" alt="image-20220311141916086"></p>
+<h2 id="can-we-use-other-divergence"><a href="#can-we-use-other-divergence" class="headerlink" title="can we use other divergence?"></a>can we use other divergence?</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111420998.png" alt="image-20220311142056838"></p>
+<h2 id="Tips-of-gan"><a href="#Tips-of-gan" class="headerlink" title="Tips of gan"></a>Tips of gan</h2><h3 id="JS-divergence-is-not-suitable"><a href="#JS-divergence-is-not-suitable" class="headerlink" title="JS divergence is not suitable"></a>JS divergence is not suitable</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111427871.png" alt="image-20220311142740738"></p>
+<p>如果取样太少的话，命名generator已经取得了进步但是无法在discriminator 体现不出来</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111428345.png" alt="image-20220311142826197"></p>
+<p>只要没有相交js divergence就为log2，但是有可能已经进步了，只不过没有达到那个程度。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111434806.png" alt="image-20220311143400651"></p>
+<h2 id="Wasserstein-distance"><a href="#Wasserstein-distance" class="headerlink" title="Wasserstein distance"></a>Wasserstein distance</h2><p>让一个分布与另一个分布重合所用的精力</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111439317.png" alt="image-20220311143947176"></p>
+<p>但是当分布复杂时，想让它们重合有不同的moving plan,所以需要穷举。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111442061.png" alt="image-20220311144159911"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111445703.png" alt="image-20220311144501598"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111447842.png" alt="image-20220311144703645"></p>
+<h2 id="WGAN"><a href="#WGAN" class="headerlink" title="WGAN"></a>WGAN</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111454545.png" alt="image-20220311145434422"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111459051.png" alt="image-20220311145930884"></p>
+<h1 id="生成式對抗網路-Generative-Adversarial-Network-GAN-三-–-生成器效能評估與條件式生成"><a href="#生成式對抗網路-Generative-Adversarial-Network-GAN-三-–-生成器效能評估與條件式生成" class="headerlink" title="生成式對抗網路 (Generative Adversarial Network, GAN) (三) – 生成器效能評估與條件式生成"></a>生成式對抗網路 (Generative Adversarial Network, GAN) (三) – 生成器效能評估與條件式生成</h1><h2 id="GAN-is-still-challenging"><a href="#GAN-is-still-challenging" class="headerlink" title="GAN is still challenging"></a>GAN is still challenging</h2><p>如果一方停下了，没办法再前进的话，另一方也会停下。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111503152.png" alt="image-20220311150342006"></p>
+<h2 id="GAN-for-Sequence-Generation"><a href="#GAN-for-Sequence-Generation" class="headerlink" title="GAN for Sequence Generation"></a>GAN for Sequence Generation</h2><p>如果有多个输出且去max的话，那么其他输出的参数因参数的变化而增长是无法体现出来的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111511598.png" alt="image-20220311151119409"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111512967.png" alt="image-20220311151243838"></p>
+<h3 id="For-more"><a href="#For-more" class="headerlink" title="For more"></a>For more</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111514047.png" alt="image-20220311151415941"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111514548.png" alt="image-20220311151423436"></p>
+<h2 id="为什么用GAN"><a href="#为什么用GAN" class="headerlink" title="为什么用GAN"></a>为什么用GAN</h2><p>因为GAN目前效果比VAE FLOW好。。。即使是它比较难train也比其他的方法也不会难太多</p>
+<h2 id="Possible-Solution"><a href="#Possible-Solution" class="headerlink" title="Possible Solution"></a>Possible Solution</h2><p>Train一个输入向量，输出图片的模型</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111518742.png" alt="image-20220311151853551"></p>
+<h2 id="Quality-of-Image"><a href="#Quality-of-Image" class="headerlink" title="Quality of Image"></a>Quality of Image</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111520886.png" alt="image-20220311152042659"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111522292.png" alt="image-20220311152253198"></p>
+<h2 id="Diversity-Mode-Collapse"><a href="#Diversity-Mode-Collapse" class="headerlink" title="Diversity - Mode Collapse"></a>Diversity - Mode Collapse</h2><p>Discriminator万一有弱点被generator抓到的话。。。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111524890.png" alt="image-20220311152459572"></p>
+<h2 id="Diversity-Mode-Dropping"><a href="#Diversity-Mode-Dropping" class="headerlink" title="Diversity - Mode Dropping"></a>Diversity - Mode Dropping</h2><p>看似分布和质量都合理，但是其实真实数据比这更大</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111527252.png" alt="image-20220311152716994"></p>
+<p>用分类器分类的结果如果过去集中则可能是这个问题</p>
+<p>如果够平均则可能没有这个问题。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111529302.png" alt="image-20220311152928194"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111529694.png" alt="image-20220311152935580"></p>
+<h2 id="Frechet-inception-Distance-FID-插眼"><a href="#Frechet-inception-Distance-FID-插眼" class="headerlink" title="Frechet inception Distance(FID)(插眼)"></a>Frechet inception Distance(FID)(插眼)</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111538202.png" alt="image-20220311153848062"></p>
+<h2 id="We-don’t-want-memory-GAN"><a href="#We-don’t-want-memory-GAN" class="headerlink" title="We don’t want memory GAN"></a>We don’t want memory GAN</h2><p>产生的跟训练资料的一模一样是不行的</p>
+<h2 id="Conditional-Generation"><a href="#Conditional-Generation" class="headerlink" title="Conditional Generation"></a>Conditional Generation</h2><h3 id="Text-to-image"><a href="#Text-to-image" class="headerlink" title="Text to image"></a>Text to image</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111546613.png" alt="image-20220311154649317"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111549517.png" alt="image-20220311154918368"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111551107.png" alt="image-20220311155116997"></p>
+<h2 id="Application-1"><a href="#Application-1" class="headerlink" title="Application"></a>Application</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111555415.png" alt="image-20220311155544191"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111556838.png" alt="image-20220311155633673"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111558823.png" alt="image-20220311155821568"></p>
+<h1 id="生成式對抗網路-Generative-Adversarial-Network-GAN-四-–-Cycle-GAN"><a href="#生成式對抗網路-Generative-Adversarial-Network-GAN-四-–-Cycle-GAN" class="headerlink" title="生成式對抗網路 (Generative Adversarial Network, GAN) (四) – Cycle GAN"></a>生成式對抗網路 (Generative Adversarial Network, GAN) (四) – Cycle GAN</h1><h2 id="Learning-from-Unpaired-Data（无监督）"><a href="#Learning-from-Unpaired-Data（无监督）" class="headerlink" title="Learning from Unpaired Data（无监督）"></a>Learning from Unpaired Data（无监督）</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111609272.png" alt="image-20220311160950161"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111612339.png" alt="image-20220311161251161"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111613065.png" alt="image-20220311161332878"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111615863.png" alt="image-20220311161525671"></p>
+<p>没有成对的资料来训练</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111617412.png" alt="image-20220311161726234"></p>
+<p>由于有了还原，产生的图片就不能和输入差太多（保证有一些关系（即使很奇怪（暂时还没啥好解法）））</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111619453.png" alt="image-20220311161900285"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111624332.png" alt="image-20220311162411169"></p>
+<h2 id="more"><a href="#more" class="headerlink" title="more"></a>more</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111624254.png" alt="image-20220311162435070"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111625776.png" alt="image-20220311162524575"></p>
+<h2 id="SELFIE2ANIME"><a href="#SELFIE2ANIME" class="headerlink" title="SELFIE2ANIME"></a>SELFIE2ANIME</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111626226.png" alt="image-20220311162646942"></p>
+<h2 id="Text-Style-Transfer"><a href="#Text-Style-Transfer" class="headerlink" title="Text Style Transfer"></a>Text Style Transfer</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111629172.png" alt="image-20220311162931032"></p>
+<p>Other</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111631772.png" alt="image-20220311163122634"></p>
+<h1 id="自督導式學習-Self-supervised-Learning-一-–-芝麻街與進擊的巨人"><a href="#自督導式學習-Self-supervised-Learning-一-–-芝麻街與進擊的巨人" class="headerlink" title="自督導式學習 (Self-supervised Learning) (一) – 芝麻街與進擊的巨人"></a>自督導式學習 (Self-supervised Learning) (一) – 芝麻街與進擊的巨人</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111636506.png" alt="image-20220311163636334"></p>
+<h1 id="自督導式學習-Self-supervised-Learning-二-–-BERT簡介"><a href="#自督導式學習-Self-supervised-Learning-二-–-BERT簡介" class="headerlink" title="自督導式學習 (Self-supervised Learning) (二) – BERT簡介"></a>自督導式學習 (Self-supervised Learning) (二) – BERT簡介</h1><h2 id="Self-supervised-Learning"><a href="#Self-supervised-Learning" class="headerlink" title="Self-supervised Learning"></a>Self-supervised Learning</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111653796.png" alt="image-20220311165359636"></p>
+<h2 id="Masking-Input"><a href="#Masking-Input" class="headerlink" title="Masking Input"></a>Masking Input</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111700481.png" alt="image-20220311170046338"></p>
+<h2 id="Next-Sentence-Prediction"><a href="#Next-Sentence-Prediction" class="headerlink" title="Next Sentence Prediction"></a>Next Sentence Prediction</h2><p>分辨两个句子是不是该接在一起</p>
+<p>被认为不是很有用，model没有学到很多东西</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111706915.png" alt="image-20220311170618799"></p>
+<h2 id="Downstream-Tasks-将前面的训练结果用在其他训练上"><a href="#Downstream-Tasks-将前面的训练结果用在其他训练上" class="headerlink" title="Downstream Tasks 将前面的训练结果用在其他训练上"></a>Downstream Tasks 将前面的训练结果用在其他训练上</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111709607.png" alt="image-20220311170912465"></p>
+<h2 id="GLUE"><a href="#GLUE" class="headerlink" title="GLUE"></a>GLUE</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111710742.png" alt="image-20220311171023561"></p>
+<h2 id="How-to-use-BERT"><a href="#How-to-use-BERT" class="headerlink" title="How to use BERT"></a>How to use BERT</h2><h3 id="Case-1-input-asq-output-class"><a href="#Case-1-input-asq-output-class" class="headerlink" title="Case 1 input asq output class"></a>Case 1 input asq output class</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111717475.png" alt="image-20220311171722364"></p>
+<h3 id="Case-2-input-seq-output-same-as-seq"><a href="#Case-2-input-seq-output-same-as-seq" class="headerlink" title="Case 2 input seq output same as seq"></a>Case 2 input seq output same as seq</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111722660.png" alt="image-20220311172214528"></p>
+<h3 id="Case-3-input-two-seq-output-class"><a href="#Case-3-input-two-seq-output-class" class="headerlink" title="Case 3 input two seq output class"></a>Case 3 input two seq output class</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111725901.png" alt="image-20220311172540773"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111725457.png" alt="image-20220311172558350"></p>
+<h3 id="Case-4-input-document-and-query-output-answer"><a href="#Case-4-input-document-and-query-output-answer" class="headerlink" title="Case 4 input document and query output  answer"></a>Case 4 input document and query output  answer</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111728498.png" alt="image-20220311172832343"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111732272.png" alt="image-20220311173255130"></p>
+<h2 id="Training-BERT-is-challenging"><a href="#Training-BERT-is-challenging" class="headerlink" title="Training BERT is challenging"></a>Training BERT is challenging</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111738014.png" alt="image-20220311173804867"></p>
+<h2 id="BERT-Embryology-胚胎学"><a href="#BERT-Embryology-胚胎学" class="headerlink" title="BERT Embryology(胚胎学)"></a>BERT Embryology(胚胎学)</h2><p>了解BERT学习到知识的细节</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111739932.png" alt="image-20220311173936718"></p>
+<h2 id="Pre-training-a-seq2seq-model"><a href="#Pre-training-a-seq2seq-model" class="headerlink" title="Pre-training a seq2seq model"></a>Pre-training a seq2seq model</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111740402.png" alt="image-20220311174051298"></p>
+<p>输入encoder弄坏的数据，decoder输出没坏的数据</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203111741904.png" alt="image-20220311174144788"></p>
+<h1 id="自督導式學習-Self-supervised-Learning-三-–-BERT的奇聞軼事"><a href="#自督導式學習-Self-supervised-Learning-三-–-BERT的奇聞軼事" class="headerlink" title="自督導式學習 (Self-supervised Learning) (三) – BERT的奇聞軼事"></a>自督導式學習 (Self-supervised Learning) (三) – BERT的奇聞軼事</h1><h2 id="Why-does-BERT-work"><a href="#Why-does-BERT-work" class="headerlink" title="Why does BERT work"></a>Why does BERT work</h2><p>同一个字有不同的意义</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141054271.png" alt="image-20220314105449128"></p>
+<p>一个词汇的意思取决于它的上下文</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141103522.png" alt="image-20220314110345369"></p>
+<h2 id="Applying-BERT-to-protein-DNA-music-classification"><a href="#Applying-BERT-to-protein-DNA-music-classification" class="headerlink" title="Applying BERT to protein,DNA,music classification"></a>Applying BERT to protein,DNA,music classification</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141115093.png" alt="image-20220314111554974"> </p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141116489.png" alt="image-20220314111616272"></p>
+<h2 id="Multi-lingual-BERT"><a href="#Multi-lingual-BERT" class="headerlink" title="Multi-lingual BERT"></a>Multi-lingual BERT</h2><p>训练在英文反而在中文的test上取得了进步</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141119777.png" alt="image-20220314111954632"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141120398.png" alt="image-20220314112004247"></p>
+<h3 id="Cross-lingual-Alignment-一种解释"><a href="#Cross-lingual-Alignment-一种解释" class="headerlink" title="Cross-lingual Alignment(一种解释)"></a>Cross-lingual Alignment(一种解释)</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141122448.png" alt="image-20220314112242298"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141127924.png" alt="image-20220314112701789"></p>
+<p>似乎不同语言向量的差异就是语言的信息？</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141128385.png" alt="image-20220314112843223"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141130116.png" alt="image-20220314113023958"></p>
+<h1 id="自督導式學習-Self-supervised-Learning-四-–-GPT的野望"><a href="#自督導式學習-Self-supervised-Learning-四-–-GPT的野望" class="headerlink" title="自督導式學習 (Self-supervised Learning) (四) – GPT的野望"></a>自督導式學習 (Self-supervised Learning) (四) – GPT的野望</h1><p>如下，只不过是数据量特别大</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141135977.png" alt="image-20220314113548845"></p>
+<h2 id="How-to-use-GPT"><a href="#How-to-use-GPT" class="headerlink" title="How to use GPT"></a>How to use GPT</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141142869.png" alt="image-20220314114228746"></p>
+<h2 id="Few-shot-learning-no-gradient-descent-“In-context”-Learning"><a href="#Few-shot-learning-no-gradient-descent-“In-context”-Learning" class="headerlink" title="Few-shot learning (no gradient descent) “In-context” Learning"></a>Few-shot learning (no gradient descent) “In-context” Learning</h2><p>只用很少的资料去训练。效果见仁见智</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141144552.png" alt="image-20220314114438407"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141145793.png" alt="image-20220314114526420"></p>
+<h2 id="Beyond-Text"><a href="#Beyond-Text" class="headerlink" title="Beyond  Text"></a>Beyond  Text</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141147297.png" alt="image-20220314114700178"></p>
+<h3 id="Image-1"><a href="#Image-1" class="headerlink" title="Image"></a>Image</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141148087.png" alt="image-20220314114801920"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141148727.png" alt="image-20220314114841612"></p>
+<h3 id="Speech-1"><a href="#Speech-1" class="headerlink" title="Speech"></a>Speech</h3><p>语音方面暂时没有公认的像GLUE的资料库</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141149764.png" alt="image-20220314114939626"></p>
+<p>他自己做了一个</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141150897.png" alt="image-20220314115057788"></p>
+<h2 id="Application-of-self-supervised"><a href="#Application-of-self-supervised" class="headerlink" title="Application of self supervised"></a>Application of self supervised</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141153415.png" alt="image-20220314115333201"></p>
+<h1 id="自編碼器-Auto-encoder-上-–-基本概念"><a href="#自編碼器-Auto-encoder-上-–-基本概念" class="headerlink" title="自編碼器 (Auto-encoder) (上) – 基本概念"></a>自編碼器 (Auto-encoder) (上) – 基本概念</h1><h2 id="Outline"><a href="#Outline" class="headerlink" title="Outline"></a>Outline</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141342822.png" alt="image-20220314134255650"></p>
+<h2 id="review-of-self-supervised-learning-frame-work"><a href="#review-of-self-supervised-learning-frame-work" class="headerlink" title="review of self-supervised learning frame work"></a>review of self-supervised learning frame work</h2><p>学习没有标注资料的任务，在有bert gpt之前，就有了auto-encoder。</p>
+<h2 id="auto-encoder-in-image"><a href="#auto-encoder-in-image" class="headerlink" title="auto-encoder in image"></a>auto-encoder in image</h2><h3 id="Dimension-reduction"><a href="#Dimension-reduction" class="headerlink" title="Dimension reduction"></a>Dimension reduction</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141347670.png" alt="image-20220314134751495"></p>
+<h3 id="for-more"><a href="#for-more" class="headerlink" title="for more"></a>for more</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141348069.png" alt="image-20220314134822953"></p>
+<h2 id="Why-auto-encoder"><a href="#Why-auto-encoder" class="headerlink" title="Why auto-encoder?"></a>Why auto-encoder?</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141355167.png" alt="image-20220314135524915"></p>
+<p>并不是3*3的向量都是图片，其形式是有限的，所以可以用更小的维度表示3*3的图片。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141354951.png" alt="image-20220314135442811"></p>
+<h2 id="Auto-encoder-is-not-a-new-idea"><a href="#Auto-encoder-is-not-a-new-idea" class="headerlink" title="Auto-encoder is not a new idea"></a>Auto-encoder is not a new idea</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141356898.png" alt="image-20220314135619740"></p>
+<h2 id="De-noising-Auto-encoder"><a href="#De-noising-Auto-encoder" class="headerlink" title="De-noising Auto-encoder"></a>De-noising Auto-encoder</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141400008.png" alt="image-20220314140040870"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141403569.png" alt="image-20220314140324449"></p>
+<h1 id="自編碼器-Auto-encoder-下-–-領結變聲器與更多應用"><a href="#自編碼器-Auto-encoder-下-–-領結變聲器與更多應用" class="headerlink" title="自編碼器 (Auto-encoder) (下) – 領結變聲器與更多應用"></a>自編碼器 (Auto-encoder) (下) – 領結變聲器與更多應用</h1><h2 id="Feature-Disentangle"><a href="#Feature-Disentangle" class="headerlink" title="Feature Disentangle"></a>Feature Disentangle</h2><p>分解中间向量，理解其信息</p>
+<h3 id="Representation-includes-information-of-different-aspects"><a href="#Representation-includes-information-of-different-aspects" class="headerlink" title="Representation includes information of different aspects"></a>Representation includes information of different aspects</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141405093.png" alt="image-20220314140525936"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141406091.png" alt="image-20220314140612916"></p>
+<h2 id="Application-voice-conversion"><a href="#Application-voice-conversion" class="headerlink" title="Application: voice conversion"></a>Application: voice conversion</h2><p>不需要资料库中两个人说一样的话。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141410469.png" alt="image-20220314141012317"></p>
+<h2 id="discrete-representation"><a href="#discrete-representation" class="headerlink" title="discrete representation"></a>discrete representation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141414058.png" alt="image-20220314141405868"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141417025.png" alt="image-20220314141736842"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141418141.png" alt="image-20220314141833087"></p>
+<p>固定输出的可能性，不是无限的而是离散的</p>
+<h2 id="Text-as-representation"><a href="#Text-as-representation" class="headerlink" title="Text as representation"></a>Text as representation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141421620.png" alt="image-20220314142133471"></p>
+<p>强迫encoder train出人话一样的中间向量。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141423309.png" alt="image-20220314142307092"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141424328.png" alt="image-20220314142410154"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141424637.png" alt="image-20220314142442444"></p>
+<h2 id="Tree-as-Embedding"><a href="#Tree-as-Embedding" class="headerlink" title="Tree as Embedding"></a>Tree as Embedding</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141425516.png" alt="image-20220314142514373"></p>
+<h2 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141426358.png" alt="image-20220314142624201"></p>
+<h2 id="Compression"><a href="#Compression" class="headerlink" title="Compression"></a>Compression</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141427873.png" alt="image-20220314142742720"></p>
+<h2 id="Anomaly-Detection"><a href="#Anomaly-Detection" class="headerlink" title="Anomaly Detection"></a>Anomaly Detection</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141429280.png" alt="image-20220314142932175"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141430974.png" alt="image-20220314143015788"></p>
+<p>用来探测异常交易，异常请求，异常病情等</p>
+<p>和分类器还是有区别的，因为训练资料大多数只有一类</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141433311.png" alt="image-20220314143326176"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141434235.png" alt="image-20220314143418074"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141434870.png" alt="image-20220314143443674"></p>
+<h2 id="For-More"><a href="#For-More" class="headerlink" title="For More"></a>For More</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141435726.png" alt="image-20220314143556606"></p>
+<h1 id="來自人類的惡意攻擊-Adversarial-Attack-上-–-基本概念"><a href="#來自人類的惡意攻擊-Adversarial-Attack-上-–-基本概念" class="headerlink" title="來自人類的惡意攻擊 (Adversarial Attack) (上) – 基本概念"></a>來自人類的惡意攻擊 (Adversarial Attack) (上) – 基本概念</h1><h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>需要在有人试图欺骗他的情况下正常工作</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141438923.png" alt="image-20220314143801762"></p>
+<h2 id="How-to-arrack"><a href="#How-to-arrack" class="headerlink" title="How to arrack"></a>How to arrack</h2><h3 id="Example-of-attack"><a href="#Example-of-attack" class="headerlink" title="Example of attack"></a>Example of attack</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141441623.png" alt="image-20220314144113467"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141443616.png" alt="image-20220314144315367"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141443785.png" alt="image-20220314144325514"></p>
+<p>正常的错误应该是这样的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141445644.png" alt="image-20220314144533270"></p>
+<h3 id="含恶意的噪音"><a href="#含恶意的噪音" class="headerlink" title="含恶意的噪音"></a>含恶意的噪音</h3><p>尽量让正确的目标概率变小，让目标概率变大，同时尽量让差距小于人类能感知的差异的最小值</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141510206.png" alt="image-20220314151015068"></p>
+<h3 id="Non-perceivable"><a href="#Non-perceivable" class="headerlink" title="Non-perceivable"></a>Non-perceivable</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141514554.png" alt="image-20220314151407433"></p>
+<h2 id="Attack-Approach"><a href="#Attack-Approach" class="headerlink" title="Attack Approach"></a>Attack Approach</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141525745.png" alt="image-20220314152519619"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141529038.png" alt="image-20220314152905906"></p>
+<h1 id="來自人類的惡意攻擊-Adversarial-Attack-下-–-類神經網路能否躲過人類深不見底的惡意？"><a href="#來自人類的惡意攻擊-Adversarial-Attack-下-–-類神經網路能否躲過人類深不見底的惡意？" class="headerlink" title="來自人類的惡意攻擊 (Adversarial Attack) (下) – 類神經網路能否躲過人類深不見底的惡意？"></a>來自人類的惡意攻擊 (Adversarial Attack) (下) – 類神經網路能否躲過人類深不見底的惡意？</h1><h2 id="White-Box-vs-Black-Box"><a href="#White-Box-vs-Black-Box" class="headerlink" title="White Box vs Black Box"></a>White Box vs Black Box</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141532903.png" alt="image-20220314153222740"></p>
+<h2 id="Black-Box"><a href="#Black-Box" class="headerlink" title="Black Box"></a>Black Box</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141534392.png" alt="image-20220314153412201"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141540185.png" alt="image-20220314154050031"></p>
+<p>不同的数据产生的结果截然不同</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141545777.png" alt="image-20220314154500629"></p>
+<h2 id="One-pixel-attack"><a href="#One-pixel-attack" class="headerlink" title="One pixel attack"></a>One pixel attack</h2><p>只改变一点导致结果改变</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141548038.png" alt="image-20220314154808782"></p>
+<h2 id="Universal-Adversarial-Attack"><a href="#Universal-Adversarial-Attack" class="headerlink" title="Universal Adversarial Attack"></a>Universal Adversarial Attack</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141548715.png" alt="image-20220314154841529"></p>
+<h2 id="Beyond-Images"><a href="#Beyond-Images" class="headerlink" title="Beyond Images"></a>Beyond Images</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141552567.png" alt="image-20220314155241385"></p>
+<h2 id="Attack-in-the-Physical-World"><a href="#Attack-in-the-Physical-World" class="headerlink" title="Attack in the Physical World"></a>Attack in the Physical World</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141556837.png" alt="image-20220314155630581"></p>
+<h2 id="Backdoor-in-Model"><a href="#Backdoor-in-Model" class="headerlink" title="Backdoor in Model"></a>Backdoor in Model</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141604162.png" alt="image-20220314160459014"></p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>模糊化，让攻击信号被改变</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141609473.png" alt="image-20220314160922185"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141609675.png" alt="image-20220314160910483"></p>
+<p>但是如果被知道了使用了这种方法，攻击时也可以加上这个，所以可以加上随机性</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141612937.png" alt="image-20220314161213775"></p>
+<h2 id="Proactive-Defense"><a href="#Proactive-Defense" class="headerlink" title="Proactive Defense"></a>Proactive Defense</h2><p>自己攻击自己然后把攻击数据学习进去</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141618546.png" alt="image-20220314161820428"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141621045.png" alt="image-20220314162136755"></p>
+<h1 id="機器學習模型的可解釋性-Explainable-ML-上-–-為什麼類神經網路可以正確分辨寶可夢和數碼寶貝呢？"><a href="#機器學習模型的可解釋性-Explainable-ML-上-–-為什麼類神經網路可以正確分辨寶可夢和數碼寶貝呢？" class="headerlink" title="機器學習模型的可解釋性 (Explainable ML) (上) – 為什麼類神經網路可以正確分辨寶可夢和數碼寶貝呢？"></a>機器學習模型的可解釋性 (Explainable ML) (上) – 為什麼類神經網路可以正確分辨寶可夢和數碼寶貝呢？</h1><h2 id="Why-we-need-Explainable-ML"><a href="#Why-we-need-Explainable-ML" class="headerlink" title="Why we need Explainable ML?"></a>Why we need Explainable ML?</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141628250.png" alt="image-20220314162821135"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141628765.png" alt="image-20220314162835563"></p>
+<h2 id="Interpretable-vs-powerful"><a href="#Interpretable-vs-powerful" class="headerlink" title="Interpretable vs powerful"></a>Interpretable vs powerful</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141630592.png" alt="image-20220314163028426"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141631242.png" alt="image-20220314163111887"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141633544.png" alt="image-20220314163334420"></p>
+<h2 id="Goal-of-Explainable-ML"><a href="#Goal-of-Explainable-ML" class="headerlink" title="Goal of Explainable ML"></a>Goal of Explainable ML</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141639423.png" alt="image-20220314163927285"></p>
+<p>人们只是需要一个理由去接受 - .- </p>
+<h2 id="Explainable-ML"><a href="#Explainable-ML" class="headerlink" title="Explainable ML"></a>Explainable ML</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141641803.png" alt="image-20220314164155673"></p>
+<h3 id="Local-Exception"><a href="#Local-Exception" class="headerlink" title="Local Exception"></a>Local Exception</h3><p>改造或删除某部分导致结论错误，那么它就是原因</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141644885.png" alt="image-20220314164414637"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141646771.png" alt="image-20220314164642441"></p>
+<p>更改向量的值，计算偏导数，得出是哪个参数更重要</p>
+<p>Saliency Map</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141649365.png" alt="image-20220314164936108"></p>
+<h3 id="A-test"><a href="#A-test" class="headerlink" title="A test"></a>A test</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141652938.png" alt="image-20220314165245766"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141652541.png" alt="image-20220314165232008"></p>
+<p>结果是由于数据错误，，，背景问题</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141654709.png" alt="image-20220314165405405"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141654791.png" alt="image-20220314165415412"></p>
+<p>因为介绍文字而判断图片</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141655165.png" alt="image-20220314165519831"></p>
+<h3 id="SmoothGrad"><a href="#SmoothGrad" class="headerlink" title="SmoothGrad"></a>SmoothGrad</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141656110.png" alt="image-20220314165641944"></p>
+<h3 id="Gradient-Saturation"><a href="#Gradient-Saturation" class="headerlink" title="Gradient Saturation"></a>Gradient Saturation</h3><p>如果在平滑处取导数的话会得出鼻子长度与判读大象无关的结论</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141658849.png" alt="image-20220314165857732"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141659780.png" alt="image-20220314165946718"></p>
+<h2 id="How-a-net-work-process-the-input-data"><a href="#How-a-net-work-process-the-input-data" class="headerlink" title="How a net work process the input data"></a>How a net work process the input data</h2><h3 id="为了观察过程压缩中间向量的维度"><a href="#为了观察过程压缩中间向量的维度" class="headerlink" title="为了观察过程压缩中间向量的维度"></a>为了观察过程压缩中间向量的维度</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141701305.png" alt="image-20220314170144183"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141705435.png" alt="image-20220314170511238"></p>
+<h3 id="很多问题尚待研究。。"><a href="#很多问题尚待研究。。" class="headerlink" title="很多问题尚待研究。。"></a>很多问题尚待研究。。</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141706839.png" alt="image-20220314170659716"></p>
+<h3 id="用探针处理中间向量"><a href="#用探针处理中间向量" class="headerlink" title="用探针处理中间向量"></a>用探针处理中间向量</h3><p>但注意Classifier的正确情况</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141708280.png" alt="image-20220314170851046"></p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141712792.png" alt="image-20220314171208635"></p>
+<p>在不同层加探针看语音到底在那里失去了性别信息，或者杂音。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141715485.png" alt="image-20220314171551251"></p>
+<h1 id="機器學習模型的可解釋性-Explainable-ML-下-–機器心中的貓長什麼樣子？"><a href="#機器學習模型的可解釋性-Explainable-ML-下-–機器心中的貓長什麼樣子？" class="headerlink" title="機器學習模型的可解釋性 (Explainable ML) (下) –機器心中的貓長什麼樣子？"></a>機器學習模型的可解釋性 (Explainable ML) (下) –機器心中的貓長什麼樣子？</h1><h2 id="What-does-a-filter-detect-（插眼，他在说什么）"><a href="#What-does-a-filter-detect-（插眼，他在说什么）" class="headerlink" title="What does a filter detect?（插眼，他在说什么）"></a>What does a filter detect?（插眼，他在说什么）</h2><p>通过filter观察模型在观察什么</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141754322.png" alt="image-20220314175448144"></p>
+<p>图示是某个filter</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141756789.png" alt="image-20220314175637568"></p>
+<p>下图是被攻击了，命名看不出来是什么，机器却觉得是0123456789。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141758118.png" alt="image-20220314175821937"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141814729.png" alt="image-20220314181454529"></p>
+<p>要得到如下的结果要大量的知识和处理。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141815852.png" alt="image-20220314181543310"></p>
+<p>或者通过generator达到目的（插眼，他在说什么）</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141818899.png" alt="image-20220314181845733"></p>
+<p>并不是在乎机器真正的注意点，而是将注意点转成人能理解的形式</p>
+<h2 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h2><p>用简单的linear模型模拟复杂的deep learning模型，再用简单的模型理解复杂的模型</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203141823945.png" alt="image-20220314182334820"></p>
+<h1 id="概述領域自適應-Domain-Adaptation"><a href="#概述領域自適應-Domain-Adaptation" class="headerlink" title="概述領域自適應 (Domain Adaptation)"></a>概述領域自適應 (Domain Adaptation)</h1><h2 id="Domain-shift"><a href="#Domain-shift" class="headerlink" title="Domain shift"></a>Domain shift</h2><p>有一些改变就会犯错</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151038867.png" alt="image-20220315103810740"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151043678.png" alt="image-20220315104344563"></p>
+<p>需要考虑两种情况</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151046869.png" alt="image-20220315104603745"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151048770.png" alt="image-20220315104805665"></p>
+<h2 id="Basic-idea"><a href="#Basic-idea" class="headerlink" title="Basic idea"></a>Basic idea</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151049494.png" alt="image-20220315104903362"></p>
+<h2 id="Domain-Adversarial-Training"><a href="#Domain-Adversarial-Training" class="headerlink" title="Domain Adversarial Training"></a>Domain Adversarial Training</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151051102.png" alt="image-20220315105143945"></p>
+<p>Domain Classifier用来分辨是黑白的还是彩色的，训练到它分别不出来且loss不再下降</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151111252.png" alt="image-20220315111113121"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151112339.png" alt="image-20220315111225175"></p>
+<h2 id="Limitation-插眼"><a href="#Limitation-插眼" class="headerlink" title="Limitation(插眼)"></a>Limitation(插眼)</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151116059.png" alt="image-20220315111608905"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151117838.png" alt="image-20220315111724707"></p>
+<h2 id="Outlook-1"><a href="#Outlook-1" class="headerlink" title="Outlook"></a>Outlook</h2><p>有两者数据不完全重合的情况</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151118787.png" alt="image-20220315111818652"></p>
+<h2 id="More-condition-in-domain-Adaptation"><a href="#More-condition-in-domain-Adaptation" class="headerlink" title="More condition in domain Adaptation"></a>More condition in domain Adaptation</h2><h3 id="little-unlabel"><a href="#little-unlabel" class="headerlink" title="little unlabel"></a>little unlabel</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151120389.png" alt="image-20220315112056270"></p>
+<h3 id="Know-nothing"><a href="#Know-nothing" class="headerlink" title="Know nothing"></a>Know nothing</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151121979.png" alt="image-20220315112136861"></p>
+<h4 id="Domain-Generation"><a href="#Domain-Generation" class="headerlink" title="Domain Generation"></a>Domain Generation</h4><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203151122277.png" alt="image-20220315112247065"></p>
+<h1 id="概述增強式學習-Reinforcement-Learning-RL-一-–-增強式學習跟機器學習一樣都是三個步驟"><a href="#概述增強式學習-Reinforcement-Learning-RL-一-–-增強式學習跟機器學習一樣都是三個步驟" class="headerlink" title="概述增強式學習 (Reinforcement Learning, RL) (一) – 增強式學習跟機器學習一樣都是三個步驟"></a>概述增強式學習 (Reinforcement Learning, RL) (一) – 增強式學習跟機器學習一樣都是三個步驟</h1><h2 id="Supervised-learning-gt-RL"><a href="#Supervised-learning-gt-RL" class="headerlink" title="Supervised learning -&gt; RL"></a>Supervised learning -&gt; RL</h2><p>收集正确答案很困难的时候</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241704421.png" alt="image-20220324170448289"></p>
+<h2 id="Outline-1"><a href="#Outline-1" class="headerlink" title="Outline"></a>Outline</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241704171.png" alt="image-20220324170459063"></p>
+<h1 id="Mache-learning-≈-looking-for-a-function"><a href="#Mache-learning-≈-looking-for-a-function" class="headerlink" title="Mache learning ≈ looking for a function"></a>Mache learning ≈ looking for a function</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241708673.png" alt="image-20220324170828552"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241710102.png" alt="image-20220324171016982"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241712929.png" alt="image-20220324171238799"></p>
+<p>在围棋中只有游戏结束时才能获得reward</p>
+<h2 id="Mache-Learning-is-so-simple"><a href="#Mache-Learning-is-so-simple" class="headerlink" title="Mache Learning is so simple"></a>Mache Learning is so simple</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241716360.png" alt="image-20220324171600228"></p>
+<h3 id="Step-1-Function-with-Unknown"><a href="#Step-1-Function-with-Unknown" class="headerlink" title="Step 1: Function with Unknown"></a>Step 1: Function with Unknown</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241719016.png" alt="image-20220324171952880"></p>
+<h3 id="Step-2-Define-“Loss”"><a href="#Step-2-Define-“Loss”" class="headerlink" title="Step 2: Define “Loss”"></a>Step 2: Define “Loss”</h3><p>reward 是一次的 return是总和</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241724187.png" alt="image-20220324172437043"></p>
+<h3 id="Step-3-Optimization"><a href="#Step-3-Optimization" class="headerlink" title="Step 3: Optimization"></a>Step 3: Optimization</h3><p>环境和reward有随机性,相比gan，env和reward它们不是神经网络，这两者的随机性是rn很重要的特性</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241731122.png" alt="image-20220324173149984"></p>
+<h2 id="How-to-control-your-actor"><a href="#How-to-control-your-actor" class="headerlink" title="How to control your actor"></a>How to control your actor</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241747874.png" alt="image-20220324174707771"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241748455.png" alt="image-20220324174814337"></p>
+<p>这其中还可以区分程度</p>
+<h1 id="概述增強式學習-Reinforcement-Learning-RL-二-–-Policy-Gradient-與修課心情"><a href="#概述增強式學習-Reinforcement-Learning-RL-二-–-Policy-Gradient-與修課心情" class="headerlink" title="概述增強式學習 (Reinforcement Learning, RL) (二) – Policy Gradient 與修課心情"></a>概述增強式學習 (Reinforcement Learning, RL) (二) – Policy Gradient 與修課心情</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241832203.png" alt="image-20220324183243087"></p>
+<h2 id="version0"><a href="#version0" class="headerlink" title="version0"></a>version0</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241832432.png" alt="image-20220324183257305"></p>
+<p>但是这样是短视的，行动会影响后面的很多reward，还有要先失去一些分数才能获得更多的分数的情况。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241836897.png" alt="image-20220324183659769"></p>
+<h2 id="version-1-Cumulated-reward"><a href="#version-1-Cumulated-reward" class="headerlink" title="version 1 Cumulated reward"></a>version 1 Cumulated reward</h2><p>缺点在于如果很长的话，第一个有可能不至于影响到最后一个</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241838997.png" alt="image-20220324183844901"></p>
+<h2 id="version-2"><a href="#version-2" class="headerlink" title="version 2"></a>version 2</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241842182.png" alt="image-20220324184203073"></p>
+<h2 id="version-3"><a href="#version-3" class="headerlink" title="version 3"></a>version 3</h2><p>做一下标准化，因为好和坏是相对的，有可能在这一把得10分很高了，下一把10分很低。当全是正的时，差一些的就是坏的。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241848169.png" alt="image-20220324184809057"></p>
+<h2 id="Policy-Gradient"><a href="#Policy-Gradient" class="headerlink" title="Policy Gradient"></a>Policy Gradient</h2><h3 id="on-policy"><a href="#on-policy" class="headerlink" title="on-policy"></a>on-policy</h3><p>收集资料在for循环里</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241851523.png" alt="image-20220324185137430"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241852874.png" alt="image-20220324185218772"></p>
+<p>原因：</p>
+<p>围棋中，同样的行为对不同预判能力的玩家来说是不一样好的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241857743.png" alt="image-20220324185724629"></p>
+<h3 id="off-policy"><a href="#off-policy" class="headerlink" title="off policy"></a>off policy</h3><p>用一些办法使其可以收集;上几步的资料</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241900132.png" alt="image-20220324190004012"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241901280.png" alt="image-20220324190151089"></p>
+<h2 id="Exploration"><a href="#Exploration" class="headerlink" title="Exploration"></a>Exploration</h2><p>有些action没被执行过就不知道到底好不好，所以想让它尽可能的大一点。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203241903671.png" alt="image-20220324190349538"></p>
+<h1 id="概述增強式學習-Reinforcement-Learning-RL-四-回饋非常罕見的時候怎麼辦？機器的望梅止渴"><a href="#概述增強式學習-Reinforcement-Learning-RL-四-回饋非常罕見的時候怎麼辦？機器的望梅止渴" class="headerlink" title="概述增強式學習 (Reinforcement Learning, RL) (四) - 回饋非常罕見的時候怎麼辦？機器的望梅止渴"></a>概述增強式學習 (Reinforcement Learning, RL) (四) - 回饋非常罕見的時候怎麼辦？機器的望梅止渴</h1><h2 id="Sparse-Reward"><a href="#Sparse-Reward" class="headerlink" title="Sparse Reward"></a>Sparse Reward</h2><p>如果reward好多都是零只有一两个极大或其他类似情况应该怎么办？比如让机器栓螺丝</p>
+<p>所以需要定义一些额外的reward 这就叫reward shaping</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251435534.png" alt="image-20220325143505402"></p>
+<h2 id="Examples-of-Reward-Shaping"><a href="#Examples-of-Reward-Shaping" class="headerlink" title="Examples of Reward Shaping"></a>Examples of Reward Shaping</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251444112.png" alt="image-20220325144419946"></p>
+<h1 id="概述增強式學習-Reinforcement-Learning-RL-五-如何從示範中學習？逆向增強式學習-Inverse-RL"><a href="#概述增強式學習-Reinforcement-Learning-RL-五-如何從示範中學習？逆向增強式學習-Inverse-RL" class="headerlink" title="概述增強式學習 (Reinforcement Learning, RL) (五) - 如何從示範中學習？逆向增強式學習 (Inverse RL)"></a>概述增強式學習 (Reinforcement Learning, RL) (五) - 如何從示範中學習？逆向增強式學習 (Inverse RL)</h1><p>有的时候就没有reward，</p>
+<h1 id="Motivation-1"><a href="#Motivation-1" class="headerlink" title="Motivation"></a>Motivation</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251456210.png" alt="image-20220325145629061"></p>
+<h2 id="Limitation-Learning"><a href="#Limitation-Learning" class="headerlink" title="Limitation Learning"></a>Limitation Learning</h2><p>引入人类行为资料</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251501455.png" alt="image-20220325150105295"></p>
+<h2 id="Isn’t-it-Supervised-Learning-？"><a href="#Isn’t-it-Supervised-Learning-？" class="headerlink" title="Isn’t it Supervised Learning ？"></a>Isn’t it Supervised Learning ？</h2><p>并不是，因为有些事是人类不会做的，但是是机器需要考虑的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251508011.png" alt="image-20220325150839883"></p>
+<h2 id="More-problem"><a href="#More-problem" class="headerlink" title="More problem"></a>More problem</h2><p>可能会学一些坏习惯。。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251511665.png" alt="image-20220325151142335"></p>
+<h2 id="Inverse-Reinforcement-Learning"><a href="#Inverse-Reinforcement-Learning" class="headerlink" title="Inverse Reinforcement Learning"></a>Inverse Reinforcement Learning</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251517890.png" alt="image-20220325151713780"></p>
+<h2 id="Framework-of-IRL"><a href="#Framework-of-IRL" class="headerlink" title="Framework of IRL"></a>Framework of IRL</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251527503.png" alt="image-20220325152712378"></p>
+<h1 id="機器終身學習-Life-Long-Learning-LL-一-為什麼今日的人工智慧無法成為天網？災難性遺忘-Catastrophic-Forgetting"><a href="#機器終身學習-Life-Long-Learning-LL-一-為什麼今日的人工智慧無法成為天網？災難性遺忘-Catastrophic-Forgetting" class="headerlink" title="機器終身學習 (Life Long Learning, LL) (一) - 為什麼今日的人工智慧無法成為天網？災難性遺忘(Catastrophic Forgetting)"></a>機器終身學習 (Life Long Learning, LL) (一) - 為什麼今日的人工智慧無法成為天網？災難性遺忘(Catastrophic Forgetting)</h1><h3 id="LLL"><a href="#LLL" class="headerlink" title="LLL"></a>LLL</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251531491.png" alt="image-20220325153108319"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203251536194.png" alt="image-20220325153641075"></p>
+<h2 id="模型会遗忘"><a href="#模型会遗忘" class="headerlink" title="模型会遗忘"></a>模型会遗忘</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281347107.png" alt="image-20220328134715016"></p>
+<p>但其实是可以同时学到任务一任务二的。。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281347005.png" alt="image-20220328134740922"></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281352687.png" alt="image-20220328135201610"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281356046.png" alt="image-20220328135624974"></p>
+<h2 id="同时训练好多任务缺陷明显，而且一点都不像终身学习"><a href="#同时训练好多任务缺陷明显，而且一点都不像终身学习" class="headerlink" title="同时训练好多任务缺陷明显，而且一点都不像终身学习"></a>同时训练好多任务缺陷明显，而且一点都不像终身学习</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281400020.png" alt="image-20220328140029927"></p>
+<h2 id="为每一个任务储存模型缺点依然明显"><a href="#为每一个任务储存模型缺点依然明显" class="headerlink" title="为每一个任务储存模型缺点依然明显"></a>为每一个任务储存模型缺点依然明显</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281403147.png" alt="image-20220328140310068"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281406944.png" alt="image-20220328140640856"></p>
+<h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281408113.png" alt="image-20220328140852027"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281415267.png" alt="image-20220328141536175"></p>
+<h1 id="機器終身學習-Life-Long-Learning-LL-二-災難性遺忘-Catastrophic-Forgetting-的克服之道"><a href="#機器終身學習-Life-Long-Learning-LL-二-災難性遺忘-Catastrophic-Forgetting-的克服之道" class="headerlink" title="機器終身學習 (Life Long Learning, LL) (二) - 災難性遺忘(Catastrophic Forgetting)的克服之道"></a>機器終身學習 (Life Long Learning, LL) (二) - 災難性遺忘(Catastrophic Forgetting)的克服之道</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281417826.png" alt="image-20220328141752746"></p>
+<p>第一种方法是比较常见的方法</p>
+<h2 id="为什么这种情况会发生？"><a href="#为什么这种情况会发生？" class="headerlink" title="为什么这种情况会发生？"></a>为什么这种情况会发生？</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281422113.png" alt="image-20220328142228026"></p>
+<h2 id="Selective-Synaptic-Plasticity"><a href="#Selective-Synaptic-Plasticity" class="headerlink" title="Selective Synaptic Plasticity"></a>Selective Synaptic Plasticity</h2><p>更改损失函数确保尽量少对<strong>重要参数</strong>进行修改：</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281429623.png" alt="image-20220328142900542"></p>
+<p>对于参数重要度的参数很重要，小了失去了效果，大了不容易学到新的,它是根据情况算出来的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281431771.png" alt="image-20220328143125690"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281437603.png" alt="image-20220328143717529"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281440882.png" alt="image-20220328144001796"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281447839.png" alt="image-20220328144757763"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281448073.png" alt="image-20220328144828004"></p>
+<h2 id="Gradient-Episodic-Memory-GEM"><a href="#Gradient-Episodic-Memory-GEM" class="headerlink" title="Gradient Episodic Memory(GEM)"></a>Gradient Episodic Memory(GEM)</h2><p>但是这个方法需要存少量的以前的资料</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281452218.png" alt="image-20220328145254126"></p>
+<h2 id="Addition-Neural-Resource-Allocation"><a href="#Addition-Neural-Resource-Allocation" class="headerlink" title="Addition Neural Resource Allocation"></a>Addition Neural Resource Allocation</h2><h3 id="Progressive-Neural-Networks"><a href="#Progressive-Neural-Networks" class="headerlink" title="Progressive Neural Networks"></a>Progressive Neural Networks</h3><p>没新加一个任务就新加一套参数</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281457758.png" alt="image-20220328145732673"></p>
+<h3 id="PackNet"><a href="#PackNet" class="headerlink" title="PackNet"></a>PackNet</h3><p>提前预备出任务需要的参数位置，给后来的任务使用</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281500141.png" alt="image-20220328150025009"></p>
+<h3 id="Generating-Data"><a href="#Generating-Data" class="headerlink" title="Generating Data"></a>Generating Data</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281502765.png" alt="image-20220328150202679"></p>
+<h2 id="More-scenarios"><a href="#More-scenarios" class="headerlink" title="More scenarios"></a>More scenarios</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281503628.png" alt="image-20220328150332554"></p>
+<h2 id="Curriculum-Learning"><a href="#Curriculum-Learning" class="headerlink" title="Curriculum Learning"></a>Curriculum Learning</h2><p>学习的顺序也很重要</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281506747.png" alt="image-20220328150636666"></p>
+<h1 id="神經網路壓縮-Network-Compression-一-類神經網路剪枝-Pruning-與大樂透假說-Lottery-Ticket-Hypothesis"><a href="#神經網路壓縮-Network-Compression-一-類神經網路剪枝-Pruning-與大樂透假說-Lottery-Ticket-Hypothesis" class="headerlink" title="神經網路壓縮 (Network Compression) (一) - 類神經網路剪枝 (Pruning) 與大樂透假說 (Lottery Ticket Hypothesis)"></a>神經網路壓縮 (Network Compression) (一) - 類神經網路剪枝 (Pruning) 與大樂透假說 (Lottery Ticket Hypothesis)</h1><h2 id="Need-smaller-model"><a href="#Need-smaller-model" class="headerlink" title="Need smaller model"></a>Need smaller model</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281507130.png" alt="image-20220328150756022"></p>
+<p>由于时间差或者隐私问题需要在小型设备上运行。</p>
+<h2 id="Outline-2"><a href="#Outline-2" class="headerlink" title="Outline"></a>Outline</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281509784.png" alt="image-20220328150941718"></p>
+<h2 id="Network-can-be-pruned-network-pruning"><a href="#Network-can-be-pruned-network-pruning" class="headerlink" title="Network can be pruned(network pruning)"></a>Network can be pruned(network pruning)</h2><p>有些参数是没用或者用处不大的，可以扔了</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281512018.png" alt="image-20220328151209934"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281515911.png" alt="image-20220328151539828"></p>
+<p>参数太怪异不利于定义和运算，实践发现虽然weight pruning虽然压缩了weight但是由于运算不规则导致运算没有加速</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281518707.png" alt="image-20220328151807624"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281520198.png" alt="image-20220328152016113"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281521829.png" alt="image-20220328152146743"></p>
+<h2 id="为什么不直接训练一个小的network"><a href="#为什么不直接训练一个小的network" class="headerlink" title="为什么不直接训练一个小的network"></a>为什么不直接训练一个小的network</h2><p>小的network很难得到大的network的效果</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281525091.png" alt="image-20220328152531993"></p>
+<p>有一个猜想是大的network就像买了更多的彩票，概率更大</p>
+<p>如果小network用大network的参数开始训练就可以，所以可能是那些参数就是可以成功训练的参数</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281528959.png" alt="image-20220328152853855"></p>
+<p>正 负号对于训练参数很重要</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281533112.png" alt="image-20220328153355025"></p>
+<p>但是这种想法就不一定是对的，这人说小模型其实也是可以直接训练出来的，只要epoch多一点</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281535374.png" alt="image-20220328153502282"></p>
+<h1 id="神經網路壓縮-Network-Compression-二-從各種不同的面向來壓縮神經網路"><a href="#神經網路壓縮-Network-Compression-二-從各種不同的面向來壓縮神經網路" class="headerlink" title="神經網路壓縮 (Network Compression) (二) - 從各種不同的面向來壓縮神經網路"></a>神經網路壓縮 (Network Compression) (二) - 從各種不同的面向來壓縮神經網路</h1><h2 id="Knowledge-Distillation"><a href="#Knowledge-Distillation" class="headerlink" title="Knowledge Distillation"></a>Knowledge Distillation</h2><p>学生以老师的输出为标准答案，为什么不直接训小的？因为小的不好训（插眼）</p>
+<p>因为老师可以告诉学生其实小的1还是有点像7和9的</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281543007.png" alt="image-20220328154349925"></p>
+<p>老师可以是n重的network</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281544302.png" alt="image-20220328154454222"></p>
+<p>需要对老师的softmax进行一定的调整，以防可能小的情况被无视</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281552196.png" alt="image-20220328155208113"></p>
+<h2 id="Parameter-Quantization"><a href="#Parameter-Quantization" class="headerlink" title="Parameter Quantization"></a>Parameter Quantization</h2><p>储存一个参数可能用64bits那改小点会不会好点？</p>
+<p>或者可以将参数分类，每类一个值，简化存储</p>
+<p>或者用哈夫曼编码？</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281558687.png" alt="image-20220328155851581"></p>
+<h2 id="Binary-Weights"><a href="#Binary-Weights" class="headerlink" title="Binary Weights"></a>Binary Weights</h2><p>用一个bit存储参数</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281559770.png" alt="image-20220328155945690"></p>
+<p>效果似乎还可以：</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281600609.png" alt="image-20220328160023499"></p>
+<h2 id="Depthwise-separable-convolution-Architecture-Design"><a href="#Depthwise-separable-convolution-Architecture-Design" class="headerlink" title="Depthwise separable convolution __Architecture Design"></a>Depthwise separable convolution __Architecture Design</h2><h3 id="Review-Standard-CNN"><a href="#Review-Standard-CNN" class="headerlink" title="Review: Standard CNN"></a>Review: Standard CNN</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281606053.png" alt="image-20220328160639972"></p>
+<h3 id="Depthwise-separable-Convolution"><a href="#Depthwise-separable-Convolution" class="headerlink" title="Depthwise separable Convolution"></a>Depthwise separable Convolution</h3><p>有几个channel就有几个filter</p>
+<p>Channel之间没有互动，所以有了pointwise的，它限定filter大小为1</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281615768.png" alt="image-20220328161511681"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281616476.png" alt="image-20220328161657389"></p>
+<p>（插眼）</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281620185.png" alt="image-20220328162041103"></p>
+<h2 id="Low-rank-approximation"><a href="#Low-rank-approximation" class="headerlink" title="Low rank approximation"></a>Low rank approximation</h2><p>用矩阵乘法减少参数规模</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281624026.png" alt="image-20220328162440961"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281627610.png" alt="image-20220328162754516"></p>
+<h3 id="To-learning-more"><a href="#To-learning-more" class="headerlink" title="To learning more"></a>To learning more</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281628956.png" alt="image-20220328162812895"></p>
+<h2 id="Dynamic-Computation"><a href="#Dynamic-Computation" class="headerlink" title="Dynamic Computation"></a>Dynamic Computation</h2><p>根据需要自由的调整运算量，（同一模型应用到不同的硬件上，同一硬件的不同状态上）</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281630007.png" alt="image-20220328163037924"></p>
+<h3 id="Dynamic-Depth"><a href="#Dynamic-Depth" class="headerlink" title="Dynamic Depth"></a>Dynamic Depth</h3><p>根据情况停止于不同的深度</p>
+<p>只要在训练时考虑各层输出就可以了，但是效果一般还有更好的。</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281633533.png" alt="image-20220328163344459"></p>
+<h3 id="Dynamic-Width"><a href="#Dynamic-Width" class="headerlink" title="Dynamic Width"></a>Dynamic Width</h3><p>根据需要选择宽度</p>
+<p>但是其实也有问题，可以根据需要看引用的论文</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281634666.png" alt="image-20220328163450581"></p>
+<h3 id="Computation-based-on-Sample-Difficulty"><a href="#Computation-based-on-Sample-Difficulty" class="headerlink" title="Computation based on Sample Difficulty"></a>Computation based on Sample Difficulty</h3><p>根据实际问题的困难程度来选择要应用的模型深度 </p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281637553.png" alt="image-20220328163708467"></p>
+<h2 id="Concluding-Remarks"><a href="#Concluding-Remarks" class="headerlink" title="Concluding Remarks"></a>Concluding Remarks</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281638583.png" alt="image-20220328163851522"></p>
+<h1 id="元學習-Meta-Learning-一-元學習跟機器學習一樣也是三個步驟"><a href="#元學習-Meta-Learning-一-元學習跟機器學習一樣也是三個步驟" class="headerlink" title="元學習 Meta Learning (一) - 元學習跟機器學習一樣也是三個步驟"></a>元學習 Meta Learning (一) - 元學習跟機器學習一樣也是三個步驟</h1><p>学习如何学习</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281654075.png" alt="image-20220328165427008"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281700477.png" alt="image-20220328170015356"></p>
+<h2 id="review-of-machine-learning"><a href="#review-of-machine-learning" class="headerlink" title="review of machine learning"></a>review of machine learning</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281701080.png" alt="image-20220328170158993"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281702412.png" alt="image-20220328170251327"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281703842.png" alt="image-20220328170321764"></p>
+<h2 id="introduction-of-meta-learning"><a href="#introduction-of-meta-learning" class="headerlink" title="introduction of meta learning"></a>introduction of meta learning</h2><h2 id="What-is-Meta-Learning"><a href="#What-is-Meta-Learning" class="headerlink" title="What is Meta Learning?"></a>What is Meta Learning?</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281705185.png" alt="image-20220328170555103"></p>
+<p>用机器学习学习的方法</p>
+<h2 id="Meta-Learning-Step-1"><a href="#Meta-Learning-Step-1" class="headerlink" title="Meta Learning Step 1"></a>Meta Learning Step 1</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281708732.png" alt="image-20220328170825653"></p>
+<h2 id="Meta-learning-step-2-插眼，跟丢了"><a href="#Meta-learning-step-2-插眼，跟丢了" class="headerlink" title="Meta learning step 2(插眼，跟丢了)"></a>Meta learning step 2(插眼，跟丢了)</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281710157.png" alt="image-20220328171027065"></p>
+<p>分别在训练集和测试集训练</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281713059.png" alt="image-20220328171303974"></p>
+<p>在很多任务上进行训练</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281715838.png" alt="image-20220328171550749"></p>
+<p>meta learning用测试资计算loss</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281718025.png" alt="image-20220328171801876"></p>
+<h2 id="Meta-learning-step-3"><a href="#Meta-learning-step-3" class="headerlink" title="Meta learning step 3"></a>Meta learning step 3</h2><p>如果gradient descent没办法算？</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281720514.png" alt="image-20220328172006437"> </p>
+<h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281721024.png" alt="image-20220328172147926"></p>
+<p>few shot learning不是meta learning</p>
+<h2 id="ML-vs-Meta"><a href="#ML-vs-Meta" class="headerlink" title="ML vs Meta"></a>ML vs Meta</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281725934.png" alt="image-20220328172508853"></p>
+<h3 id="Training-Data"><a href="#Training-Data" class="headerlink" title="Training Data"></a>Training Data</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281726785.png" alt="image-20220328172603692"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281727297.png" alt="image-20220328172712197"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281729076.png" alt="image-20220328172950986"></p>
+<h3 id="Loss-1"><a href="#Loss-1" class="headerlink" title="Loss"></a>Loss</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281730873.png" alt="image-20220328173054796"></p>
+<h3 id="Train"><a href="#Train" class="headerlink" title="Train"></a>Train</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281732443.png" alt="image-20220328173249349"></p>
+<h3 id="共通之处"><a href="#共通之处" class="headerlink" title="共通之处"></a>共通之处</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281733890.png" alt="image-20220328173349819"></p>
+<p>Meta meta meta meat …. leaning 学习如何去学习如何学习如何学习</p>
+<h1 id="元學習-Meta-Learning-二-萬物皆可-Meta"><a href="#元學習-Meta-Learning-二-萬物皆可-Meta" class="headerlink" title="元學習 Meta Learning (二) - 萬物皆可 Meta"></a>元學習 Meta Learning (二) - 萬物皆可 Meta</h1><h2 id="Review-Gradient-Descent"><a href="#Review-Gradient-Descent" class="headerlink" title="Review: Gradient Descent"></a>Review: Gradient Descent</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281742066.png" alt="image-20220328174242980"></p>
+<h2 id="Learning-to-initialize"><a href="#Learning-to-initialize" class="headerlink" title="Learning to initialize"></a>Learning to initialize</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281743464.png" alt="image-20220328174308374"></p>
+<h3 id="How-to-train-you-Dragon-MAML"><a href="#How-to-train-you-Dragon-MAML" class="headerlink" title="How to train you Dragon MAML"></a>How to train you <del>Dragon</del> MAML</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281747862.png" alt="image-20220328174702768"></p>
+<h2 id="Maml-vs-pretraining"><a href="#Maml-vs-pretraining" class="headerlink" title="Maml vs pretraining"></a>Maml vs pretraining</h2><p> domain adaptation 是个啥？（插眼）</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281750111.png" alt="image-20220328175020986"></p>
+<h3 id="More"><a href="#More" class="headerlink" title="More"></a>More</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281749342.png" alt="image-20220328174902269"></p>
+<h2 id="Maml-is-good-because。。。"><a href="#Maml-is-good-because。。。" class="headerlink" title="Maml is good because。。。"></a>Maml is good because。。。</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281751958.png" alt="image-20220328175152866"></p>
+<h3 id="More-1"><a href="#More-1" class="headerlink" title="More"></a>More</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281753879.png" alt="image-20220328175310815"></p>
+<h2 id="Learn-to-get-a-better-Optimizer"><a href="#Learn-to-get-a-better-Optimizer" class="headerlink" title="Learn to get a better Optimizer"></a>Learn to get a better Optimizer</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281754018.png" alt="image-20220328175407919"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281754836.png" alt="image-20220328175422752"></p>
+<h2 id="Network-Architecture-Search-NAS"><a href="#Network-Architecture-Search-NAS" class="headerlink" title="Network Architecture Search (NAS)"></a>Network Architecture Search (NAS)</h2><p>学习模型的架构</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281757667.png" alt="image-20220328175745582"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281758513.png" alt="image-20220328175819434"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281800827.png" alt="image-20220328180023736"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281800052.png" alt="image-20220328180041964"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281801336.png" alt="image-20220328180117256"></p>
+<h2 id="Learn-about-Data-Augmentation"><a href="#Learn-about-Data-Augmentation" class="headerlink" title="Learn about Data Augmentation"></a>Learn about Data Augmentation</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281802367.png" alt="image-20220328180204271"> </p>
+<h2 id="Sample-Reweighting"><a href="#Sample-Reweighting" class="headerlink" title="Sample Reweighting"></a>Sample Reweighting</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281803971.png" alt="image-20220328180324890"></p>
+<h2 id="Beyond-Gradient-Descent"><a href="#Beyond-Gradient-Descent" class="headerlink" title="Beyond Gradient Descent"></a>Beyond Gradient Descent</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281804643.png" alt="image-20220328180419562"></p>
+<h2 id="Until-now-…"><a href="#Until-now-…" class="headerlink" title="Until now …"></a>Until now …</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281806017.png" alt="image-20220328180602923"></p>
+<h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><h3 id="Few-shot-image-classification"><a href="#Few-shot-image-classification" class="headerlink" title="Few-shot image classification"></a>Few-shot image classification</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281807794.png" alt="image-20220328180754705"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281808353.png" alt="image-20220328180820253"></p>
+<p>可以根据这个数据集制造出自己需要的数据集</p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281811140.png" alt="image-20220328181140060"></p>
+<h3 id="more-than-omniglot"><a href="#more-than-omniglot" class="headerlink" title="more than omniglot"></a>more than omniglot</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281812016.png" alt="image-20220328181213915"></p>
+<h1 id="課程結語-最後的業配並改編《為學一首示子姪》作結"><a href="#課程結語-最後的業配並改編《為學一首示子姪》作結" class="headerlink" title="課程結語 - 最後的業配並改編《為學一首示子姪》作結"></a>課程結語 - 最後的業配並改編《為學一首示子姪》作結</h1><h2 id="What-do-we-learn"><a href="#What-do-we-learn" class="headerlink" title="What do we learn"></a>What do we learn</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281844280.png" alt="image-20220328184420187"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281845594.png" alt="image-20220328184549520"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281847986.png" alt="image-20220328184759889"></p>
+<p>This is a long journey,It’s just the beginning not the end.</p>
+<h2 id="What-to-Learn-Next"><a href="#What-to-Learn-Next" class="headerlink" title="What to Learn Next"></a>What to Learn Next</h2><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281851699.png" alt="image-20220328185146622"></p>
+<h1 id="爲學一-首示子侄"><a href="#爲學一-首示子侄" class="headerlink" title="爲學一 首示子侄"></a>爲學一 首示子侄</h1><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281856990.png" alt="image-20220328185652915"></p>
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202203281858304.png" alt="image-20220328185835224"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

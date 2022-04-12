@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%86%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%9C%80%E8%A6%81%E7%9A%84%E8%A1%8C%E6%95%B0/</loc>
+    
+    <lastmod>2022-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/</loc>
     
     <lastmod>2022-04-12</lastmod>
@@ -356,13 +365,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/MQ/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/python/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -399,6 +401,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/ML/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/MQ/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -454,6 +463,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/easy/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -478,13 +494,6 @@
   
   <url>
     <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-04-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/categories/C/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -520,6 +529,13 @@
   
   <url>
     <loc>https://juggler.fun/categories/python/</loc>
+    <lastmod>2022-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/C/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
