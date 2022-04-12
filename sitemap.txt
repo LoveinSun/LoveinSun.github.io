@@ -1,3 +1,4 @@
+https://juggler.fun/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/
 https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/
 https://juggler.fun/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/
 https://juggler.fun/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/
@@ -49,6 +50,7 @@ https://juggler.fun/tags/nacos/
 https://juggler.fun/tags/js/
 https://juggler.fun/tags/MongoDB/
 https://juggler.fun/tags/azure/
+https://juggler.fun/tags/ham/
 https://juggler.fun/tags/japanese/
 https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/
 https://juggler.fun/tags/joy/
@@ -63,6 +65,7 @@ https://juggler.fun/categories/python/
 https://juggler.fun/categories/Unity/
 https://juggler.fun/categories/nacos/
 https://juggler.fun/categories/js/
+https://juggler.fun/categories/ham/
 https://juggler.fun/categories/japanese/
 https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/
 https://juggler.fun/categories/%E7%AE%97%E6%B3%95/unreviewed/
