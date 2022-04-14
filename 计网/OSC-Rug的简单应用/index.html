@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"juggler.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="OSC.Rug的简单应用有一个问题导致我放弃了这个库，他的OSCMessage容量有限，传输音频的base64会报错 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSC.Rug的简单应用">
+<meta property="og:url" content="https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="JugglerDancing">
+<meta property="og:description" content="OSC.Rug的简单应用有一个问题导致我放弃了这个库，他的OSCMessage容量有限，传输音频的base64会报错 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-14T09:56:52.000Z">
+<meta property="article:modified_time" content="2022-04-14T09:58:18.777Z">
+<meta property="article:author" content="Juggler">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/","path":"计网/OSC-Rug的简单应用/","title":"OSC.Rug的简单应用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OSC.Rug的简单应用 | JugglerDancing</title>
+  
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous" />
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/music.js"></script>
+	<div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">JugglerDancing</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Juggler is dancing</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">OSC.Rug的简单应用</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Juggler"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Juggler</p>
+  <div class="site-description" itemprop="description">吾之生命如流星，誓要从全世界路过。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OSC.Rug的简单应用 | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OSC.Rug的简单应用<a href="https://github.com/LoveinSun/LoveinSun.github.io/tree/master_posts/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-14 17:56:52 / Modified: 17:58:18" itemprop="dateCreated datePublished" datetime="2022-04-14T17:56:52+08:00">2022-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">计网</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="OSC-Rug的简单应用"><a href="#OSC-Rug的简单应用" class="headerlink" title="OSC.Rug的简单应用"></a>OSC.Rug的简单应用</h1><p>有一个问题导致我放弃了这个库，他的OSCMessage容量有限，传输音频的base64会报错</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> GatewayApi.Utils;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json.Linq;</span><br><span class="line"><span class="keyword">using</span> Rug.Osc;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">static</span> OscReceiver receiver;</span><br><span class="line">    <span class="keyword">static</span> IPAddress address = IPAddress.Parse(<span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line">    <span class="keyword">static</span> Thread thread;</span><br><span class="line">    <span class="keyword">static</span> IHttpHelper httpHelper = <span class="keyword">new</span> HttpHelper();</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">       </span><br><span class="line">        <span class="comment">// This is the port we are going to listen on </span></span><br><span class="line">        <span class="built_in">int</span> port = <span class="number">8501</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Create the receiver</span></span><br><span class="line">        receiver = <span class="keyword">new</span> OscReceiver(port);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Create a thread to do the listening</span></span><br><span class="line">        thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(ListenLoop));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Connect the receiver</span></span><br><span class="line">        receiver.Connect();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Start the listen thread</span></span><br><span class="line">        thread.Start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// wait for a key press to exit</span></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Press any key to exit&quot;</span>);</span><br><span class="line">        Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// close the Reciver </span></span><br><span class="line">        receiver.Close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Wait for the listen thread to exit</span></span><br><span class="line">        thread.Join();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">ListenLoop</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span> (receiver.State != OscSocketState.Closed)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// if we are in a state to recieves</span></span><br><span class="line">                <span class="keyword">if</span> (receiver.State == OscSocketState.Connected)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// get the next message </span></span><br><span class="line">                    <span class="comment">// this will block until one arrives or the socket is closed</span></span><br><span class="line">                    OscPacket packet = receiver.Receive();</span><br><span class="line">                    <span class="built_in">string</span> pac = packet.ToString();</span><br><span class="line">                    <span class="comment">//string address = pac.Substring(0,pac.IndexOf(&quot;,&quot;));</span></span><br><span class="line">                    <span class="built_in">string</span> data = pac.Substring(pac.IndexOf(<span class="string">&quot;,&quot;</span>)+<span class="number">1</span>);</span><br><span class="line">                    <span class="built_in">string</span> addres = pac.Substring(<span class="number">0</span>, pac.IndexOf(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">                    <span class="keyword">var</span> dat = JObject.Parse(data.Substring(<span class="number">2</span>,data.Length<span class="number">-3</span>));</span><br><span class="line">                    <span class="keyword">var</span> msg = <span class="keyword">await</span> getReply(dat);</span><br><span class="line">                    <span class="built_in">int</span> seq = <span class="number">0</span>;</span><br><span class="line">                    Byte[] fileByte = <span class="keyword">new</span> Byte[<span class="number">0</span>];</span><br><span class="line">                    <span class="keyword">if</span> (dat.ContainsKey(<span class="string">&quot;seq&quot;</span>))</span><br><span class="line">                    &#123;</span><br><span class="line">                        seq = <span class="built_in">int</span>.Parse(dat[<span class="string">&quot;seq&quot;</span>].ToString());</span><br><span class="line">                        <span class="built_in">string</span> url = msg[<span class="string">&quot;data&quot;</span>].ToString();</span><br><span class="line">                        <span class="keyword">using</span> (MemoryStream ms = <span class="keyword">new</span> MemoryStream())</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">using</span> (Stream stream = WebRequest.Create(url)</span><br><span class="line">                                .GetResponse().GetResponseStream())</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="built_in">byte</span>[] buffer = <span class="keyword">new</span> <span class="built_in">byte</span>[<span class="number">32768</span>];</span><br><span class="line">                                <span class="built_in">int</span> read;</span><br><span class="line">                                <span class="keyword">while</span> ((read = stream.Read(buffer, <span class="number">0</span>, buffer.Length)) &gt; <span class="number">0</span>)</span><br><span class="line">                                &#123;</span><br><span class="line">                                    ms.Write(buffer, <span class="number">0</span>, read);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                            ms.Position = <span class="number">0</span>;</span><br><span class="line">                            fileByte = ms.ToArray();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// Write the packet to the console</span></span><br><span class="line">                    Console.WriteLine(msg.ToString());</span><br><span class="line">                    <span class="keyword">using</span> (OscSender sender = <span class="keyword">new</span> OscSender(address,<span class="number">0</span>, <span class="number">9513</span>))</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">// Connect the sender socket  </span></span><br><span class="line">                        sender.Connect();</span><br><span class="line">                        <span class="keyword">if</span> (fileByte.Length &gt; <span class="number">1</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            sender.Send(<span class="keyword">new</span> OscMessage(addres, seq, fileByte));</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            sender.Send(<span class="keyword">new</span> OscMessage(addres, seq, msg.ToString()));</span><br><span class="line">                        &#125;</span><br><span class="line">                        </span><br><span class="line">                        </span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// DO SOMETHING HERE!</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// if the socket was connected when this happens</span></span><br><span class="line">            <span class="comment">// then tell the user</span></span><br><span class="line">            <span class="keyword">if</span> (receiver.State == OscSocketState.Connected)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Exception in listen loop&quot;</span>);</span><br><span class="line">                Console.WriteLine(ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task&lt;JObject&gt;  <span class="title">getReply</span>(<span class="params">JObject data</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        HttpResponseMessage response = <span class="literal">null</span>;    </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(!data.ContainsKey(<span class="string">&quot;method&quot;</span>) || !data.ContainsKey(<span class="string">&quot;url&quot;</span>) ||data==<span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;invalid parameters&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> <span class="keyword">warning</span> disable CS8602,CS8604,CS8603 // Dereference of a possibly null reference.</span></span><br><span class="line">        <span class="keyword">if</span> (data[<span class="string">&quot;method&quot;</span>].ToString() == <span class="string">&quot;GET&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            response = <span class="keyword">await</span> httpHelper.HttpGetResponseAsync(data[<span class="string">&quot;url&quot;</span>].ToString(),timeout:<span class="number">130</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(data[<span class="string">&quot;method&quot;</span>].ToString() == <span class="string">&quot;POST&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">object</span>&gt; dic = <span class="keyword">new</span> Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">object</span>&gt;();</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> i <span class="keyword">in</span> JObject.Parse(data[<span class="string">&quot;dic&quot;</span>].ToString()))</span><br><span class="line">            &#123;</span><br><span class="line">                dic.Add(i.Key, i.Value);</span><br><span class="line">            &#125;</span><br><span class="line">            response = <span class="keyword">await</span> httpHelper.HttpPostResponseAsync(data[<span class="string">&quot;url&quot;</span>].ToString(),dic, timeout: <span class="number">130</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> responseJson = <span class="keyword">await</span> response.Content.ReadAsStringAsync().ConfigureAwait(<span class="literal">false</span>);</span><br><span class="line">        <span class="keyword">if</span> (response.IsSuccessStatusCode)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> JsonConvert.DeserializeObject&lt;JObject&gt;(responseJson);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            JObject j = <span class="keyword">new</span> JObject();</span><br><span class="line">            j[<span class="string">&quot;code&quot;</span>] = <span class="string">&quot;500&quot;</span>;</span><br><span class="line">            j[<span class="string">&quot;msg&quot;</span>] = <span class="string">&quot;failed&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> <span class="keyword">warning</span> restore CS8602,CS8604 // Dereference of a possibly null reference.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C#</a>
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E7%AE%97%E6%B3%95/%E5%86%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%9C%80%E8%A6%81%E7%9A%84%E8%A1%8C%E6%95%B0/" rel="prev" title="写字符串需要的行数">
+                  <i class="fa fa-chevron-left"></i> 写字符串需要的行数
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">冀ICP备2021011397号-1 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Juggler</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.12.1/dist/algoliasearch-lite.umd.js" integrity="sha256-gOvJ6W+j+t/cgnnl9iUU3cb6F1WFQGDdtTXhfPjU4bc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.39.0/dist/instantsearch.production.min.js" integrity="sha256-+ZlQZK9m82XOYGFZCIRrPOFh2kDdAGB6e7TjWGvoaSY=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LoveinSun","repo":"blog-comment","client_id":"40e1002206dc11748978","client_secret":"027043262cdf608cfa6b1c20173bc245b1cff702","admin_user":"LoveinSun","distraction_free_mode":true,"proxy":"https://proxy.juggler.fun:9013/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"07a244eef01fe577a2cd9d10f8e95e73"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
