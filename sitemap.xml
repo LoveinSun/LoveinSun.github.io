@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://juggler.fun/%E8%AE%A1%E7%BD%91/Rug-osc-Gateway/</loc>
+    
+    <lastmod>2022-04-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/Character/</loc>
     
     <lastmod>2022-04-19</lastmod>
@@ -455,6 +464,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/%E8%AE%A1%E7%BD%91/</loc>
+    <lastmod>2022-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/fastapi/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -490,13 +506,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/ham/</loc>
-    <lastmod>2022-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/japanese/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -504,7 +513,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/a-easy/</loc>
+    <loc>https://juggler.fun/tags/ham/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -526,6 +535,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/docker/</loc>
+    <lastmod>2022-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/a-easy/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -583,14 +599,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/Unity/</loc>
+    <loc>https://juggler.fun/categories/python/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/python/</loc>
+    <loc>https://juggler.fun/categories/Unity/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -611,14 +627,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ham/</loc>
+    <loc>https://juggler.fun/categories/japanese/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/japanese/</loc>
+    <loc>https://juggler.fun/categories/ham/</loc>
     <lastmod>2022-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
