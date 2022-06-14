@@ -164,18 +164,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,113 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/N%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/N%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">N叉树的层序遍历</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-08 11:03:23 / Modified: 11:30:39" itemprop="dateCreated datePublished" datetime="2022-04-08T11:03:23+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="429-N-叉树的层序遍历"><a href="#429-N-叉树的层序遍历" class="headerlink" title="429. N 叉树的层序遍历"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/">429. N 叉树的层序遍历</a></h1><p>给定一个 N 叉树，返回其节点值的<em>层序遍历</em>。（即从左到右，逐层遍历）。</p>
+<p>树的序列化输入是用层序遍历，每组子节点都由 null 值分隔（参见示例）。</p>
+<p><strong>示例1：</strong></p>
+<p> <img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204081119117.png"></p>
+<blockquote>
+<p><strong>输入：</strong>root &#x3D; [1,null,3,2,4,null,5,6]</p>
+<p><strong>输出：</strong>[[1],[3,2,4],[5,6]]</p>
+</blockquote>
+<p><strong>示例2:</strong></p>
+<p> <img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204081119578.png"></p>
+<blockquote>
+<p><strong>输入：</strong>root &#x3D; [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]</p>
+<p><strong>输出：</strong>[[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li>树的高度不会超过 <code>1000</code></li>
+<li>树的节点总数在 <code>[0, 10^4]</code> 之间</li>
+</ul>
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><p><strong>哈哈，好久没有体验过当One shot guy 了哈哈，不过可惜提交没有，少考虑了输入为null的情况</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Leetcode.cpp : This file contains the &#x27;main&#x27; function. Program execution begins and ends there.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    TreeNode* left;</span><br><span class="line">    TreeNode* right;</span><br><span class="line">    <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode* left, TreeNode* right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Definition for a Node.</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    vector&lt;Node*&gt; children;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Node</span>() &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Node</span>(<span class="type">int</span> _val) &#123;</span><br><span class="line">        val = _val;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Node</span>(<span class="type">int</span> _val, vector&lt;Node*&gt; _children) &#123;</span><br><span class="line">        val = _val;</span><br><span class="line">        children = _children;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(Node* root) &#123;</span><br><span class="line">        queue&lt;Node*&gt; q;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; res;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">            <span class="type">int</span> l = q.<span class="built_in">size</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> h : q.<span class="built_in">front</span>()-&gt;children) &#123;</span><br><span class="line">                    q.<span class="built_in">push</span>(h);</span><br><span class="line">                &#125;</span><br><span class="line">                temp.<span class="built_in">push_back</span>(q.<span class="built_in">front</span>()-&gt;val);</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            res.<span class="built_in">push_back</span>(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Driver program to test above function</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;Node*&gt; ch&#123;<span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">5</span>),<span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">6</span>)&#125;;</span><br><span class="line">    Node* nod = <span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">3</span>,ch);</span><br><span class="line">    vector&lt;Node*&gt; chi &#123; nod,<span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">2</span>),<span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">4</span>)&#125;;</span><br><span class="line">    Node* node = <span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">1</span>, chi);</span><br><span class="line">    <span class="keyword">auto</span> res =  <span class="built_in">Solution</span>().<span class="built_in">levelOrder</span>(node);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : res) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> j : i) &#123;</span><br><span class="line">            cout &lt;&lt; j;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">levelOrder</span>(Node* root) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; ans;</span><br><span class="line">        queue&lt;Node*&gt; q;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> cnt = q.<span class="built_in">size</span>();</span><br><span class="line">            vector&lt;<span class="type">int</span>&gt; level;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; ++i) &#123;</span><br><span class="line">                Node* cur = q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                level.<span class="built_in">push_back</span>(cur-&gt;val);</span><br><span class="line">                <span class="keyword">for</span> (Node* child: cur-&gt;children) &#123;</span><br><span class="line">                    q.<span class="built_in">push</span>(child);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(<span class="built_in">move</span>(level));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1502,262 +1609,6 @@
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/japanese/%E6%97%A5%E6%9C%AC%E8%AA%9E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/japanese/%E6%97%A5%E6%9C%AC%E8%AA%9E/" class="post-title-link" itemprop="url">日本語第二课</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-24 16:13:21" itemprop="dateCreated datePublished" datetime="2022-03-24T16:13:21+08:00">2022-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-03-31 12:03:23" itemprop="dateModified" datetime="2022-03-31T12:03:23+08:00">2022-03-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/japanese/" itemprop="url" rel="index"><span itemprop="name">japanese</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="第二课-はじめまして"><a href="#第二课-はじめまして" class="headerlink" title="第二课 はじめまして"></a>第二课 はじめまして</h1><table>
-<thead>
-<tr>
-<th align="center">-</th>
-<th align="center">あ</th>
-<th align="center">い</th>
-<th align="center">う</th>
-<th align="center">え</th>
-<th align="center">お</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">が</td>
-<td align="center">が</td>
-<td align="center">ぎ</td>
-<td align="center">ぐ</td>
-<td align="center">げ</td>
-<td align="center">ご</td>
-</tr>
-<tr>
-<td align="center">ざ</td>
-<td align="center">ざ</td>
-<td align="center">じ</td>
-<td align="center">ず</td>
-<td align="center">ぜ</td>
-<td align="center">ぞ</td>
-</tr>
-<tr>
-<td align="center">だ</td>
-<td align="center">だ</td>
-<td align="center">ぢ</td>
-<td align="center">づ</td>
-<td align="center">で</td>
-<td align="center">ど</td>
-</tr>
-<tr>
-<td align="center">ば</td>
-<td align="center">ば</td>
-<td align="center">び</td>
-<td align="center">ぶ</td>
-<td align="center">べ</td>
-<td align="center">ぼ</td>
-</tr>
-</tbody></table>
-<h2 id="词例"><a href="#词例" class="headerlink" title="词例"></a>词例</h2><table>
-<thead>
-<tr>
-<th>日本語</th>
-<th>中文</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>がいこく(外国)⓪</td>
-<td>(名)外国</td>
-</tr>
-<tr>
-<td>ぎし(技師)①</td>
-<td>(名)技师，工程师</td>
-</tr>
-<tr>
-<td>ぐあい(具合)⓪</td>
-<td>(名)情况</td>
-</tr>
-<tr>
-<td>げんき(元気)①</td>
-<td>(名)精力，健康</td>
-</tr>
-<tr>
-<td>ごはん(ごはん)①</td>
-<td>(名)饭，米饭</td>
-</tr>
-<tr>
-<td>いちがつ(一月)④</td>
-<td>(名)一月</td>
-</tr>
-<tr>
-<td>かぎ(鍵)②</td>
-<td>(名)钥匙；锁</td>
-</tr>
-<tr>
-<td>かぐ(家具)①</td>
-<td>(名)家具</td>
-</tr>
-<tr>
-<td>ひげ(鬚)⓪</td>
-<td>(名)胡子</td>
-</tr>
-<tr>
-<td>りんご(林檎)⓪</td>
-<td>(名)苹果</td>
-</tr>
-<tr>
-<td>ざせき(座席)⓪</td>
-<td>(名)座位</td>
-</tr>
-<tr>
-<td>じこ(事故)①</td>
-<td>(名)事故</td>
-</tr>
-<tr>
-<td>ちず(地図)①</td>
-<td>(名)地图</td>
-</tr>
-<tr>
-<td>ゼミ(德 Seminar)①</td>
-<td>(名)小组讨论（研究）ゼミナール的缩写</td>
-</tr>
-<tr>
-<td>ぞくご(俗語)⓪</td>
-<td>(名)俗语，俚语</td>
-</tr>
-<tr>
-<td>だいがく(大学)⓪</td>
-<td>(名)大学</td>
-</tr>
-<tr>
-<td>ちぢむ(縮む)⓪</td>
-<td>(名)缩小，缩短</td>
-</tr>
-<tr>
-<td>つづく(続く)⓪</td>
-<td>(名)继续</td>
-</tr>
-<tr>
-<td>でんわ(電話)⓪</td>
-<td>(名)电话</td>
-</tr>
-<tr>
-<td>ドア(door)①</td>
-<td>(名)门</td>
-</tr>
-<tr>
-<td>ばあい(場合)⓪</td>
-<td>(名)场合</td>
-</tr>
-<tr>
-<td>ビザ(visa)①</td>
-<td>(名)签证</td>
-</tr>
-<tr>
-<td>ぶた(ぶた)⓪</td>
-<td>(名)猪</td>
-</tr>
-<tr>
-<td>べんり(便利)①</td>
-<td>(名 形动)方便</td>
-</tr>
-<tr>
-<td>ぼく(僕) ⓪  ①</td>
-<td>(名)我（男子用语）</td>
-</tr>
-<tr>
-<td>パンダ(panda)①</td>
-<td>(名)熊猫</td>
-</tr>
-<tr>
-<td>ビンク(pink)①</td>
-<td>(名)粉红色</td>
-</tr>
-<tr>
-<td>ブラス(plus)⓪ ①</td>
-<td>(名)加号（+），正数</td>
-</tr>
-<tr>
-<td>ペン(pen)①</td>
-<td>(名)钢笔</td>
-</tr>
-<tr>
-<td>ポスト(post)①</td>
-<td>(名)邮筒,邮政</td>
 </tr>
 </tbody></table>
 
