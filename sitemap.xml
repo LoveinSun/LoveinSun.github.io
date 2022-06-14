@@ -398,20 +398,6 @@
 
   
   <url>
-    <loc>https://juggler.fun/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/unfinished/</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/C/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,6 +426,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/easy/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -454,7 +447,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://juggler.fun/tags/unfinished/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -468,6 +461,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/NLP/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -475,14 +475,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/ML/</loc>
+    <loc>https://juggler.fun/tags/%E8%AE%A1%E7%BD%91/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/%E8%AE%A1%E7%BD%91/</loc>
+    <loc>https://juggler.fun/tags/ML/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -545,14 +545,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/finance/</loc>
+    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://juggler.fun/tags/finance/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -575,13 +575,6 @@
 
   
   <url>
-    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/C/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -596,6 +589,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/data/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -603,14 +603,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/%E8%AE%A1%E7%BD%91/</loc>
+    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
+    <loc>https://juggler.fun/categories/%E8%AE%A1%E7%BD%91/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -666,13 +666,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/finance/</loc>
-    <lastmod>2022-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -681,6 +674,13 @@
   
   <url>
     <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/unreviewed/</loc>
+    <lastmod>2022-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/finance/</loc>
     <lastmod>2022-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
