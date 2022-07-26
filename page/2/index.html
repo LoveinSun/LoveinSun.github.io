@@ -164,18 +164,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,189 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E8%AE%A1%E7%BD%91/OSC-Rug%E7%9A%84%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/" class="post-title-link" itemprop="url">OSC.Rug的简单应用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-14 17:56:52 / Modified: 17:58:18" itemprop="dateCreated datePublished" datetime="2022-04-14T17:56:52+08:00">2022-04-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">计网</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="OSC-Rug的简单应用"><a href="#OSC-Rug的简单应用" class="headerlink" title="OSC.Rug的简单应用"></a>OSC.Rug的简单应用</h1><p>有一个问题导致我放弃了这个库，他的OSCMessage容量有限，传输音频的base64会报错</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> GatewayApi.Utils;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json.Linq;</span><br><span class="line"><span class="keyword">using</span> Rug.Osc;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">static</span> OscReceiver receiver;</span><br><span class="line">    <span class="keyword">static</span> IPAddress address = IPAddress.Parse(<span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line">    <span class="keyword">static</span> Thread thread;</span><br><span class="line">    <span class="keyword">static</span> IHttpHelper httpHelper = <span class="keyword">new</span> HttpHelper();</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">       </span><br><span class="line">        <span class="comment">// This is the port we are going to listen on </span></span><br><span class="line">        <span class="built_in">int</span> port = <span class="number">8501</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Create the receiver</span></span><br><span class="line">        receiver = <span class="keyword">new</span> OscReceiver(port);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Create a thread to do the listening</span></span><br><span class="line">        thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadStart(ListenLoop));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Connect the receiver</span></span><br><span class="line">        receiver.Connect();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Start the listen thread</span></span><br><span class="line">        thread.Start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// wait for a key press to exit</span></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Press any key to exit&quot;</span>);</span><br><span class="line">        Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// close the Reciver </span></span><br><span class="line">        receiver.Close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Wait for the listen thread to exit</span></span><br><span class="line">        thread.Join();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">ListenLoop</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span> (receiver.State != OscSocketState.Closed)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// if we are in a state to recieves</span></span><br><span class="line">                <span class="keyword">if</span> (receiver.State == OscSocketState.Connected)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// get the next message </span></span><br><span class="line">                    <span class="comment">// this will block until one arrives or the socket is closed</span></span><br><span class="line">                    OscPacket packet = receiver.Receive();</span><br><span class="line">                    <span class="built_in">string</span> pac = packet.ToString();</span><br><span class="line">                    <span class="comment">//string address = pac.Substring(0,pac.IndexOf(&quot;,&quot;));</span></span><br><span class="line">                    <span class="built_in">string</span> data = pac.Substring(pac.IndexOf(<span class="string">&quot;,&quot;</span>)+<span class="number">1</span>);</span><br><span class="line">                    <span class="built_in">string</span> addres = pac.Substring(<span class="number">0</span>, pac.IndexOf(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">                    <span class="keyword">var</span> dat = JObject.Parse(data.Substring(<span class="number">2</span>,data.Length<span class="number">-3</span>));</span><br><span class="line">                    <span class="keyword">var</span> msg = <span class="keyword">await</span> getReply(dat);</span><br><span class="line">                    <span class="built_in">int</span> seq = <span class="number">0</span>;</span><br><span class="line">                    Byte[] fileByte = <span class="keyword">new</span> Byte[<span class="number">0</span>];</span><br><span class="line">                    <span class="keyword">if</span> (dat.ContainsKey(<span class="string">&quot;seq&quot;</span>))</span><br><span class="line">                    &#123;</span><br><span class="line">                        seq = <span class="built_in">int</span>.Parse(dat[<span class="string">&quot;seq&quot;</span>].ToString());</span><br><span class="line">                        <span class="built_in">string</span> url = msg[<span class="string">&quot;data&quot;</span>].ToString();</span><br><span class="line">                        <span class="keyword">using</span> (MemoryStream ms = <span class="keyword">new</span> MemoryStream())</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">using</span> (Stream stream = WebRequest.Create(url)</span><br><span class="line">                                .GetResponse().GetResponseStream())</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="built_in">byte</span>[] buffer = <span class="keyword">new</span> <span class="built_in">byte</span>[<span class="number">32768</span>];</span><br><span class="line">                                <span class="built_in">int</span> read;</span><br><span class="line">                                <span class="keyword">while</span> ((read = stream.Read(buffer, <span class="number">0</span>, buffer.Length)) &gt; <span class="number">0</span>)</span><br><span class="line">                                &#123;</span><br><span class="line">                                    ms.Write(buffer, <span class="number">0</span>, read);</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                            ms.Position = <span class="number">0</span>;</span><br><span class="line">                            fileByte = ms.ToArray();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// Write the packet to the console</span></span><br><span class="line">                    Console.WriteLine(msg.ToString());</span><br><span class="line">                    <span class="keyword">using</span> (OscSender sender = <span class="keyword">new</span> OscSender(address,<span class="number">0</span>, <span class="number">9513</span>))</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">// Connect the sender socket  </span></span><br><span class="line">                        sender.Connect();</span><br><span class="line">                        <span class="keyword">if</span> (fileByte.Length &gt; <span class="number">1</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            sender.Send(<span class="keyword">new</span> OscMessage(addres, seq, fileByte));</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span></span><br><span class="line">                        &#123;</span><br><span class="line">                            sender.Send(<span class="keyword">new</span> OscMessage(addres, seq, msg.ToString()));</span><br><span class="line">                        &#125;</span><br><span class="line">                        </span><br><span class="line">                        </span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">// DO SOMETHING HERE!</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// if the socket was connected when this happens</span></span><br><span class="line">            <span class="comment">// then tell the user</span></span><br><span class="line">            <span class="keyword">if</span> (receiver.State == OscSocketState.Connected)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Exception in listen loop&quot;</span>);</span><br><span class="line">                Console.WriteLine(ex.Message);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task&lt;JObject&gt;  <span class="title">getReply</span>(<span class="params">JObject data</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        HttpResponseMessage response = <span class="literal">null</span>;    </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(!data.ContainsKey(<span class="string">&quot;method&quot;</span>) || !data.ContainsKey(<span class="string">&quot;url&quot;</span>) ||data==<span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">&quot;invalid parameters&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> <span class="keyword">warning</span> disable CS8602,CS8604,CS8603 // Dereference of a possibly null reference.</span></span><br><span class="line">        <span class="keyword">if</span> (data[<span class="string">&quot;method&quot;</span>].ToString() == <span class="string">&quot;GET&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            response = <span class="keyword">await</span> httpHelper.HttpGetResponseAsync(data[<span class="string">&quot;url&quot;</span>].ToString(),timeout:<span class="number">130</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(data[<span class="string">&quot;method&quot;</span>].ToString() == <span class="string">&quot;POST&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">object</span>&gt; dic = <span class="keyword">new</span> Dictionary&lt;<span class="built_in">string</span>, <span class="built_in">object</span>&gt;();</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">var</span> i <span class="keyword">in</span> JObject.Parse(data[<span class="string">&quot;dic&quot;</span>].ToString()))</span><br><span class="line">            &#123;</span><br><span class="line">                dic.Add(i.Key, i.Value);</span><br><span class="line">            &#125;</span><br><span class="line">            response = <span class="keyword">await</span> httpHelper.HttpPostResponseAsync(data[<span class="string">&quot;url&quot;</span>].ToString(),dic, timeout: <span class="number">130</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> responseJson = <span class="keyword">await</span> response.Content.ReadAsStringAsync().ConfigureAwait(<span class="literal">false</span>);</span><br><span class="line">        <span class="keyword">if</span> (response.IsSuccessStatusCode)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> JsonConvert.DeserializeObject&lt;JObject&gt;(responseJson);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            JObject j = <span class="keyword">new</span> JObject();</span><br><span class="line">            j[<span class="string">&quot;code&quot;</span>] = <span class="string">&quot;500&quot;</span>;</span><br><span class="line">            j[<span class="string">&quot;msg&quot;</span>] = <span class="string">&quot;failed&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> j;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> <span class="keyword">warning</span> restore CS8602,CS8604 // Dereference of a possibly null reference.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%86%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%9C%80%E8%A6%81%E7%9A%84%E8%A1%8C%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E5%86%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%9C%80%E8%A6%81%E7%9A%84%E8%A1%8C%E6%95%B0/" class="post-title-link" itemprop="url">写字符串需要的行数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-12 14:07:00 / Modified: 19:20:03" itemprop="dateCreated datePublished" datetime="2022-04-12T14:07:00+08:00">2022-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="806-写字符串需要的行数"><a href="#806-写字符串需要的行数" class="headerlink" title="806. 写字符串需要的行数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-lines-to-write-string/">806. 写字符串需要的行数</a></h1><p>我们要把给定的字符串 S 从左到右写到每一行上，每一行的最大宽度为100个单位，如果我们在写某个字母的时候会使这行超过了100 个单位，那么我们应该把这个字母写到下一行。我们给定了一个数组 widths ，这个数组 widths[0] 代表 ‘a’ 需要的单位， widths[1] 代表 ‘b’ 需要的单位，…， widths[25] 代表 ‘z’ 需要的单位。</p>
+<p>现在回答两个问题：至少多少行能放下S，以及最后一行使用的宽度是多少个单位？将你的答案作为长度为2的整数列表返回。</p>
+<blockquote>
+<p><strong>示例 1:</strong><br><strong>输入:</strong><br>widths &#x3D; [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]<br>S &#x3D; “abcdefghijklmnopqrstuvwxyz”<br><strong>输出:</strong> [3, 60]<br><strong>解释:</strong><br>所有的字符拥有相同的占用单位10。所以书写所有的26个字母，<br>我们需要2个整行和占用60个单位的一行。</p>
+</blockquote>
+<blockquote>
+<p><strong>示例 2:</strong><br><strong>输入:</strong><br>widths &#x3D; [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]<br>S &#x3D; “bbbcccdddaaa”<br><strong>输出:</strong> [2, 4]<br><strong>解释:</strong><br>除去字母’a’所有的字符都是相同的单位10，并且字符串 “bbbcccdddaa” 将会覆盖 9 * 10 + 2 * 4 &#x3D; 98 个单位.<br>最后一个字母 ‘a’ 将会被写到第二行，因为第一行只剩下2个单位了。<br>所以，这个答案是2行，第二行有4个单位宽度。</p>
+</blockquote>
+<p><strong>注:</strong></p>
+<ul>
+<li>字符串 S 的长度在 [1, 1000] 的范围。</li>
+<li>S 只包含小写字母。</li>
+<li>widths 是长度为 26的数组。</li>
+<li>widths[i] 值的范围在 [2, 10]。</li>
+</ul>
+<p><strong>这个题配上这个示例1，，，真的是人间迷惑题目。</strong></p>
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Leetcode.cpp : This file contains the &#x27;main&#x27; function. Program execution begins and ends there.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">numberOfLines</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; widths, string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> row = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> column = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sum + widths[s[i]<span class="number">-97</span>] &gt; <span class="number">100</span>) &#123;</span><br><span class="line">                sum = <span class="number">0</span>;</span><br><span class="line">                row += <span class="number">1</span>;</span><br><span class="line">                column = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sum += widths[s[i] - <span class="number">97</span>];</span><br><span class="line">            column += widths[s[i] - <span class="number">97</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        res.<span class="built_in">push_back</span>(row + <span class="number">1</span>);</span><br><span class="line">        res.<span class="built_in">push_back</span>(column);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; num&#123; <span class="number">4</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span>, <span class="number">10</span> &#125;;</span><br><span class="line">    string s = <span class="string">&quot;bbbcccdddaaa&quot;</span>;</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="built_in">Solution</span>().<span class="built_in">numberOfLines</span>(num,s);</span><br><span class="line">    std::cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> MAX_WIDTH = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">numberOfLines</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; widths, string s)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> lines = <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> width = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp; c : s) &#123;</span><br><span class="line">            <span class="type">int</span> need = widths[c - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">            width += need;</span><br><span class="line">            <span class="keyword">if</span> (width &gt; MAX_WIDTH) &#123;</span><br><span class="line">                lines++;</span><br><span class="line">                width = need;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;lines, width&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -977,245 +1160,6 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="2031-1-比-0-多的子数组个数"><a href="#2031-1-比-0-多的子数组个数" class="headerlink" title="2031. 1 比 0 多的子数组个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-subarrays-with-more-ones-than-zeros/">2031. 1 比 0 多的子数组个数</a></h1><p>此题败北，思路是总子数组数量减都为0的子数组数量，结果没有去掉重复元素</p>
 <p>当然leetcode不能只刷自己会的，然而现在状态是在太差，脑袋晕乎乎的，所以所以先粘上去等以后状态好时再捡回来做。当然明白这是flag，，，，但是不妨探索一下学习方法再认识一下自己的废物程度</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/" class="post-title-link" itemprop="url">四因数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-04-02 15:56:09" itemprop="dateCreated datePublished" datetime="2022-04-02T15:56:09+08:00">2022-04-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-26 13:47:14" itemprop="dateModified" datetime="2022-07-26T13:47:14+08:00">2022-07-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="1390-四因数"><a href="#1390-四因数" class="headerlink" title="1390. 四因数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/four-divisors/">1390. 四因数</a></h1><p>给你一个整数数组 <code>nums</code>，请你返回该数组中恰有四个因数的这些整数的各因数之和。如果数组中不存在满足题意的整数，则返回 <code>0</code> 。</p>
- <img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021541109.png" alt="image-20220402154140070" style="zoom: 67%;" />
-
-<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            sum += <span class="built_in">judge</span>(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">1</span> + num;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(num); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i == num / i) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                    res += i;</span><br><span class="line">                    res += num / i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
-</li>
-<li><p>空间复杂度：O(1)O(1)。</p>
-</li>
-</ul>
-<h3 id="错误："><a href="#错误：" class="headerlink" title="错误："></a>错误：</h3><p>没有考虑两个因数相等的情况，也就是18，19行</p>
-<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num: nums) &#123;</span><br><span class="line">            <span class="comment">// factor_cnt: 因数的个数</span></span><br><span class="line">            <span class="comment">// factor_sum: 因数的和</span></span><br><span class="line">            <span class="type">int</span> factor_cnt = <span class="number">0</span>, factor_sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i * i &lt;= num; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ++factor_cnt;</span><br><span class="line">                    factor_sum += i;</span><br><span class="line">                    <span class="keyword">if</span> (i * i != num) &#123;   <span class="comment">// 判断 i 和 num/i 是否相等，若不相等才能将 num/i 看成新的因数</span></span><br><span class="line">                        ++factor_cnt;</span><br><span class="line">                        factor_sum += num / i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (factor_cnt == <span class="number">4</span>) &#123;</span><br><span class="line">                ans += factor_sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
-</li>
-<li><p>空间复杂度：O(1)O(1)。</p>
-</li>
-</ul>
-<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><h3 id="使用筛法"><a href="#使用筛法" class="headerlink" title="使用筛法"></a>使用筛法</h3><p>思路就是使用筛法过滤出所有的需要的素数，然后使用它们构建四因数</p>
-<p>然后涉及到的就是四因数有何种性质使得其可以用质数进行构建。</p>
-<p>这里涉及到筛法的问题感觉可以单开一章</p>
-<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204071459754.png" alt="image-20220407145938647" style="zoom: 67%;" />
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// C 是数组 nums 元素的上限，C3 是 C 的立方根</span></span><br><span class="line">        <span class="type">int</span> C = <span class="number">100000</span>, C3 = <span class="number">46</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">isprime</span><span class="params">(C + <span class="number">1</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; primes;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 埃拉托斯特尼筛法</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= C; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (isprime[i]) &#123;</span><br><span class="line">                primes.<span class="built_in">push_back</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + i; j &lt;= C; j += i) &#123;</span><br><span class="line">                isprime[j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 欧拉筛法</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        for (int i = 2; i &lt;= C; ++i) &#123;</span></span><br><span class="line"><span class="comment">            if (isprime[i]) &#123;</span></span><br><span class="line"><span class="comment">                primes.push_back(i);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            for (int prime: primes) &#123;</span></span><br><span class="line"><span class="comment">                if (i * prime &gt; C) &#123;</span></span><br><span class="line"><span class="comment">                    break;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">                isprime[i * prime] = 0;</span></span><br><span class="line"><span class="comment">                if (i % prime == 0) &#123;</span></span><br><span class="line"><span class="comment">                    break;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过质数表构造出所有的四因数</span></span><br><span class="line">        unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; factor4;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> prime : primes) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prime &lt;= C3) &#123;</span><br><span class="line">                factor4[prime * prime * prime] = <span class="number">1</span> + prime + prime * prime + prime * prime * prime;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; primes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; primes.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (primes[i] &lt;= C / primes[j]) &#123;</span><br><span class="line">                    factor4[primes[i] * primes[j]] = <span class="number">1</span> + primes[i] + primes[j] + primes[i] * primes[j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (factor4.<span class="built_in">count</span>(num)) &#123;</span><br><span class="line">                ans += factor4[num];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/Leetcode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%AE%97%E6%B3%95/Leetcode/" class="post-title-link" itemprop="url">从根节点到叶节点的路径数字之和&最大连续 1 的个数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-02 14:38:09 / Modified: 16:06:28" itemprop="dateCreated datePublished" datetime="2022-04-02T14:38:09+08:00">2022-04-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="剑指-Offer-II-049-从根节点到叶节点的路径数字之和"><a href="#剑指-Offer-II-049-从根节点到叶节点的路径数字之和" class="headerlink" title="剑指 Offer II 049. 从根节点到叶节点的路径数字之和"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/3Etpl5/">剑指 Offer II 049. 从根节点到叶节点的路径数字之和</a></h1><p>给定一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。</p>
-<p>每条从根节点到叶节点的路径都代表一个数字：</p>
-<ul>
-<li>例如，从根节点到叶节点的路径 1 -&gt; 2 -&gt; 3 表示数字 123 。</li>
-</ul>
-<p>计算从根节点到叶节点生成的 所有数字之和 。</p>
-<p>叶节点 是指没有子节点的节点。</p>
-<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021442746.png" alt="image-20220402144256687" style="zoom:50%;" /><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021443997.png" alt="image-20220402144311958" style="zoom:50%;" /></p>
-<p><strong>提示：</strong></p>
-<ul>
-<li>树中节点的数目在范围 <code>[1, 1000]</code> 内</li>
-<li><code>0 &lt;= Node.val &lt;= 9</code></li>
-<li>树的深度不超过 <code>10</code></li>
-</ul>
-<h2 id="我解："><a href="#我解：" class="headerlink" title="我解："></a>我解：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="built_in">display</span>(<span class="number">0</span>, root);</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">display</span><span class="params">(<span class="type">int</span> val, TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            left =  <span class="built_in">display</span>(<span class="number">10</span>*val + root-&gt;val, root-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;right != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            right =  <span class="built_in">display</span>(<span class="number">10</span>*val + root-&gt;val, root-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10</span>*val + root-&gt;val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> res = left + right;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为 <span class="built_in">O</span>(n)。</span><br></pre></td></tr></table></figure>
-
-<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><h3 id="深度优先"><a href="#深度优先" class="headerlink" title="深度优先"></a>深度优先</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(TreeNode* root, <span class="type">int</span> prevSum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = prevSum * <span class="number">10</span> + root-&gt;val;</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">nullptr</span> &amp;&amp; root-&gt;right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> sum;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">dfs</span>(root-&gt;left, sum) + <span class="built_in">dfs</span>(root-&gt;right, sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">dfs</span>(root, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为 <span class="built_in">O</span>(n)。</span><br></pre></td></tr></table></figure>
-
-<h3 id="广度优先"><a href="#广度优先" class="headerlink" title="广度优先"></a>广度优先</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumNumbers</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        queue&lt;TreeNode*&gt; nodeQueue;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; numQueue;</span><br><span class="line">        nodeQueue.<span class="built_in">push</span>(root);</span><br><span class="line">        numQueue.<span class="built_in">push</span>(root-&gt;val);</span><br><span class="line">        <span class="keyword">while</span> (!nodeQueue.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            TreeNode* node = nodeQueue.<span class="built_in">front</span>();</span><br><span class="line">            <span class="type">int</span> num = numQueue.<span class="built_in">front</span>();</span><br><span class="line">            nodeQueue.<span class="built_in">pop</span>();</span><br><span class="line">            numQueue.<span class="built_in">pop</span>();</span><br><span class="line">            TreeNode* left = node-&gt;left;</span><br><span class="line">            TreeNode* right = node-&gt;right;</span><br><span class="line">            <span class="keyword">if</span> (left == <span class="literal">nullptr</span> &amp;&amp; right == <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                sum += num;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (left != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    nodeQueue.<span class="built_in">push</span>(left);</span><br><span class="line">                    numQueue.<span class="built_in">push</span>(num * <span class="number">10</span> + left-&gt;val);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (right != <span class="literal">nullptr</span>) &#123;</span><br><span class="line">                    nodeQueue.<span class="built_in">push</span>(right);</span><br><span class="line">                    numQueue.<span class="built_in">push</span>(num * <span class="number">10</span> + right-&gt;val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">**复杂度分析**</span><br><span class="line"></span><br><span class="line">- 时间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。对每个节点访问一次。</span><br><span class="line"></span><br><span class="line">- 空间复杂度：<span class="built_in">O</span>(n)，其中 n 是二叉树的节点个数。空间复杂度主要取决于队列，每个队列中的元素个数不会超过 n。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="485-最大连续-1-的个数"><a href="#485-最大连续-1-的个数" class="headerlink" title="485. 最大连续 1 的个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/max-consecutive-ones/">485. 最大连续 1 的个数</a></h1><p>给定一个二进制数组 <code>nums</code> ， 计算其中最大连续 <code>1</code> 的个数。</p>
-<p><strong>示例1</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,1,0,1,1,1]</span><br><span class="line">输出：3</span><br><span class="line">解释：开头的两位和最后的三位都是连续 1 ，所以最大连续 1 的个数是 3.</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例2</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,0,1,1,0,1]</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 105</code></li>
-<li><code>nums[i]</code> 不是 <code>0</code> 就是 <code>1</code>.</li>
-</ul>
-<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = nums.<span class="built_in">size</span>() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (temp &gt; max) &#123;</span><br><span class="line">                    max = temp;</span><br><span class="line">                &#125;</span><br><span class="line">                temp = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (temp &gt; max) &#123;</span><br><span class="line">            max = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li>时间复杂度：O(n)，其中 n 是数组的长度。需要遍历数组一次。</li>
-<li>空间复杂度：<em>O</em>(1)。</li>
-</ul>
-<h3 id="错误"><a href="#错误" class="headerlink" title="错误:"></a>错误:</h3><p>没有考虑循环从最长的1出去的情况，也就是少写了20-22</p>
-<h2 id="他解-1"><a href="#他解-1" class="headerlink" title="他解"></a>他解</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">public:</span><br><span class="line">    <span class="built_in">int</span> findMaxConsecutiveOnes(vector&lt;<span class="built_in">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">int</span> maxCount = <span class="number">0</span>, count = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">int</span> n = nums.size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                maxCount = <span class="built_in">max</span>(maxCount, count);</span><br><span class="line">                count = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        maxCount = <span class="built_in">max</span>(maxCount, count);</span><br><span class="line">        <span class="keyword">return</span> maxCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li>时间复杂度：O(n)，其中 n 是数组的长度。需要遍历数组一次。</li>
-<li>空间复杂度：<em>O</em>(1)。</li>
-</ul>
 
       
     </div>
