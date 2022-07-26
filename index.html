@@ -164,18 +164,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,173 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/uncategorized/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/git/" class="post-title-link" itemprop="url">git</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-26 13:54:57 / Modified: 13:56:16" itemprop="dateCreated datePublished" datetime="2022-07-26T13:54:57+08:00">2022-07-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="强行更改分支不改代码"><a href="#强行更改分支不改代码" class="headerlink" title="强行更改分支不改代码"></a>强行更改分支不改代码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git symbolic-ref HEAD refs/heads/otherbranch</span><br></pre></td></tr></table></figure>
+
+<p>If you need to commit on this branch, you’ll want to reset the index too otherwise you’ll end up committing something based on the last checked out branch.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure>
+
+<h1 id="强行提交本地版本覆盖远程版本"><a href="#强行提交本地版本覆盖远程版本" class="headerlink" title="强行提交本地版本覆盖远程版本"></a>强行提交本地版本覆盖远程版本</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch pang origin/pang</span><br></pre></td></tr></table></figure>
+
+<h1 id="Commit-以后想撤回但是不想丢失代码"><a href="#Commit-以后想撤回但是不想丢失代码" class="headerlink" title="Commit 以后想撤回但是不想丢失代码"></a>Commit 以后想撤回但是不想丢失代码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<h1 id="强制同步远程分支"><a href="#强制同步远程分支" class="headerlink" title="强制同步远程分支"></a>强制同步远程分支</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all` 更新所有分支</span><br><span class="line">`git reset --hard origin/master</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/kubenetes/kubenetes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/kubenetes/kubenetes/" class="post-title-link" itemprop="url">kubenetes</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-07-26 13:52:46 / Modified: 13:54:37" itemprop="dateCreated datePublished" datetime="2022-07-26T13:52:46+08:00">2022-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/kubenetes/" itemprop="url" rel="index"><span itemprop="name">kubenetes</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">kubectl version</span><br><span class="line"></span><br><span class="line">kubectl get nodes</span><br><span class="line"></span><br><span class="line">kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1</span><br><span class="line"></span><br><span class="line">kubectl get deployments</span><br><span class="line"></span><br><span class="line">curl http://localhost:8001/api/v1/namespaces/default/pods/<span class="variable">$POD_NAME</span>/</span><br><span class="line"></span><br><span class="line">kubectl describe pods</span><br><span class="line">	</span><br><span class="line">kubectl proxy</span><br><span class="line"></span><br><span class="line">kubectl logs <span class="variable">$POD_NAME</span></span><br><span class="line"></span><br><span class="line">kubectl <span class="built_in">exec</span> <span class="variable">$POD_NAME</span> -- <span class="built_in">env</span></span><br><span class="line"></span><br><span class="line">kubectl <span class="built_in">exec</span> -ti <span class="variable">$POD_NAME</span> -- bash</span><br><span class="line"></span><br><span class="line">kubectl expose deployment/kubernetes-bootcamp --<span class="built_in">type</span>=<span class="string">&quot;NodePort&quot;</span> --port 8080</span><br><span class="line"></span><br><span class="line">kubectl get services</span><br><span class="line"></span><br><span class="line">kubectl describe services/kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">curl $(minikube ip):<span class="variable">$NODE_PORT</span></span><br><span class="line"></span><br><span class="line">kubectl describe deployment</span><br><span class="line"></span><br><span class="line">kubectl get pods -l app=kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">kubectl get services -l app=kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">kubectl label pods <span class="variable">$POD_NAME</span> version=v1</span><br><span class="line"></span><br><span class="line">kubectl describe pods <span class="variable">$POD_NAME</span></span><br><span class="line"></span><br><span class="line">kubectl get pods -l version=v1</span><br><span class="line"></span><br><span class="line">kubectl delete service -l app=kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">kubectl get services</span><br><span class="line"></span><br><span class="line">kubectl <span class="built_in">exec</span> -ti <span class="variable">$POD_NAME</span> -- curl localhost:8080</span><br><span class="line"></span><br><span class="line"><span class="comment">#To see the ReplicaSet created by the Deployment</span></span><br><span class="line">kubectl get rs</span><br><span class="line"></span><br><span class="line"><span class="comment">#scale the Deployment to 4 replicas</span></span><br><span class="line">kubectl scale deployments/kubernetes-bootcamp --replicas=4</span><br><span class="line"></span><br><span class="line">kubectl get pods -o wide</span><br><span class="line"></span><br><span class="line">kubectl get services/kubernetes-bootcamp -o go-template=<span class="string">&#x27;&#123;&#123;(index .spec.ports 0).nodePort&#125;&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">curl $(minikube ip):<span class="variable">$NODE_PORT</span></span><br><span class="line"></span><br><span class="line">kubectl scale deployments/kubernetes-bootcamp --replicas=2</span><br><span class="line"></span><br><span class="line">kubectl <span class="built_in">set</span> image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2</span><br><span class="line"></span><br><span class="line">kubectl rollout status deployments/kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">kubectl rollout undo deployments/kubernetes-bootcamp</span><br><span class="line"></span><br><span class="line">kubectl apply -k </span><br><span class="line"></span><br><span class="line">kubectl patch deployment &#123;image_name&#125; --namespace ai-model-servers --patch-file &#123;fname&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>kubectx kubens </p>
+<p>学习yaml 文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">ccmodel</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">strategy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">RollingUpdate</span></span><br><span class="line">    <span class="attr">rollingUpdate:</span></span><br><span class="line">      <span class="attr">maxUnavailable:</span> <span class="number">0</span></span><br><span class="line">      <span class="attr">maxSurge:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">ccmodel</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">ccmodel</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ccmodel</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">none</span> <span class="comment"># set by Kustomize</span></span><br><span class="line">          <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8000</span></span><br><span class="line">          <span class="attr">envFrom:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">configMapRef:</span></span><br><span class="line">                <span class="attr">name:</span> <span class="string">ccmodel-config</span></span><br><span class="line">          <span class="attr">volumeMounts:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">mountPath:</span> <span class="string">&quot;/mnt/storage&quot;</span></span><br><span class="line">              <span class="attr">name:</span> <span class="string">volume</span></span><br><span class="line">          <span class="attr">livenessProbe:</span></span><br><span class="line">            <span class="attr">httpGet:</span></span><br><span class="line">              <span class="attr">path:</span> <span class="string">/hc</span></span><br><span class="line">              <span class="attr">port:</span> <span class="number">8000</span></span><br><span class="line">          <span class="attr">startupProbe:</span></span><br><span class="line">            <span class="attr">httpGet:</span></span><br><span class="line">              <span class="attr">path:</span> <span class="string">/hc</span></span><br><span class="line">              <span class="attr">port:</span> <span class="number">8000</span></span><br><span class="line">            <span class="attr">failureThreshold:</span> <span class="number">50</span></span><br><span class="line">            <span class="attr">periodSeconds:</span> <span class="number">20</span></span><br><span class="line">          <span class="attr">resources:</span></span><br><span class="line">            <span class="attr">requests:</span></span><br><span class="line">              <span class="attr">memory:</span> <span class="string">&quot;30Gi&quot;</span></span><br><span class="line">              <span class="comment">#cpu: &quot;200m&quot;</span></span><br><span class="line">            <span class="attr">limits:</span></span><br><span class="line"><span class="comment">#              memory: &quot;8Gi&quot;</span></span><br><span class="line">              <span class="attr">nvidia.com/gpu:</span> <span class="number">1</span></span><br><span class="line">              <span class="comment">#cpu: &quot;400m&quot;</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">volume</span></span><br><span class="line">          <span class="attr">persistentVolumeClaim:</span></span><br><span class="line">            <span class="attr">claimName:</span> <span class="string">none</span> <span class="comment"># Set by Kustomize</span></span><br><span class="line">      <span class="attr">tolerations:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">key:</span> <span class="string">&quot;sku&quot;</span></span><br><span class="line">          <span class="attr">operator:</span> <span class="string">&quot;Equal&quot;</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">&quot;gpu&quot;</span></span><br><span class="line">          <span class="attr">effect:</span> <span class="string">&quot;NoSchedule&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">key:</span> <span class="string">&quot;gpu&quot;</span></span><br><span class="line">          <span class="attr">operator:</span> <span class="string">&quot;Equal&quot;</span></span><br><span class="line">          <span class="attr">value:</span> <span class="string">&quot;t4&quot;</span></span><br><span class="line">          <span class="attr">effect:</span> <span class="string">&quot;NoSchedule&quot;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -3189,206 +3356,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/" class="post-title-link" itemprop="url">python转换业余无线电题库为anki记忆卡</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-12 11:33:35 / Modified: 11:34:28" itemprop="dateCreated datePublished" datetime="2022-04-12T11:33:35+08:00">2022-04-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ham/" itemprop="url" rel="index"><span itemprop="name">ham</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文本转anki记忆卡</p>
-<p>文本是这样的: A是答案</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[I]LK0001</span><br><span class="line">[Q]我国现行法律体系中专门针对无线电管理的最高法律文件及其立法机关是：</span><br><span class="line">[A]中华人民共和国无线电管理条例，国务院和中央军委</span><br><span class="line">[B]中华人民共和国无线电管理办法，工业和信息化部</span><br><span class="line">[C]中华人民共和国电信条例，国务院</span><br><span class="line">[D]中华人民共和国业余无线电台管理办法，工业和信息化部</span><br><span class="line">[P]</span><br></pre></td></tr></table></figure>
-
-<p>需要改成答案随机的，能anki导入的，这样：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[I]LK0001&lt;br&gt;[Q]我国现行法律体系中专门针对无线电管理的最高法律文件及其立法机关是：&lt;br&gt;[A]中华人民共和国电信条例，国务院&lt;br&gt;[B]中华人民共和国无线电管理条例，国务院和中央军委&lt;br&gt;[C]中华人民共和国业余无线电台管理办法，工业和信息化部&lt;br&gt;[D]中华人民共和国无线电管理办法，工业和信息化部&lt;br&gt;;[B]中华人民共和国无线电管理条例，国务院和中央军委</span><br></pre></td></tr></table></figure>
-
-<p>不想一次都导入了，暂时只用A类，所以先把代码留下:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span> = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]</span><br><span class="line">c = <span class="number">0</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;hamData.txt&quot;</span>,<span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> o:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;data.txt&quot;</span>,<span class="string">&quot;w&quot;</span>,encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> inp:</span><br><span class="line">        data = o.readline()</span><br><span class="line">        <span class="keyword">while</span>(data):</span><br><span class="line">            answer = <span class="string">&quot;&quot;</span></span><br><span class="line">            temp = data[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span></span><br><span class="line">            temp += o.readline()[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span></span><br><span class="line">            t = []</span><br><span class="line">            ti = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">                t.append(o.readline()[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line">            count = <span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> count &lt; <span class="number">4</span>:</span><br><span class="line">                i = random.randint(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line">                <span class="keyword">if</span> ti[i] == <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">                        answer = <span class="string">&quot;[&quot;</span> + <span class="built_in">str</span>(<span class="built_in">map</span>[count]) + t[i][<span class="number">2</span>:]</span><br><span class="line">                        c += <span class="number">1</span></span><br><span class="line">                    te = <span class="string">&quot;[&quot;</span> + <span class="built_in">str</span>(<span class="built_in">map</span>[count]) + t[i][<span class="number">2</span>:]</span><br><span class="line">                    temp += te</span><br><span class="line">                    count += <span class="number">1</span></span><br><span class="line">                    ti[i] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">                o.readline()</span><br><span class="line">            temp+=<span class="string">&quot;;&quot;</span>+answer[:-<span class="number">4</span>]+<span class="string">&quot;\n&quot;</span></span><br><span class="line">            inp.write(temp)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(answer) == <span class="number">5</span>:</span><br><span class="line">                inp.write(<span class="number">10</span>*<span class="string">&quot;\n&quot;</span>+answer+<span class="number">5</span>*<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">                answer = <span class="string">&quot;&quot;</span></span><br><span class="line">            data = o.readline()</span><br><span class="line"><span class="built_in">print</span>(c)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%AE%97%E6%B3%95/%E7%BB%9F%E8%AE%A1%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%E9%83%BD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97%E4%B8%AA%E6%95%B0/" class="post-title-link" itemprop="url">统计各位数字都不同的数字个数</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-11 11:09:13 / Modified: 11:10:03" itemprop="dateCreated datePublished" datetime="2022-04-11T11:09:13+08:00">2022-04-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="357-统计各位数字都不同的数字个数"><a href="#357-统计各位数字都不同的数字个数" class="headerlink" title="357. 统计各位数字都不同的数字个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-numbers-with-unique-digits/">357. 统计各位数字都不同的数字个数</a></h1><p>给你一个整数 <code>n</code> ，统计并返回各位数字都不同的数字 <code>x</code> 的个数，其中 <code>0 &lt;= x &lt; 10n</code> 。</p>
-<p><strong>示例1：</strong></p>
-<blockquote>
-<p><strong>输入：</strong> n &#x3D; 2</p>
-<p><strong>输出：</strong>91</p>
-<p><strong>解释：</strong>答案应为除去 11、22、33、44、55、66、77、88、99 外，在 0 ≤ x &lt; 100 范围内的所有数字。 </p>
-</blockquote>
-<p><strong>示例2：</strong></p>
-<blockquote>
-<p><strong>输入：</strong>n&#x3D;0</p>
-<p><strong>输出：</strong>1</p>
-</blockquote>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>0 &lt;= n &lt;=8</code></li>
-</ul>
-<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><p>先求有9位不以零开头的，再把没加上的依次加上，典型的有000 010 001</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> dontStartWithZero = <span class="built_in">A</span>(<span class="number">9</span>,<span class="number">10</span>, <span class="number">11</span> - n);</span><br><span class="line">        <span class="type">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">            temp += <span class="built_in">A</span>(<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>-i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dontStartWithZero + temp;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">A</span><span class="params">(<span class="type">int</span> start,<span class="type">int</span> foot,<span class="type">int</span> head)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = foot<span class="number">-1</span>; i &gt;= head; i--) &#123;</span><br><span class="line">            res *= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="built_in">Solution</span>().<span class="built_in">countNumbersWithUniqueDigits</span>(<span class="number">2</span>);</span><br><span class="line">    std::cout &lt;&lt; sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">10</span>, cur = <span class="number">9</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; ++i) &#123;</span><br><span class="line">            cur *= <span class="number">9</span> - i;</span><br><span class="line">            ans += cur;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><p>找规律，除了n&#x3D;&#x3D;0的情况，其他位数的数字数就是<code>9*A(9)(n-1)</code>：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">@可爱抱抱呀</span></span><br><span class="line"><span class="comment">执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</span></span><br><span class="line"><span class="comment">内存消耗：37.9 MB, 在所有 Java 提交中击败了67.75%的用户</span></span><br><span class="line"><span class="comment">2022年4月8日 16:43</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">countNumbersWithUniqueDigits</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="number">1</span>;&#125;</span><br><span class="line">        <span class="type">int</span> count=<span class="number">9</span>,ans=<span class="number">9</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            count*=(<span class="number">11</span>-i);</span><br><span class="line">            ans+=count;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>+ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="趣解"><a href="#趣解" class="headerlink" title="趣解"></a>趣解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">func <span class="title">countNumbersWithUniqueDigits</span><span class="params">(n <span class="type">int</span>)</span> <span class="type">int</span> </span>&#123;</span><br><span class="line">	res := []<span class="type">int</span>&#123;<span class="number">1</span>,<span class="number">10</span>,<span class="number">91</span>,<span class="number">739</span>,<span class="number">5275</span>,<span class="number">32491</span>,<span class="number">168571</span>,<span class="number">712891</span>,<span class="number">2345851</span>&#125;</span><br><span class="line">	<span class="keyword">return</span> res[n]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
