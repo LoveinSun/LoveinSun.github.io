@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,90 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/Unity/%E7%9A%84Base64%E7%BC%96%E7%A0%81%E8%BD%ACAudioClip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Unity/%E7%9A%84Base64%E7%BC%96%E7%A0%81%E8%BD%ACAudioClip/" class="post-title-link" itemprop="url">WAV/MP3的Base64编码转AudioClip</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-15 14:45:30 / Modified: 14:47:28" itemprop="dateCreated datePublished" datetime="2022-04-15T14:45:30+08:00">2022-04-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Unity/" itemprop="url" rel="index"><span itemprop="name">Unity</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="WAV-x2F-MP3-的Base64编码转AudioClip"><a href="#WAV-x2F-MP3-的Base64编码转AudioClip" class="headerlink" title="WAV&#x2F;MP3 的Base64编码转AudioClip"></a>WAV&#x2F;MP3 的Base64编码转AudioClip</h1><p>代码过于好用，收藏一下</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> NAudio;</span><br><span class="line"><span class="keyword">using</span> NAudio.Wave;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">NAudioPlayer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> AudioClip <span class="title">FromWavData</span>(<span class="params"><span class="built_in">byte</span>[] buffer</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 转换mp3格式的代码</span></span><br><span class="line">        <span class="comment">//MemoryStream mp3stream = new MemoryStream(buffer);</span></span><br><span class="line">        <span class="comment">// Convert the data in the stream to WAV format</span></span><br><span class="line">        <span class="comment">//Mp3FileReader mp3audio = new Mp3FileReader(mp3stream);</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//转换wave格式的代码</span></span><br><span class="line">        MemoryStream wavstream = <span class="keyword">new</span> MemoryStream(buffer);</span><br><span class="line">        WaveFileReader waveAudio = <span class="keyword">new</span> WaveFileReader(wavstream);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">        WaveStream waveStream = WaveFormatConversionStream.CreatePcmStream(waveAudio);</span><br><span class="line">       </span><br><span class="line">        <span class="comment">// Convert to WAV data</span></span><br><span class="line">        WAV wav = <span class="keyword">new</span> WAV(AudioMemStream(waveStream).ToArray());</span><br><span class="line">        Debug.Log(wav);</span><br><span class="line">        AudioClip audioClip = AudioClip.Create(<span class="string">&quot;testSound&quot;</span>, wav.SampleCount, <span class="number">1</span>, wav.Frequency, <span class="literal">false</span>);</span><br><span class="line">        audioClip.SetData(wav.LeftChannel, <span class="number">0</span>);</span><br><span class="line">        <span class="comment">// Return the clip</span></span><br><span class="line">        <span class="keyword">return</span> audioClip;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> MemoryStream <span class="title">AudioMemStream</span>(<span class="params">WaveStream waveStream</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        MemoryStream outputStream = <span class="keyword">new</span> MemoryStream();</span><br><span class="line">        <span class="keyword">using</span> (WaveFileWriter waveFileWriter = <span class="keyword">new</span> WaveFileWriter(outputStream, waveStream.WaveFormat))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">byte</span>[] bytes = <span class="keyword">new</span> <span class="built_in">byte</span>[waveStream.Length];</span><br><span class="line">            waveStream.Position = <span class="number">0</span>;</span><br><span class="line">            waveStream.Read(bytes, <span class="number">0</span>, Convert.ToInt32(waveStream.Length));</span><br><span class="line">            waveFileWriter.Write(bytes, <span class="number">0</span>, bytes.Length);</span><br><span class="line">            waveFileWriter.Flush();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> outputStream;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">WAV</span></span><br><span class="line">&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// convert two bytes to one float in the range -1 to 1</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="built_in">float</span> <span class="title">bytesToFloat</span>(<span class="params"><span class="built_in">byte</span> firstByte, <span class="built_in">byte</span> secondByte</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// convert two bytes to one short (little endian)</span></span><br><span class="line">        <span class="built_in">short</span> s = (<span class="built_in">short</span>)((secondByte &lt;&lt; <span class="number">8</span>) | firstByte);</span><br><span class="line">        <span class="comment">// convert to range from -1 to (just below) 1</span></span><br><span class="line">        <span class="keyword">return</span> s / <span class="number">32768.0F</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="built_in">int</span> <span class="title">bytesToInt</span>(<span class="params"><span class="built_in">byte</span>[] bytes, <span class="built_in">int</span> offset = <span class="number">0</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">int</span> <span class="keyword">value</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">value</span> |= ((<span class="built_in">int</span>)bytes[offset + i]) &lt;&lt; (i * <span class="number">8</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">value</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// properties</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span>[] LeftChannel &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span>[] RightChannel &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> ChannelCount &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> SampleCount &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> Frequency &#123; <span class="keyword">get</span>; <span class="keyword">internal</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WAV</span>(<span class="params"><span class="built_in">byte</span>[] wav</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Determine if mono or stereo</span></span><br><span class="line">        ChannelCount = wav[<span class="number">22</span>];     <span class="comment">// Forget byte 23 as 99.999% of WAVs are 1 or 2 channels</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Get the frequency</span></span><br><span class="line">        Frequency = bytesToInt(wav, <span class="number">24</span>);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Get past all the other sub chunks to get to the data subchunk:</span></span><br><span class="line">        <span class="built_in">int</span> pos = <span class="number">12</span>;   <span class="comment">// First Subchunk ID from 12 to 16</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Keep iterating until we find the data chunk (i.e. 64 61 74 61 ...... (i.e. 100 97 116 97 in decimal))</span></span><br><span class="line">        <span class="keyword">while</span> (!(wav[pos] == <span class="number">100</span> &amp;&amp; wav[pos + <span class="number">1</span>] == <span class="number">97</span> &amp;&amp; wav[pos + <span class="number">2</span>] == <span class="number">116</span> &amp;&amp; wav[pos + <span class="number">3</span>] == <span class="number">97</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            pos += <span class="number">4</span>;</span><br><span class="line">            <span class="built_in">int</span> chunkSize = wav[pos] + wav[pos + <span class="number">1</span>] * <span class="number">256</span> + wav[pos + <span class="number">2</span>] * <span class="number">65536</span> + wav[pos + <span class="number">3</span>] * <span class="number">16777216</span>;</span><br><span class="line">            pos += <span class="number">4</span> + chunkSize;</span><br><span class="line">        &#125;</span><br><span class="line">        pos += <span class="number">8</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Pos is now positioned to start of actual sound data.</span></span><br><span class="line">        SampleCount = (wav.Length - pos) / <span class="number">2</span>;     <span class="comment">// 2 bytes per sample (16 bit sound mono)</span></span><br><span class="line">        <span class="keyword">if</span> (ChannelCount == <span class="number">2</span>) SampleCount /= <span class="number">2</span>;        <span class="comment">// 4 bytes per sample (16 bit stereo)</span></span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Allocate memory (right will be null if only mono sound)</span></span><br><span class="line">        LeftChannel = <span class="keyword">new</span> <span class="built_in">float</span>[SampleCount];</span><br><span class="line">        <span class="keyword">if</span> (ChannelCount == <span class="number">2</span>) RightChannel = <span class="keyword">new</span> <span class="built_in">float</span>[SampleCount];</span><br><span class="line">        <span class="keyword">else</span> RightChannel = <span class="literal">null</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// Write to double array/s:</span></span><br><span class="line">        <span class="built_in">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (pos &lt; wav.Length)</span><br><span class="line">        &#123;</span><br><span class="line">            LeftChannel[i] = bytesToFloat(wav[pos], wav[pos + <span class="number">1</span>]);</span><br><span class="line">            pos += <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (ChannelCount == <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                RightChannel[i] = bytesToFloat(wav[pos], wav[pos + <span class="number">1</span>]);</span><br><span class="line">                pos += <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">string</span> <span class="title">ToString</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">string</span>.Format(<span class="string">&quot;[WAV: LeftChannel=&#123;0&#125;, RightChannel=&#123;1&#125;, ChannelCount=&#123;2&#125;, SampleCount=&#123;3&#125;, Frequency=&#123;4&#125;]&quot;</span>, LeftChannel, RightChannel, ChannelCount, SampleCount, Frequency);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1080,86 +1164,6 @@
 
 <h2 id="优解"><a href="#优解" class="headerlink" title="优解"></a>优解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">degree</span><span class="params">(n)</span></span>;   <span class="comment">//每个节点对应的度数</span></span><br><span class="line">        map&lt;<span class="type">int</span>,vector&lt;<span class="type">int</span>&gt;&gt; m;  <span class="comment">//邻接表</span></span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res; <span class="comment">//结果</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;edges.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            <span class="type">int</span> u=edges[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> v=edges[i][<span class="number">1</span>];</span><br><span class="line">            degree[u]++;</span><br><span class="line">            degree[v]++;</span><br><span class="line">            m[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">            m[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">        &#125;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="comment">//把叶子节点入栈</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">            <span class="keyword">if</span>(degree[i]==<span class="number">1</span>)</span><br><span class="line">                q.<span class="built_in">push</span>(i);</span><br><span class="line">        <span class="comment">//从外向内一层一层剥，每次加入的都是一层的</span></span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            res.<span class="built_in">clear</span>();</span><br><span class="line">            <span class="type">int</span> sz=q.<span class="built_in">size</span>();</span><br><span class="line">            <span class="comment">//一层全部加入结果并且清出去</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;sz;i++)&#123;</span><br><span class="line">                <span class="type">int</span> t=q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                res.<span class="built_in">push_back</span>(t);</span><br><span class="line">                <span class="comment">//加入t的邻接叶子节点</span></span><br><span class="line">                degree[t]--;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">auto</span> j:m[t])&#123;</span><br><span class="line">                    degree[j]--;</span><br><span class="line">                    <span class="keyword">if</span>(degree[j]==<span class="number">1</span>)</span><br><span class="line">                        q.<span class="built_in">push</span>(j);</span><br><span class="line">                &#125;    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/" class="post-title-link" itemprop="url">1比0多的子数组数目</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-02 16:50:14 / Modified: 16:52:14" itemprop="dateCreated datePublished" datetime="2022-04-02T16:50:14+08:00">2022-04-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="2031-1-比-0-多的子数组个数"><a href="#2031-1-比-0-多的子数组个数" class="headerlink" title="2031. 1 比 0 多的子数组个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-subarrays-with-more-ones-than-zeros/">2031. 1 比 0 多的子数组个数</a></h1><p>此题败北，思路是总子数组数量减都为0的子数组数量，结果没有去掉重复元素</p>
-<p>当然leetcode不能只刷自己会的，然而现在状态是在太差，脑袋晕乎乎的，所以所以先粘上去等以后状态好时再捡回来做。当然明白这是flag，，，，但是不妨探索一下学习方法再认识一下自己的废物程度</p>
 
       
     </div>
