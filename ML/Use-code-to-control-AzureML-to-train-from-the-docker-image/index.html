@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"juggler.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Use code to control AzureML to train from the docker imageGoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use code to control AzureML to train from the docker image">
+<meta property="og:url" content="https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/index.html">
+<meta property="og:site_name" content="JugglerDancing">
+<meta property="og:description" content="Use code to control AzureML to train from the docker imageGoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need:">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-11T07:35:01.000Z">
+<meta property="article:modified_time" content="2022-08-11T07:36:11.864Z">
+<meta property="article:author" content="Juggler">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="ML">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/","path":"ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/","title":"Use code to control AzureML to train from the docker image"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Use code to control AzureML to train from the docker image | JugglerDancing</title>
+  
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" integrity="sha256-6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" integrity="sha256-uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=" crossorigin="anonymous" />
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/music.js"></script>
+	<div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">JugglerDancing</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Juggler is dancing</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Use-code-to-control-AzureML-to-train-from-the-docker-image"><span class="nav-number">1.</span> <span class="nav-text">Use code to control AzureML to train from the docker image</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Goal"><span class="nav-number">1.1.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#need"><span class="nav-number">1.2.</span> <span class="nav-text">need:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logic"><span class="nav-number">1.3.</span> <span class="nav-text">logic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Features"><span class="nav-number">1.4.</span> <span class="nav-text">Features</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ServicePrincipalAuthentication"><span class="nav-number">1.4.1.</span> <span class="nav-text">ServicePrincipalAuthentication</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WorkSpace"><span class="nav-number">1.4.2.</span> <span class="nav-text">WorkSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">1.4.3.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experiment"><span class="nav-number">1.4.4.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Datastore"><span class="nav-number">1.4.5.</span> <span class="nav-text">Datastore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Code"><span class="nav-number">1.4.6.</span> <span class="nav-text">Main Code</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Juggler"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Juggler</p>
+  <div class="site-description" itemprop="description">吾之生命如流星，誓要从全世界路过。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Use code to control AzureML to train from the docker image | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Use code to control AzureML to train from the docker image<a href="https://github.com/LoveinSun/LoveinSun.github.io/tree/master_posts/Use-code-to-control-AzureML-to-train-from-the-docker-image.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-08-11 15:35:01 / Modified: 15:36:11" itemprop="dateCreated datePublished" datetime="2022-08-11T15:35:01+08:00">2022-08-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Use-code-to-control-AzureML-to-train-from-the-docker-image"><a href="#Use-code-to-control-AzureML-to-train-from-the-docker-image" class="headerlink" title="Use code to control AzureML to train from the docker image"></a>Use code to control AzureML to train from the docker image</h1><h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p>We can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier.</p>
+<h2 id="need"><a href="#need" class="headerlink" title="need:"></a>need:</h2><ul>
+<li>base model file</li>
+<li>tags for it [optional], give some information about it</li>
+<li>Azure storage accounts</li>
+<li>useful class:<ul>
+<li>WorkSpace</li>
+<li>Datastore</li>
+<li>ScriptRunConfig</li>
+<li>Experiment</li>
+<li>Environment</li>
+<li>ServicePrincipalAuthentication</li>
+</ul>
+</li>
+</ul>
+<h2 id="logic"><a href="#logic" class="headerlink" title="logic"></a>logic</h2><p>The model file and training data and any other possible data will be in azure storage, when we use the Azure ML to train something, azure will get the code from image and get data from Azure Storage, then it will train them on the compute cluster created by us.</p>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="ServicePrincipalAuthentication"><a href="#ServicePrincipalAuthentication" class="headerlink" title="ServicePrincipalAuthentication"></a>ServicePrincipalAuthentication</h3><p>Used to auth for WorkSpace</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/azure/developer/java/sdk/identity-service-principal-auth#create-a-service-principal-with-the-azure-cli">create</a></p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> azureml.core.authentication <span class="keyword">import</span> ServicePrincipalAuthentication</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_service_principal</span>():</span><br><span class="line">    sp = ServicePrincipalAuthentication(</span><br><span class="line">        tenant_id=CONFIG.tenant_id,</span><br><span class="line">        service_principal_id=CONFIG.service_principal_id,</span><br><span class="line">        service_principal_password=CONFIG.service_principal_password,</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> sp</span><br></pre></td></tr></table></figure>
+
+<h3 id="WorkSpace"><a href="#WorkSpace" class="headerlink" title="WorkSpace"></a>WorkSpace</h3><p><a href="docs.microsoft.com/en-us/azure/machine-learning/how-to-manage-workspace-cli">create</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> azureml.core <span class="keyword">import</span>  Workspace</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_workspace</span>():</span><br><span class="line">    sp = get_service_principal()</span><br><span class="line">    ws = Workspace(</span><br><span class="line">        subscription_id=CONFIG.azureml_subscription_id,</span><br><span class="line">        resource_group=CONFIG.azureml_resource_group,</span><br><span class="line">        workspace_name=CONFIG.azureml_workspace_name,</span><br><span class="line">        auth=sp,</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> ws</span><br></pre></td></tr></table></figure>
+
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-manage-environments-in-studio">create</a></p>
+<p>Or use azure cli:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az ml environment create -g &#123;&#125; -w &#123;&#125; --image &#123;&#125;:latest --name &#123;&#125;-<span class="built_in">env</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> azureml.core <span class="keyword">import</span> Environment</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_environment</span>(<span class="params">environment_name: <span class="built_in">str</span></span>):</span><br><span class="line">    ws = get_workspace()</span><br><span class="line">    env = Environment.get(</span><br><span class="line">        workspace=ws,</span><br><span class="line">        name=environment_name,</span><br><span class="line">    )</span><br><span class="line">    env.docker.base_image_registry.address = CONFIG.container_registry_address</span><br><span class="line">    env.docker.base_image_registry.username = CONFIG.container_registry_username</span><br><span class="line">    env.docker.base_image_registry.password = CONFIG.container_registry_password</span><br><span class="line">    <span class="keyword">return</span> env</span><br></pre></td></tr></table></figure>
+
+<h3 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h3><p>If the experiment does not exist it will be created automatically in my test.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> azureml.core <span class="keyword">import</span> Experiment</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_experiment</span>(<span class="params">experiment_name: <span class="built_in">str</span></span>):</span><br><span class="line">    ws = get_workspace()</span><br><span class="line">    exp = Experiment(</span><br><span class="line">        workspace=ws,</span><br><span class="line">        name=experiment_name,</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> exp</span><br></pre></td></tr></table></figure>
+
+<h3 id="Datastore"><a href="#Datastore" class="headerlink" title="Datastore"></a>Datastore</h3><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/cli/azure/ml/datastore?view=azure-cli-latest">create</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> azureml.core <span class="keyword">import</span> DataSource</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_datastore_model_reference</span>(<span class="params">datastore_name: <span class="built_in">str</span>, datastore_file_path: <span class="built_in">str</span></span>):</span><br><span class="line">    ws = get_workspace()</span><br><span class="line">    datastore = Datastore.get(ws, datastore_name=datastore_name)</span><br><span class="line">    model_data_ref = datastore.path(datastore_file_path).as_mount()</span><br><span class="line">    <span class="keyword">return</span> model_data_ref</span><br></pre></td></tr></table></figure>
+
+<p>This will convert a path of azure storage to a symbol, you can use the symbol to quote the path in ScriptRunConfig.</p>
+<h3 id="Main-Code"><a href="#Main-Code" class="headerlink" title="Main Code"></a>Main Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">model_dir_ref = get_datastore_model_reference(</span><br><span class="line">        datastore_name=ds_name,</span><br><span class="line">        datastore_file_path=<span class="string">f&quot;<span class="subst">&#123;base_model_dir&#125;</span>&quot;</span> </span><br><span class="line">    )</span><br><span class="line">script_run_config = ScriptRunConfig(</span><br><span class="line">        source_directory=<span class="string">&quot;.&quot;</span>,</span><br><span class="line">        command=[</span><br><span class="line">            <span class="string">&quot;cd&quot;</span>,</span><br><span class="line">            <span class="string">&quot;/src&quot;</span>,</span><br><span class="line">            <span class="string">&quot;&amp;&amp;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;python&quot;</span>,</span><br><span class="line">            <span class="string">&quot;train.py&quot;</span>,</span><br><span class="line">            <span class="string">f&#x27;&quot;<span class="subst">&#123;<span class="built_in">str</span>(model_dir_ref)&#125;</span>&quot;&#x27;</span>,</span><br><span class="line">            <span class="string">f&#x27;&quot;<span class="subst">&#123;<span class="built_in">str</span>(input_file_ref)&#125;</span>&quot;&#x27;</span>,</span><br><span class="line">            <span class="string">f&#x27;&quot;<span class="subst">&#123;<span class="built_in">str</span>(output_dir_ref)&#125;</span>&quot;&#x27;</span></span><br><span class="line"></span><br><span class="line">        ],</span><br><span class="line">        environment=get_environment(<span class="string">&quot;ure-l2-train-training-env&quot;</span>),</span><br><span class="line">        compute_target=CONFIG.compute_target,</span><br><span class="line">    )</span><br><span class="line">script_run_config.run_config.data_references = &#123;</span><br><span class="line">        model_dir_ref.data_reference_name: model_dir_ref.to_config()</span><br><span class="line">    &#125;</span><br><span class="line">experiment = get_experiment(<span class="string">&quot;experiment_name&quot;</span>)</span><br><span class="line">run = experiment.submit(script_run_config)</span><br><span class="line">run.display_name = <span class="string">&quot;&quot;</span></span><br><span class="line">tags = &#123;</span><br><span class="line">    <span class="string">&quot;userId&quot;</span>:<span class="string">&quot;1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;name&quot;</span>:<span class="string">&quot;a&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">run.set_tags(tags)</span><br><span class="line"><span class="keyword">return</span> run.get_portal_url()</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/ML/" rel="tag"># ML</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/blackboard/blackboard/" rel="prev" title="blackboard">
+                  <i class="fa fa-chevron-left"></i> blackboard
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">冀ICP备2021011397号-1 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Juggler</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.12.1/dist/algoliasearch-lite.umd.js" integrity="sha256-gOvJ6W+j+t/cgnnl9iUU3cb6F1WFQGDdtTXhfPjU4bc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.39.0/dist/instantsearch.production.min.js" integrity="sha256-+ZlQZK9m82XOYGFZCIRrPOFh2kDdAGB6e7TjWGvoaSY=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js","integrity":"sha256-7wT34TI0pEBeEFoi4z+vhuSddGh6vUTMWdqJ2SDe2jg="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"LoveinSun","repo":"blog-comment","client_id":"40e1002206dc11748978","client_secret":"027043262cdf608cfa6b1c20173bc245b1cff702","admin_user":"LoveinSun","distraction_free_mode":true,"proxy":"https://proxy.juggler.fun:9013/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f3895d01ad7bbb3545cc5ecb634625cb"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/nacos/fastapi-nacos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/nacos/fastapi-nacos/" class="post-title-link" itemprop="url">fastapi nacos</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-23 10:25:44 / Modified: 11:26:29" itemprop="dateCreated datePublished" datetime="2022-03-23T10:25:44+08:00">2022-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/nacos/" itemprop="url" rel="index"><span itemprop="name">nacos</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nacos_py</span><br><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line"><span class="keyword">import</span> yaml</span><br><span class="line"><span class="keyword">from</span> munch <span class="keyword">import</span> munchify</span><br><span class="line"><span class="keyword">from</span> starlette.requests <span class="keyword">import</span> Request</span><br><span class="line"><span class="keyword">from</span> starlette.responses <span class="keyword">import</span> Response</span><br><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line"> </span><br><span class="line">sys.tracebacklimit = <span class="number">3</span>  <span class="comment"># 限制打印错误行数</span></span><br><span class="line"><span class="comment"># 首先配置application.properties中nacos.core.auth.enabled=true</span></span><br><span class="line"><span class="comment"># 配置nacos 用户-角色-权限</span></span><br><span class="line"> </span><br><span class="line">app = FastAPI()</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># async def catch_exceptions_middleware(request: Request, call_next):</span></span><br><span class="line"><span class="comment">#     try:</span></span><br><span class="line"><span class="comment">#         return await call_next(request)</span></span><br><span class="line"><span class="comment">#     except Exception as e:</span></span><br><span class="line"><span class="comment">#         # print(e)</span></span><br><span class="line"><span class="comment">#         # print(traceback.format_list())</span></span><br><span class="line"><span class="comment">#         return Response(&quot;Internal server error&quot;, status_code=500)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># app.middleware(&#x27;http&#x27;)(catch_exceptions_middleware)</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">@app.exception_handler(<span class="params">Exception</span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">custom_http_exception_handler</span>(<span class="params">request, exc</span>):</span><br><span class="line">    <span class="keyword">return</span> Response(<span class="string">&quot;Internal server exception&quot;</span>, status_code=<span class="number">500</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">@app.exception_handler(<span class="params">ZeroDivisionError</span>)  </span><span class="comment"># 统一处理某些错误</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">custom_http_exception_handler</span>(<span class="params">request, exc</span>):</span><br><span class="line">    <span class="keyword">return</span> Response(<span class="string">&quot;Internal server error&quot;</span>, status_code=<span class="number">500</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">nacos</span>:</span><br><span class="line">    SERVER_ADDRESSES = <span class="string">&quot;127.0.0.1:8845&quot;</span></span><br><span class="line">    NAMESPACE = <span class="string">&quot;public&quot;</span></span><br><span class="line">    client = nacos_py.NacosClient(SERVER_ADDRESSES, namespace=NAMESPACE, username=<span class="string">&quot;pang&quot;</span>, password=<span class="string">&quot;pang&quot;</span>)</span><br><span class="line">    data_id = <span class="string">&quot;testDataId&quot;</span></span><br><span class="line">    group = <span class="string">&quot;testGroup&quot;</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">add_watcher</span>(<span class="params">self, methods</span>):</span><br><span class="line">        self.client.add_config_watchers(self.data_id, self.group, methods)</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_config</span>(<span class="params">self, data_id=<span class="literal">None</span>, group=<span class="literal">None</span></span>):</span><br><span class="line">        <span class="keyword">if</span> data_id <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            data_id = self.data_id</span><br><span class="line">        <span class="keyword">if</span> group <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            group = self.group</span><br><span class="line">        confi = self.client.get_config(data_id, group)</span><br><span class="line">        confi = yaml.safe_load(confi)</span><br><span class="line">        core_config = munchify(confi)</span><br><span class="line">        <span class="built_in">print</span>(core_config)</span><br><span class="line">        <span class="keyword">return</span> confi</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">call</span>(<span class="params">args</span>):</span><br><span class="line">    <span class="keyword">global</span> config</span><br><span class="line">    config = a.get_config()</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">a = nacos()</span><br><span class="line">config = a.get_config()</span><br><span class="line">a.add_watcher(&#123;call&#125;)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/print&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">root</span>():</span><br><span class="line">    var = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;message&quot;</span>: config&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/prin&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">root</span>():</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;message&quot;</span>: config&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
