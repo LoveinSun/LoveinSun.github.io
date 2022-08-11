@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://juggler.fun/uncategorized/git/</loc>
+    
+    <lastmod>2022-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/</loc>
     
     <lastmod>2022-08-11</lastmod>
@@ -93,15 +102,6 @@
   
   <url>
     <loc>https://juggler.fun/%E7%AE%97%E6%B3%95/C/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%89%AA%E6%9E%9D/</loc>
-    
-    <lastmod>2022-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/uncategorized/git/</loc>
     
     <lastmod>2022-07-26</lastmod>
     
@@ -537,6 +537,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/NLP/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/data/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -558,7 +565,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/NLP/</loc>
+    <loc>https://juggler.fun/tags/java/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -579,14 +586,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/java/</loc>
-    <lastmod>2022-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/blackboard/</loc>
+    <loc>https://juggler.fun/tags/algorithm/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -621,14 +621,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/js/</loc>
+    <loc>https://juggler.fun/tags/kubenetes/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/kubenetes/</loc>
+    <loc>https://juggler.fun/tags/js/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -642,13 +642,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/azure/</loc>
-    <lastmod>2022-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/ham/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -656,7 +649,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/windows/</loc>
+    <loc>https://juggler.fun/tags/azure/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -664,6 +657,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/ssh/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/windows/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -712,14 +712,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/algorithm/</loc>
+    <loc>https://juggler.fun/tags/joy/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/joy/</loc>
+    <loc>https://juggler.fun/tags/blackboard/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -749,6 +749,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/categories/NLP/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/data/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -770,20 +777,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/NLP/</loc>
-    <lastmod>2022-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/categories/python/</loc>
-    <lastmod>2022-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/tools/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -798,6 +791,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/categories/python/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/ML/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -805,7 +805,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/blackboard/</loc>
+    <loc>https://juggler.fun/categories/algorithm/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -826,14 +826,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/js/</loc>
+    <loc>https://juggler.fun/categories/kubenetes/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/kubenetes/</loc>
+    <loc>https://juggler.fun/categories/js/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -882,14 +882,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/algorithm/</loc>
+    <loc>https://juggler.fun/categories/joy/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/joy/</loc>
+    <loc>https://juggler.fun/categories/blackboard/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
