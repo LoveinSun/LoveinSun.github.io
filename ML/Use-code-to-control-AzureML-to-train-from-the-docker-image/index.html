@@ -23,15 +23,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"juggler.fun","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Use code to control AzureML to train from the docker imageGoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need:">
+    <meta name="description" content="GoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need: base model file tags for it [optional], give some informa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Use code to control AzureML to train from the docker image">
 <meta property="og:url" content="https://juggler.fun/ML/Use-code-to-control-AzureML-to-train-from-the-docker-image/index.html">
 <meta property="og:site_name" content="JugglerDancing">
-<meta property="og:description" content="Use code to control AzureML to train from the docker imageGoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need:">
+<meta property="og:description" content="GoalWe can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier. need: base model file tags for it [optional], give some informa">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-11T07:35:01.000Z">
-<meta property="article:modified_time" content="2022-08-11T07:36:11.864Z">
+<meta property="article:modified_time" content="2022-08-11T07:56:57.918Z">
 <meta property="article:author" content="Juggler">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="ML">
@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Use-code-to-control-AzureML-to-train-from-the-docker-image"><span class="nav-number">1.</span> <span class="nav-text">Use code to control AzureML to train from the docker image</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Goal"><span class="nav-number">1.1.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#need"><span class="nav-number">1.2.</span> <span class="nav-text">need:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logic"><span class="nav-number">1.3.</span> <span class="nav-text">logic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Features"><span class="nav-number">1.4.</span> <span class="nav-text">Features</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ServicePrincipalAuthentication"><span class="nav-number">1.4.1.</span> <span class="nav-text">ServicePrincipalAuthentication</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WorkSpace"><span class="nav-number">1.4.2.</span> <span class="nav-text">WorkSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">1.4.3.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experiment"><span class="nav-number">1.4.4.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Datastore"><span class="nav-number">1.4.5.</span> <span class="nav-text">Datastore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Code"><span class="nav-number">1.4.6.</span> <span class="nav-text">Main Code</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Goal"><span class="nav-number">1.</span> <span class="nav-text">Goal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#need"><span class="nav-number">2.</span> <span class="nav-text">need:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logic"><span class="nav-number">3.</span> <span class="nav-text">logic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Features"><span class="nav-number">4.</span> <span class="nav-text">Features</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ServicePrincipalAuthentication"><span class="nav-number">4.1.</span> <span class="nav-text">ServicePrincipalAuthentication</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WorkSpace"><span class="nav-number">4.2.</span> <span class="nav-text">WorkSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Environment"><span class="nav-number">4.3.</span> <span class="nav-text">Environment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Experiment"><span class="nav-number">4.4.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Datastore"><span class="nav-number">4.5.</span> <span class="nav-text">Datastore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Code"><span class="nav-number">4.6.</span> <span class="nav-text">Main Code</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -251,7 +251,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-08-11 15:35:01 / Modified: 15:36:11" itemprop="dateCreated datePublished" datetime="2022-08-11T15:35:01+08:00">2022-08-11</time>
+      <time title="Created: 2022-08-11 15:35:01 / Modified: 15:56:57" itemprop="dateCreated datePublished" datetime="2022-08-11T15:35:01+08:00">2022-08-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,7 +280,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Use-code-to-control-AzureML-to-train-from-the-docker-image"><a href="#Use-code-to-control-AzureML-to-train-from-the-docker-image" class="headerlink" title="Use code to control AzureML to train from the docker image"></a>Use code to control AzureML to train from the docker image</h1><h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p>We can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier.</p>
+        <h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p>We can have a website or code to call the AzureML to train the model and the train code will be in docker images to control handier.</p>
 <h2 id="need"><a href="#need" class="headerlink" title="need:"></a>need:</h2><ul>
 <li>base model file</li>
 <li>tags for it [optional], give some information about it</li>
