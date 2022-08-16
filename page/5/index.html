@@ -164,18 +164,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/python/python-LRUCache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/python/python-LRUCache/" class="post-title-link" itemprop="url">python LRUCache</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-23 10:53:42 / Modified: 11:21:32" itemprop="dateCreated datePublished" datetime="2022-03-23T10:53:42+08:00">2022-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LRUCache</span>(collections.OrderedDict):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, size=<span class="number">2</span></span>):</span><br><span class="line">        <span class="comment">#print(self.size)</span></span><br><span class="line"> </span><br><span class="line">        self.size = size,</span><br><span class="line">        <span class="built_in">print</span>(self.size)</span><br><span class="line">        self.cache = collections.OrderedDict()</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get</span>(<span class="params">self, key</span>):</span><br><span class="line">        <span class="comment">#if self.cache.has_key(key):</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.cache:</span><br><span class="line">            val = self.cache.pop(key)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            val = -<span class="number">1</span></span><br><span class="line"> </span><br><span class="line">        <span class="keyword">return</span> val</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set</span>(<span class="params">self, key, val</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;len <span class="subst">&#123;<span class="built_in">len</span>(self.cache)&#125;</span>,size<span class="subst">&#123;self.size&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="comment">#if self.cache.has_key(key):</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> self.cache:</span><br><span class="line">            val = self.cache.pop(key)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(self.cache) &gt;= self.size[<span class="number">0</span>]:</span><br><span class="line">                item = self.cache.popitem(last=<span class="literal">False</span>)</span><br><span class="line">                delete(item)</span><br><span class="line">            self.cache[key] = val</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delete</span>(<span class="params">item</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;============================start delete=========================================&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br><span class="line">    <span class="comment">#del item[1]</span></span><br><span class="line">    path =<span class="string">&quot;/&quot;</span>.join(item[<span class="number">0</span>].split(<span class="string">&quot;/&quot;</span>)[:-<span class="number">3</span>])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;delete path : &quot;</span>+path)</span><br><span class="line">    subprocess.run([<span class="string">&quot;rm&quot;</span>,<span class="string">&quot;-r&quot;</span>,path])</span><br><span class="line">    <span class="keyword">del</span> item</span><br><span class="line">    gc.collect()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;============================delete comlete=======================================&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -2552,7 +2631,7 @@
   <footer class="footer">
     <div class="footer-inner">
 
-  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">冀ICP备2021011397号-1 </a>
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">冀ICP备2021011397号-1</a>
   </div>
 
 <div class="copyright">
