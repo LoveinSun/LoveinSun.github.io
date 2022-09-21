@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-count">51</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,7 +175,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -206,6 +206,95 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/uncategorized/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/uncategorized/git/" class="post-title-link" itemprop="url">git</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-07-26 13:54:57" itemprop="dateCreated datePublished" datetime="2022-07-26T13:54:57+08:00">2022-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-08-11 15:38:34" itemprop="dateModified" datetime="2022-08-11T15:38:34+08:00">2022-08-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="强行更改分支不改代码"><a href="#强行更改分支不改代码" class="headerlink" title="强行更改分支不改代码"></a>强行更改分支不改代码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git symbolic-ref HEAD refs/heads/otherbranch</span><br></pre></td></tr></table></figure>
+
+<p>If you need to commit on this branch, you’ll want to reset the index too otherwise you’ll end up committing something based on the last checked out branch.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset</span><br></pre></td></tr></table></figure>
+
+<h1 id="强行提交本地版本覆盖远程版本"><a href="#强行提交本地版本覆盖远程版本" class="headerlink" title="强行提交本地版本覆盖远程版本"></a>强行提交本地版本覆盖远程版本</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch pang origin/pang</span><br></pre></td></tr></table></figure>
+
+<h1 id="Commit-以后想撤回但是不想丢失代码"><a href="#Commit-以后想撤回但是不想丢失代码" class="headerlink" title="Commit 以后想撤回但是不想丢失代码"></a>Commit 以后想撤回但是不想丢失代码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<h1 id="强制同步远程分支"><a href="#强制同步远程分支" class="headerlink" title="强制同步远程分支"></a>强制同步远程分支</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all` 更新所有分支</span><br><span class="line">`git reset --hard origin/master</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote get-url origin</span><br><span class="line">git remote set-url origin git@github.com</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -3302,97 +3391,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/ham/python%E8%BD%AC%E6%8D%A2%E4%B8%9A%E4%BD%99%E6%97%A0%E7%BA%BF%E7%94%B5%E9%A2%98%E5%BA%93%E4%B8%BAanki%E8%AE%B0%E5%BF%86%E5%8D%A1/" class="post-title-link" itemprop="url">python转换业余无线电题库为anki记忆卡</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-04-12 11:33:35 / Modified: 11:34:28" itemprop="dateCreated datePublished" datetime="2022-04-12T11:33:35+08:00">2022-04-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/ham/" itemprop="url" rel="index"><span itemprop="name">ham</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文本转anki记忆卡</p>
-<p>文本是这样的: A是答案</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[I]LK0001</span><br><span class="line">[Q]我国现行法律体系中专门针对无线电管理的最高法律文件及其立法机关是：</span><br><span class="line">[A]中华人民共和国无线电管理条例，国务院和中央军委</span><br><span class="line">[B]中华人民共和国无线电管理办法，工业和信息化部</span><br><span class="line">[C]中华人民共和国电信条例，国务院</span><br><span class="line">[D]中华人民共和国业余无线电台管理办法，工业和信息化部</span><br><span class="line">[P]</span><br></pre></td></tr></table></figure>
-
-<p>需要改成答案随机的，能anki导入的，这样：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[I]LK0001&lt;br&gt;[Q]我国现行法律体系中专门针对无线电管理的最高法律文件及其立法机关是：&lt;br&gt;[A]中华人民共和国电信条例，国务院&lt;br&gt;[B]中华人民共和国无线电管理条例，国务院和中央军委&lt;br&gt;[C]中华人民共和国业余无线电台管理办法，工业和信息化部&lt;br&gt;[D]中华人民共和国无线电管理办法，工业和信息化部&lt;br&gt;;[B]中华人民共和国无线电管理条例，国务院和中央军委</span><br></pre></td></tr></table></figure>
-
-<p>不想一次都导入了，暂时只用A类，所以先把代码留下:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span> = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;D&quot;</span>]</span><br><span class="line">c = <span class="number">0</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;hamData.txt&quot;</span>,<span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> o:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;data.txt&quot;</span>,<span class="string">&quot;w&quot;</span>,encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> inp:</span><br><span class="line">        data = o.readline()</span><br><span class="line">        <span class="keyword">while</span>(data):</span><br><span class="line">            answer = <span class="string">&quot;&quot;</span></span><br><span class="line">            temp = data[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span></span><br><span class="line">            temp += o.readline()[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span></span><br><span class="line">            t = []</span><br><span class="line">            ti = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">                t.append(o.readline()[:-<span class="number">1</span>]+<span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line">            count = <span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> count &lt; <span class="number">4</span>:</span><br><span class="line">                i = random.randint(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line">                <span class="keyword">if</span> ti[i] == <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">                        answer = <span class="string">&quot;[&quot;</span> + <span class="built_in">str</span>(<span class="built_in">map</span>[count]) + t[i][<span class="number">2</span>:]</span><br><span class="line">                        c += <span class="number">1</span></span><br><span class="line">                    te = <span class="string">&quot;[&quot;</span> + <span class="built_in">str</span>(<span class="built_in">map</span>[count]) + t[i][<span class="number">2</span>:]</span><br><span class="line">                    temp += te</span><br><span class="line">                    count += <span class="number">1</span></span><br><span class="line">                    ti[i] = <span class="number">1</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">                o.readline()</span><br><span class="line">            temp+=<span class="string">&quot;;&quot;</span>+answer[:-<span class="number">4</span>]+<span class="string">&quot;\n&quot;</span></span><br><span class="line">            inp.write(temp)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(answer) == <span class="number">5</span>:</span><br><span class="line">                inp.write(<span class="number">10</span>*<span class="string">&quot;\n&quot;</span>+answer+<span class="number">5</span>*<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">                answer = <span class="string">&quot;&quot;</span></span><br><span class="line">            data = o.readline()</span><br><span class="line"><span class="built_in">print</span>(c)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
