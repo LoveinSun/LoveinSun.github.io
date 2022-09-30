@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://juggler.fun/french/French-pronunciation-rules/</loc>
+    <loc>https://juggler.fun/uncategorized/French-pronunciation-rules/</loc>
     
     <lastmod>2022-09-30</lastmod>
     
@@ -538,6 +538,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/algorithm/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/C/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -546,6 +553,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/MQ/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/easy/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -566,21 +580,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/easy/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/data/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/french/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -594,35 +594,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/algorithm/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/ML/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/java/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/NLP/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -636,7 +608,28 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/NLP/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/%E8%AE%A1%E7%BD%91/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/java/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/ML/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -657,7 +650,21 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/tags/git/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/tags/docker/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/js/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -678,21 +685,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/git/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/kubenetes/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/tags/js/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -707,6 +700,13 @@
   
   <url>
     <loc>https://juggler.fun/tags/azure/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/tags/ham/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -734,13 +734,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/C/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/tags/a-easy/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -748,7 +741,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/tags/ham/</loc>
+    <loc>https://juggler.fun/tags/C/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -792,6 +785,13 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/categories/alogrithm/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/C/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -813,13 +813,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/french/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/%E8%AE%A1%E7%BD%91/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -827,7 +820,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/python/</loc>
+    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/NLP/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -841,7 +841,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/NLP/</loc>
+    <loc>https://juggler.fun/categories/python/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -862,13 +862,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/algorithm/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/blackboard/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -883,7 +876,21 @@
   </url>
   
   <url>
+    <loc>https://juggler.fun/categories/algorithm/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://juggler.fun/categories/docker/</loc>
+    <lastmod>2022-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://juggler.fun/categories/js/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -897,20 +904,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ComputerNetwork/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://juggler.fun/categories/alogrithm/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/kubenetes/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -918,7 +911,7 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/js/</loc>
+    <loc>https://juggler.fun/categories/ham/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -939,13 +932,6 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/ham/</loc>
-    <lastmod>2022-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://juggler.fun/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -953,14 +939,14 @@
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/finance/</loc>
+    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/unreviewed/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://juggler.fun/categories/%E7%AE%97%E6%B3%95/unreviewed/</loc>
+    <loc>https://juggler.fun/categories/finance/</loc>
     <lastmod>2022-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
