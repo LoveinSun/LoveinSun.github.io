@@ -31,7 +31,7 @@
 <meta property="og:description" content="1. change default docker images path1234567891011121314- Step 1. Stop docker daemon.sudo &#x2F;etc&#x2F;init.d&#x2F;docker stop- Step 2. Make sure that there are no docker related processes.ps aux|grep docker- Step">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-26T06:18:05.000Z">
-<meta property="article:modified_time" content="2022-07-26T06:19:19.905Z">
+<meta property="article:modified_time" content="2022-10-12T07:32:52.579Z">
 <meta property="article:author" content="Juggler">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
@@ -248,9 +248,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-07-26 14:18:05 / Modified: 14:19:19" itemprop="dateCreated datePublished" datetime="2022-07-26T14:18:05+08:00">2022-07-26</time>
+      <time title="Created: 2022-07-26 14:18:05" itemprop="dateCreated datePublished" datetime="2022-07-26T14:18:05+08:00">2022-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-10-12 15:32:52" itemprop="dateModified" datetime="2022-10-12T15:32:52+08:00">2022-10-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -281,7 +287,14 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="1-change-default-docker-images-path"><a href="#1-change-default-docker-images-path" class="headerlink" title="1. change default docker images path"></a>1. change default docker images path</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- Step 1. Stop docker daemon.</span><br><span class="line">sudo /etc/init.d/docker stop</span><br><span class="line"></span><br><span class="line">- Step 2. Make sure that there are no docker related processes.</span><br><span class="line">ps aux|grep docker</span><br><span class="line"></span><br><span class="line">- Step 3. Move the contents of /var/lib/docker to your new location.</span><br><span class="line">sudo <span class="built_in">mv</span> /var/lib/docker &#123;path_to_move&#125;</span><br><span class="line"></span><br><span class="line">- Step 4. Create a softlink to default location.</span><br><span class="line">sudo <span class="built_in">ln</span> -s &#123;path_to_move&#125;/docker/ /var/lib/docker</span><br><span class="line"></span><br><span class="line">- Step 5. Start docker daemon.</span><br><span class="line">sudo /etc/init.d/docker start</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-run-docker-without-sudo"><a href="#2-run-docker-without-sudo" class="headerlink" title="2 run docker without sudo"></a>2 run docker without sudo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- Step 1. Create the docker group.</span><br><span class="line">sudo groupadd docker</span><br><span class="line"></span><br><span class="line">- Step 2. Add your user to the docker group.</span><br><span class="line">sudo usermod -aG docker <span class="variable">$USER</span></span><br><span class="line"></span><br><span class="line">- Step 3. Log out and <span class="built_in">log</span> back <span class="keyword">in</span> so that your group membership is re-evaluated.</span><br></pre></td></tr></table></figure>
+<h2 id="2-run-docker-without-sudo"><a href="#2-run-docker-without-sudo" class="headerlink" title="2 run docker without sudo"></a>2 run docker without sudo</h2><p>1.创建docker组（已经存在则不用创建）</p>
+<p>sudo groupadd docker</p>
+<p>2.添加当前用户到docker组</p>
+<p>sudo gpasswd -a ${USER} docker</p>
+<p>3.重启 docker服务</p>
+<p>sudo systemctl restart docker </p>
+<p>4.切换到docker组</p>
+<p>newgrp docker</p>
 
     </div>
 
