@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,313 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91/" class="post-title-link" itemprop="url">最小高度树</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-06 18:32:08" itemprop="dateCreated datePublished" datetime="2022-04-06T18:32:08+08:00">2022-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-08 14:50:43" itemprop="dateModified" datetime="2022-04-08T14:50:43+08:00">2022-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="310-最小高度树"><a href="#310-最小高度树" class="headerlink" title="310. 最小高度树"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-height-trees/">310. 最小高度树</a></h1><blockquote>
+<p>这道题依然败北。。。选了个最笨的办法，以每个节点为根结点分别求树的高度，但是以前没用过c++，代码还算有点用处，所以姑且记下。。。</p>
+</blockquote>
+<p>树是一个无向图，其中任何两个顶点只通过一条路径连接。 换句话说，一个任何没有简单环路的连通图都是一棵树。</p>
+<p>给你一棵包含 n 个节点的树，标记为 0 到 n - 1 。给定数字 n 和一个有 n - 1 条无向边的 edges 列表（每一个边都是一对标签），其中 edges[i] &#x3D; [ai, bi] 表示树中节点 ai 和 bi 之间存在一条无向边。</p>
+<p>可选择树中任何一个节点作为根。当选择节点 x 作为根节点时，设结果树的高度为 h 。在所有可能的树中，具有最小高度的树（即，min(h)）被称为 最小高度树 。</p>
+<p>请你找到所有的 最小高度树 并按 任意顺序 返回它们的根节点标签列表。</p>
+<p>树的 高度 是指根节点和叶子节点之间最长向下路径上边的数量。</p>
+<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204061527107.png" alt="image-20220406152754013" style="zoom:50%;" />
+
+<p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204061528045.png" alt="image-20220406152823013"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>思路有很多种，我选了错误的一种，，遍历所有可能取最小的，时间复杂度过高，磨刀不误砍柴工，不外乎如此。（我解）</p>
+<p>还有一种是找到图中相距最远的两个点，其中位点即为所求（官解）</p>
+<p>还有一种是将所有出度为1的点进队进行广度优先遍历，最后一层即为所求（优解）</p>
+<h2 id="我的错解-时间复杂度过高，其实空间复杂度也不低"><a href="#我的错解-时间复杂度过高，其实空间复杂度也不低" class="headerlink" title="我的错解(时间复杂度过高，其实空间复杂度也不低)"></a>我的错解(时间复杂度过高，其实空间复杂度也不低)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">m</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n, <span class="number">0</span>));</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edges.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            s.<span class="built_in">insert</span>(edges[i][<span class="number">0</span>]);</span><br><span class="line">            s.<span class="built_in">insert</span>(edges[i][<span class="number">1</span>]);</span><br><span class="line">            m[edges[i][<span class="number">0</span>]][edges[i][<span class="number">1</span>]] = <span class="number">1</span>;</span><br><span class="line">            m[edges[i][<span class="number">1</span>]][edges[i][<span class="number">0</span>]] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> minh = n;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt;::iterator it;</span><br><span class="line">        <span class="keyword">for</span> (it = s.<span class="built_in">begin</span>(); it != s.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">            <span class="type">int</span> temp = <span class="built_in">getHeight</span>(*it, m);</span><br><span class="line">            <span class="keyword">if</span> (temp == minh) &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (temp &lt; minh) &#123;</span><br><span class="line">                minh = temp;</span><br><span class="line">                res.<span class="built_in">clear</span>();</span><br><span class="line">                res.<span class="built_in">push_back</span>(*it);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getHeight</span><span class="params">(<span class="type">int</span> root, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> h = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; graph.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (graph[root][i] == <span class="number">1</span>) &#123;</span><br><span class="line">                graph[root][i] = <span class="number">0</span>;</span><br><span class="line">                graph[i][root] = <span class="number">0</span>;</span><br><span class="line">                <span class="type">int</span> temp = <span class="built_in">getHeight</span>(i, graph);</span><br><span class="line">                <span class="keyword">if</span> (temp &gt; h) &#123;</span><br><span class="line">                    h = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> h+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这个是照着官解来的，但是最后几个样例时间复杂度总是过不去，，可能是因为我用的邻接矩阵？</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Leetcode.cpp : This file contains the &#x27;main&#x27; function. Program execution begins and ends there.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;set&gt;</span>    </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    TreeNode* left;</span><br><span class="line">    TreeNode* right;</span><br><span class="line">    <span class="built_in">TreeNode</span>() : <span class="built_in">val</span>(<span class="number">0</span>), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">nullptr</span>), <span class="built_in">right</span>(<span class="literal">nullptr</span>) &#123;&#125;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x, TreeNode* left, TreeNode* right) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(left), <span class="built_in">right</span>(right) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">m</span>(n, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(n, <span class="number">0</span>));</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edges.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            s.<span class="built_in">insert</span>(edges[i][<span class="number">0</span>]);</span><br><span class="line">            s.<span class="built_in">insert</span>(edges[i][<span class="number">1</span>]);</span><br><span class="line">            m[edges[i][<span class="number">0</span>]][edges[i][<span class="number">1</span>]] = <span class="number">1</span>;</span><br><span class="line">            m[edges[i][<span class="number">1</span>]][edges[i][<span class="number">0</span>]] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">parent</span><span class="params">(n)</span></span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            parent[i] = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; re = <span class="built_in">findFarestNode</span>(<span class="number">0</span>, parent,m);</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res = <span class="built_in">findFarestNode</span>(re.<span class="built_in">at</span>(<span class="number">0</span>), parent, m);</span><br><span class="line">        <span class="type">int</span> y = res[<span class="number">0</span>];</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="keyword">while</span> (parent[y] != <span class="number">-1</span>) &#123;</span><br><span class="line">            path.<span class="built_in">push_back</span>(y);</span><br><span class="line">            y = parent[y];</span><br><span class="line">        &#125;</span><br><span class="line">        path.<span class="built_in">push_back</span>(re[<span class="number">0</span>]);</span><br><span class="line">        <span class="type">int</span> l = path.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (l%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[l / <span class="number">2</span> - <span class="number">1</span>],path[l / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[l / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findFarestNode</span><span class="params">(<span class="type">int</span> root,vector&lt;<span class="type">int</span>&gt;&amp; parent, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph)</span> </span>&#123;</span><br><span class="line">        parent[root] = <span class="number">-1</span>;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">isVisited</span><span class="params">(graph.size())</span></span>;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line">        isVisited[root] = <span class="number">1</span>;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> size = q.<span class="built_in">size</span>();</span><br><span class="line">            res.<span class="built_in">clear</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="type">int</span> node = q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                res.<span class="built_in">push_back</span>(node);</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; graph.<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (graph[node][j] == <span class="number">1</span> &amp;&amp; isVisited[j] == <span class="number">0</span>) &#123;</span><br><span class="line">                        parent[j] = node;</span><br><span class="line">                        isVisited[j] = <span class="number">1</span>;</span><br><span class="line">                        q.<span class="built_in">push</span>(j);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; edges&#123; vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">3</span>,<span class="number">0</span>&#125; ,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">1</span>,<span class="number">3</span>&#125; ,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">2</span>,<span class="number">3</span>&#125;,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">5</span>,<span class="number">4</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">auto</span> sum = <span class="built_in">Solution</span>().<span class="built_in">findMinHeightTrees</span>(<span class="number">6</span>, edges);</span><br><span class="line">    std::cout &lt;&lt; <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><p>果然是邻接矩阵的原因，按照官解的办法改了以后就好了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">graph</span>(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; edges.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            graph[edges[i][<span class="number">0</span>]].<span class="built_in">push_back</span>(edges[i][<span class="number">1</span>]);</span><br><span class="line">            graph[edges[i][<span class="number">1</span>]].<span class="built_in">push_back</span>(edges[i][<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">parent</span><span class="params">(n)</span></span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            parent[i] = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; re = <span class="built_in">findFarestNode</span>(<span class="number">0</span>, parent,graph);</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res = <span class="built_in">findFarestNode</span>(re.<span class="built_in">at</span>(<span class="number">0</span>), parent, graph);</span><br><span class="line">        <span class="type">int</span> y = res[<span class="number">0</span>];</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        <span class="keyword">while</span> (parent[y] != <span class="number">-1</span>) &#123;</span><br><span class="line">            path.<span class="built_in">push_back</span>(y);</span><br><span class="line">            y = parent[y];</span><br><span class="line">        &#125;</span><br><span class="line">        path.<span class="built_in">push_back</span>(re[<span class="number">0</span>]);</span><br><span class="line">        <span class="type">int</span> l = path.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (l%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[l / <span class="number">2</span> - <span class="number">1</span>],path[l / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[l / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findFarestNode</span><span class="params">(<span class="type">int</span> root,vector&lt;<span class="type">int</span>&gt;&amp; parent, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; graph)</span> </span>&#123;</span><br><span class="line">        parent[root] = <span class="number">-1</span>;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">isVisited</span><span class="params">(graph.size())</span></span>;</span><br><span class="line">        q.<span class="built_in">push</span>(root);</span><br><span class="line">        isVisited[root] = <span class="number">1</span>;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> size = q.<span class="built_in">size</span>();</span><br><span class="line">            res.<span class="built_in">clear</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                <span class="type">int</span> node = q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                res.<span class="built_in">push_back</span>(node);</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> j: graph[node]) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (isVisited[j] == <span class="number">0</span>) &#123;</span><br><span class="line">                        parent[j] = node;</span><br><span class="line">                        isVisited[j] = <span class="number">1</span>;</span><br><span class="line">                        q.<span class="built_in">push</span>(j);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">findLongestNode</span><span class="params">(<span class="type">int</span> u, vector&lt;<span class="type">int</span>&gt;&amp; parent, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; adj)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = adj.<span class="built_in">size</span>();</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; qu;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">bool</span>&gt; <span class="title">visit</span><span class="params">(n)</span></span>;</span><br><span class="line">        qu.<span class="built_in">emplace</span>(u);</span><br><span class="line">        visit[u] = <span class="literal">true</span>;</span><br><span class="line">        <span class="type">int</span> node = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!qu.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> curr = qu.<span class="built_in">front</span>();</span><br><span class="line">            qu.<span class="built_in">pop</span>();</span><br><span class="line">            node = curr;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; v : adj[curr]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!visit[v]) &#123;</span><br><span class="line">                    visit[v] = <span class="literal">true</span>;</span><br><span class="line">                    parent[v] = curr;</span><br><span class="line">                    qu.<span class="built_in">emplace</span>(v);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; <span class="number">0</span> &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">adj</span>(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; edge : edges) &#123;</span><br><span class="line">            adj[edge[<span class="number">0</span>]].<span class="built_in">emplace_back</span>(edge[<span class="number">1</span>]);</span><br><span class="line">            adj[edge[<span class="number">1</span>]].<span class="built_in">emplace_back</span>(edge[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">parent</span><span class="params">(n, <span class="number">-1</span>)</span></span>;</span><br><span class="line">        <span class="comment">/* 找到与节点 0 最远的节点 x */</span></span><br><span class="line">        <span class="type">int</span> x = <span class="built_in">findLongestNode</span>(<span class="number">0</span>, parent, adj);</span><br><span class="line">        <span class="comment">/* 找到与节点 x 最远的节点 y */</span></span><br><span class="line">        <span class="type">int</span> y = <span class="built_in">findLongestNode</span>(x, parent, adj);</span><br><span class="line">        <span class="comment">/* 求出节点 x 到节点 y 的路径 */</span></span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; path;</span><br><span class="line">        parent[x] = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span> (y != <span class="number">-1</span>) &#123;</span><br><span class="line">            path.<span class="built_in">emplace_back</span>(y);</span><br><span class="line">            y = parent[y];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> m = path.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (m % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[m / <span class="number">2</span> - <span class="number">1</span>], path[m / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123; path[m / <span class="number">2</span>] &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="优解"><a href="#优解" class="headerlink" title="优解"></a>优解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">findMinHeightTrees</span><span class="params">(<span class="type">int</span> n, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">degree</span><span class="params">(n)</span></span>;   <span class="comment">//每个节点对应的度数</span></span><br><span class="line">        map&lt;<span class="type">int</span>,vector&lt;<span class="type">int</span>&gt;&gt; m;  <span class="comment">//邻接表</span></span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; res; <span class="comment">//结果</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;edges.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            <span class="type">int</span> u=edges[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> v=edges[i][<span class="number">1</span>];</span><br><span class="line">            degree[u]++;</span><br><span class="line">            degree[v]++;</span><br><span class="line">            m[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">            m[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">        &#125;</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="comment">//把叶子节点入栈</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">            <span class="keyword">if</span>(degree[i]==<span class="number">1</span>)</span><br><span class="line">                q.<span class="built_in">push</span>(i);</span><br><span class="line">        <span class="comment">//从外向内一层一层剥，每次加入的都是一层的</span></span><br><span class="line">        <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            res.<span class="built_in">clear</span>();</span><br><span class="line">            <span class="type">int</span> sz=q.<span class="built_in">size</span>();</span><br><span class="line">            <span class="comment">//一层全部加入结果并且清出去</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;sz;i++)&#123;</span><br><span class="line">                <span class="type">int</span> t=q.<span class="built_in">front</span>();</span><br><span class="line">                q.<span class="built_in">pop</span>();</span><br><span class="line">                res.<span class="built_in">push_back</span>(t);</span><br><span class="line">                <span class="comment">//加入t的邻接叶子节点</span></span><br><span class="line">                degree[t]--;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">auto</span> j:m[t])&#123;</span><br><span class="line">                    degree[j]--;</span><br><span class="line">                    <span class="keyword">if</span>(degree[j]==<span class="number">1</span>)</span><br><span class="line">                        q.<span class="built_in">push</span>(j);</span><br><span class="line">                &#125;    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/1%E6%AF%940%E5%A4%9A%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE/" class="post-title-link" itemprop="url">1比0多的子数组数目</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-02 16:50:14 / Modified: 16:52:14" itemprop="dateCreated datePublished" datetime="2022-04-02T16:50:14+08:00">2022-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="2031-1-比-0-多的子数组个数"><a href="#2031-1-比-0-多的子数组个数" class="headerlink" title="2031. 1 比 0 多的子数组个数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-subarrays-with-more-ones-than-zeros/">2031. 1 比 0 多的子数组个数</a></h1><p>此题败北，思路是总子数组数量减都为0的子数组数量，结果没有去掉重复元素</p>
+<p>当然leetcode不能只刷自己会的，然而现在状态是在太差，脑袋晕乎乎的，所以所以先粘上去等以后状态好时再捡回来做。当然明白这是flag，，，，但是不妨探索一下学习方法再认识一下自己的废物程度</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E7%AE%97%E6%B3%95/%E5%9B%9B%E5%9B%A0%E6%95%B0/" class="post-title-link" itemprop="url">四因数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-02 15:56:09" itemprop="dateCreated datePublished" datetime="2022-04-02T15:56:09+08:00">2022-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-07-26 13:47:14" itemprop="dateModified" datetime="2022-07-26T13:47:14+08:00">2022-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="1390-四因数"><a href="#1390-四因数" class="headerlink" title="1390. 四因数"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/four-divisors/">1390. 四因数</a></h1><p>给你一个整数数组 <code>nums</code>，请你返回该数组中恰有四个因数的这些整数的各因数之和。如果数组中不存在满足题意的整数，则返回 <code>0</code> 。</p>
+ <img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204021541109.png" alt="image-20220402154140070" style="zoom: 67%;" />
+
+<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            sum += <span class="built_in">judge</span>(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">judge</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> res = <span class="number">1</span> + num;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(num); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i == num / i) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                    res += i;</span><br><span class="line">                    res += num / i;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
+</li>
+<li><p>空间复杂度：O(1)O(1)。</p>
+</li>
+</ul>
+<h3 id="错误："><a href="#错误：" class="headerlink" title="错误："></a>错误：</h3><p>没有考虑两个因数相等的情况，也就是18，19行</p>
+<h2 id="他解"><a href="#他解" class="headerlink" title="他解"></a>他解</h2><h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num: nums) &#123;</span><br><span class="line">            <span class="comment">// factor_cnt: 因数的个数</span></span><br><span class="line">            <span class="comment">// factor_sum: 因数的和</span></span><br><span class="line">            <span class="type">int</span> factor_cnt = <span class="number">0</span>, factor_sum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i * i &lt;= num; ++i) &#123;</span><br><span class="line">                <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ++factor_cnt;</span><br><span class="line">                    factor_sum += i;</span><br><span class="line">                    <span class="keyword">if</span> (i * i != num) &#123;   <span class="comment">// 判断 i 和 num/i 是否相等，若不相等才能将 num/i 看成新的因数</span></span><br><span class="line">                        ++factor_cnt;</span><br><span class="line">                        factor_sum += num / i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (factor_cnt == <span class="number">4</span>) &#123;</span><br><span class="line">                ans += factor_sum;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：$$O(N \sqrt[2]{C}）$$，其中 N 是数组 nums 的长度，C 是数组 nums 中元素值的范围，在本题中 C 不超过 10^510<br>5。</p>
+</li>
+<li><p>空间复杂度：O(1)O(1)。</p>
+</li>
+</ul>
+<h2 id="官解"><a href="#官解" class="headerlink" title="官解"></a>官解</h2><h3 id="使用筛法"><a href="#使用筛法" class="headerlink" title="使用筛法"></a>使用筛法</h3><p>思路就是使用筛法过滤出所有的需要的素数，然后使用它们构建四因数</p>
+<p>然后涉及到的就是四因数有何种性质使得其可以用质数进行构建。</p>
+<p>这里涉及到筛法的问题感觉可以单开一章</p>
+<img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202204071459754.png" alt="image-20220407145938647" style="zoom: 67%;" />
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">sumFourDivisors</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// C 是数组 nums 元素的上限，C3 是 C 的立方根</span></span><br><span class="line">        <span class="type">int</span> C = <span class="number">100000</span>, C3 = <span class="number">46</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">isprime</span><span class="params">(C + <span class="number">1</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; primes;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 埃拉托斯特尼筛法</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= C; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (isprime[i]) &#123;</span><br><span class="line">                primes.<span class="built_in">push_back</span>(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + i; j &lt;= C; j += i) &#123;</span><br><span class="line">                isprime[j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 欧拉筛法</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        for (int i = 2; i &lt;= C; ++i) &#123;</span></span><br><span class="line"><span class="comment">            if (isprime[i]) &#123;</span></span><br><span class="line"><span class="comment">                primes.push_back(i);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            for (int prime: primes) &#123;</span></span><br><span class="line"><span class="comment">                if (i * prime &gt; C) &#123;</span></span><br><span class="line"><span class="comment">                    break;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">                isprime[i * prime] = 0;</span></span><br><span class="line"><span class="comment">                if (i % prime == 0) &#123;</span></span><br><span class="line"><span class="comment">                    break;</span></span><br><span class="line"><span class="comment">                &#125;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过质数表构造出所有的四因数</span></span><br><span class="line">        unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; factor4;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> prime : primes) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prime &lt;= C3) &#123;</span><br><span class="line">                factor4[prime * prime * prime] = <span class="number">1</span> + prime + prime * prime + prime * prime * prime;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; primes.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; primes.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (primes[i] &lt;= C / primes[j]) &#123;</span><br><span class="line">                    factor4[primes[i] * primes[j]] = <span class="number">1</span> + primes[i] + primes[j] + primes[i] * primes[j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (factor4.<span class="built_in">count</span>(num)) &#123;</span><br><span class="line">                ans += factor4[num];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1411,273 +1718,6 @@
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Entity;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Follow</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Transform FakeParent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Vector3 _positionOffset;</span><br><span class="line">    <span class="keyword">private</span> Quaternion _rotationOffset;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (FakeParent != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            SetFakeParent(FakeParent);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//Invoke(&quot;Timer&quot;, 15.0f);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FakeParent == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> targetPos = FakeParent.position - _positionOffset;</span><br><span class="line">        <span class="keyword">var</span> targetRot = FakeParent.localRotation * _rotationOffset;</span><br><span class="line"></span><br><span class="line">        transform.position = RotatePointAroundPivot(targetPos, FakeParent.position, targetRot);</span><br><span class="line">        transform.localRotation = targetRot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Timer</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Debug.Log(string.Format(&quot;Timer3 is up !!! time=$&#123;0&#125;&quot;, Time.time));</span></span><br><span class="line">        <span class="comment">//GC.Collect();</span></span><br><span class="line">        <span class="comment">//Invoke(&quot;Timer&quot;, 17.0f);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetFakeParent</span>(<span class="params">Transform parent</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Offset vector</span></span><br><span class="line">        _positionOffset = parent.position - transform.position;</span><br><span class="line">        <span class="comment">//Offset rotation</span></span><br><span class="line">        _rotationOffset = Quaternion.Inverse(parent.localRotation * transform.localRotation);</span><br><span class="line">        <span class="comment">//Our fake parent</span></span><br><span class="line">        FakeParent = parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Vector3 <span class="title">RotatePointAroundPivot</span>(<span class="params">Vector3 point, Vector3 pivot, Quaternion rotation</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Get a direction from the pivot to the point</span></span><br><span class="line">        Vector3 dir = point - pivot;</span><br><span class="line">        <span class="comment">//Rotate vector around pivot</span></span><br><span class="line">        dir = rotation * dir;</span><br><span class="line">        <span class="comment">//Calc the rotated vector</span></span><br><span class="line">        point = dir + pivot;</span><br><span class="line">        <span class="comment">//Return calculated vector</span></span><br><span class="line">        <span class="keyword">return</span> point;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" class="post-title-link" itemprop="url">碎碎念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-23 14:04:05" itemprop="dateCreated datePublished" datetime="2022-03-23T14:04:05+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-09-21 18:32:21" itemprop="dateModified" datetime="2022-09-21T18:32:21+08:00">2022-09-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>昨天好几个梦都梦到了某人，笑死，在梦里都不敢多想，只是回到那时候就已经很幸福了，不知道恢复之后的我怎么想？</p>
-<blockquote>
-<p>恢复后：安拉，犯深井冰习惯了</p>
-</blockquote>
-<p>我手中的乃不能抛弃之物，<br>我追寻的是无可抵达的梦。</p>
-<p>追逐梦想不是请客吃饭</p>
-<p>桂花同酒千里来，风满楼台月照白，<br>千帆淘浪今始过，桑榆梦晚尚可怀。</p>
-<blockquote>
-<p>朽木千帆今始过</p>
-</blockquote>
-<p>天有不测，<br>人有力尽,<br>我已到极限</p>
-<p>物含妙理，世界不生无根之火。<br>造化无情，人间竟得斯人来过。<br>岁月蹉跎</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%9D%82%E8%AE%B0/%E5%B0%8F%E8%AE%B0/" class="post-title-link" itemprop="url">小记</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-23 11:07:16" itemprop="dateCreated datePublished" datetime="2022-03-23T11:07:16+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-11 11:40:10" itemprop="dateModified" datetime="2022-04-11T11:40:10+08:00">2022-04-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>待我低吟一首小诗，韵了平仄，与你细说，世间有此河，躺世俗尸骨，仙胎无计数。</p>
-</blockquote>
-<blockquote>
-<p>没必要这么累，<strong>有些</strong>东西得不得的到的区别还是体现在想不想， 干的卖力当然重要，但是我不想，没人能让我想。如果需要的话，只能我自己开始这么想，吃亏是必然的，但是以我的经验不这么干还会吃很多白亏。目前为止我对自己分析局势的能力还是有信心的，当然执行力是另一回事。</p>
-</blockquote>
-<blockquote>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/js/js-promise-%E7%89%9B%E5%88%80%E5%B0%8F%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/js/js-promise-%E7%89%9B%E5%88%80%E5%B0%8F%E8%AF%95/" class="post-title-link" itemprop="url">js promise 牛刀小试</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-23 10:59:45 / Modified: 11:24:31" itemprop="dateCreated datePublished" datetime="2022-03-23T10:59:45+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fuck</span>:<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">timeOut</span>().<span class="title function_">then</span>(<span class="keyword">function</span> <span class="title function_">success</span>(<span class="params">value</span>)&#123;</span><br><span class="line">          <span class="variable language_">console</span>.<span class="title function_">log</span>(value)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">timeOut</span>:<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span> (<span class="params">resolve, reject</span>)&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF&quot;</span>)</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF2&quot;</span>)</span><br><span class="line">            <span class="title function_">resolve</span>(<span class="string">&quot;成功!&quot;</span>);<span class="comment">//代码正常执行！</span></span><br><span class="line"></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;WTF3&quot;</span>)</span><br><span class="line">          &#125;<span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="title function_">reject</span>(e);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">        &#125;, <span class="number">2000</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
 
       
     </div>

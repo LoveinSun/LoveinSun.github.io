@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -206,6 +206,300 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/algorithm/1832/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm/1832/" class="post-title-link" itemprop="url">Check if the Sentence Is Pangram</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-25 15:22:24 / Modified: 15:23:21" itemprop="dateCreated datePublished" datetime="2022-10-25T15:22:24+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Check-if-the-Sentence-Is-Pangram"><a href="#Check-if-the-Sentence-Is-Pangram" class="headerlink" title="Check if the Sentence Is Pangram"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/check-if-the-sentence-is-pangram/">Check if the Sentence Is Pangram</a></h2><p>Easy</p>
+<p>A <strong>pangram</strong> is a sentence where every letter of the English alphabet appears at least once.</p>
+<p>Given a string <code>sentence</code> containing only lowercase English letters, return <code>true</code> <em>if</em> <code>sentence</code> <em>is a <strong>pangram</strong>, or</em> <code>false</code> <em>otherwise.</em></p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: sentence = &quot;thequickbrownfoxjumpsoverthelazydog&quot;</span><br><span class="line">Output: true</span><br><span class="line">Explanation: sentence contains at least one of every letter of the English alphabet.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: sentence = &quot;leetcode&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="My-solution"><a href="#My-solution" class="headerlink" title="My solution"></a>My solution</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">checkIfPangram</span><span class="params">(string sentence)</span> </span>&#123;</span><br><span class="line">        set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; sentence.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            s.<span class="built_in">insert</span>(sentence[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(s.<span class="built_in">size</span>()==<span class="number">26</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/algorithm/1662/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm/1662/" class="post-title-link" itemprop="url">Check If Two String Arrays are Equivalent</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-25 15:16:59 / Modified: 15:23:42" itemprop="dateCreated datePublished" datetime="2022-10-25T15:16:59+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Check-If-Two-String-Arrays-are-Equivalent"><a href="#Check-If-Two-String-Arrays-are-Equivalent" class="headerlink" title="Check If Two String Arrays are Equivalent"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/">Check If Two String Arrays are Equivalent</a></h2><p>Easy</p>
+<p>Given two string arrays <code>word1</code> and <code>word2</code>, return <code>true</code> <em>if the two arrays <strong>represent</strong> the same string, and</em> <code>false</code> <em>otherwise.</em></p>
+<p>A string is <strong>represented</strong> by an array if the array elements concatenated <strong>in order</strong> forms the string.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: word1 = [&quot;ab&quot;, &quot;c&quot;], word2 = [&quot;a&quot;, &quot;bc&quot;]</span><br><span class="line">Output: true</span><br><span class="line">Explanation:</span><br><span class="line">word1 represents string &quot;ab&quot; + &quot;c&quot; -&gt; &quot;abc&quot;</span><br><span class="line">word2 represents string &quot;a&quot; + &quot;bc&quot; -&gt; &quot;abc&quot;</span><br><span class="line">The strings are the same, so return true.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: word1 = [&quot;a&quot;, &quot;cb&quot;], word2 = [&quot;ab&quot;, &quot;c&quot;]</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: word1  = [&quot;abc&quot;, &quot;d&quot;, &quot;defg&quot;], word2 = [&quot;abcddefg&quot;]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= word1.length, word2.length &lt;= 103</code></li>
+<li><code>1 &lt;= word1[i].length, word2[i].length &lt;= 103</code></li>
+<li><code>1 &lt;= sum(word1[i].length), sum(word2[i].length) &lt;= 103</code></li>
+<li><code>word1[i]</code> and <code>word2[i]</code> consist of lowercase letters.</li>
+</ul>
+<h3 id="My-solution"><a href="#My-solution" class="headerlink" title="My solution"></a>My solution</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">arrayStringsAreEqual</span><span class="params">(vector&lt;string&gt;&amp; word1, vector&lt;string&gt;&amp; word2)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; index = &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&gt;<span class="number">-1</span>;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(word1[index[<span class="number">0</span>]][i-index[<span class="number">2</span>]]!=word2[index[<span class="number">1</span>]][i-index[<span class="number">3</span>]])&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">if</span>(i-index[<span class="number">2</span>]+<span class="number">1</span>==word1[index[<span class="number">0</span>]].<span class="built_in">size</span>())&#123;</span><br><span class="line">                            index[<span class="number">2</span>]+=word1[index[<span class="number">0</span>]].<span class="built_in">size</span>();</span><br><span class="line">                            index[<span class="number">0</span>]++;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">if</span>(i-index[<span class="number">3</span>]+<span class="number">1</span>==word2[index[<span class="number">1</span>]].<span class="built_in">size</span>())&#123;</span><br><span class="line">                                index[<span class="number">3</span>]+=word2[index[<span class="number">1</span>]].<span class="built_in">size</span>();</span><br><span class="line">                                index[<span class="number">1</span>]++;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">if</span>(index[<span class="number">0</span>]&gt;=word1.<span class="built_in">size</span>()||index[<span class="number">1</span>]&gt;=word2.<span class="built_in">size</span>())&#123;</span><br><span class="line">                                <span class="keyword">if</span>(index[<span class="number">0</span>]&gt;=word1.<span class="built_in">size</span>()&amp;&amp;index[<span class="number">1</span>]&gt;=word2.<span class="built_in">size</span>())&#123;</span><br><span class="line">                                        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                        &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        vector&lt;string&gt; word1 = &#123;<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;d&quot;</span>,<span class="string">&quot;defg&quot;</span>&#125;;</span><br><span class="line">        vector&lt;string&gt; word2 = &#123;<span class="string">&quot;abcdddefg&quot;</span>&#125;;</span><br><span class="line">        <span class="keyword">auto</span> res = <span class="built_in">Solution</span>().<span class="built_in">arrayStringsAreEqual</span>(word1,word2);</span><br><span class="line">        cout&lt;&lt;res&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/algorithm/12/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/algorithm/12/" class="post-title-link" itemprop="url">Integer to Roman</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-10-25 14:53:15 / Modified: 15:16:47" itemprop="dateCreated datePublished" datetime="2022-10-25T14:53:15+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Integer-to-Roman"><a href="#Integer-to-Roman" class="headerlink" title="Integer to Roman"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/integer-to-roman/">Integer to Roman</a></h2><p>Medium</p>
+<p>Roman numerals are represented by seven different symbols: <code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Symbol       Value</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure>
+
+<p>For example, <code>2</code> is written as <code>II</code> in Roman numeral, just two one’s added together. <code>12</code> is written as <code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+<ul>
+<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9. </li>
+<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90. </li>
+<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>
+</ul>
+<p>Given an integer, convert it to a roman numeral.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: num = 3</span><br><span class="line">Output: &quot;III&quot;</span><br><span class="line">Explanation: 3 is represented as 3 ones.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: num = 58</span><br><span class="line">Output: &quot;LVIII&quot;</span><br><span class="line">Explanation: L = 50, V = 5, III = 3.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: num = 1994</span><br><span class="line">Output: &quot;MCMXCIV&quot;</span><br><span class="line">Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>1 &lt;= num &lt;= 3999</code></li>
+</ul>
+<h3 id="My-solution"><a href="#My-solution" class="headerlink" title="My solution"></a>My solution</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">intToRoman</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">        vector&lt;<span class="type">char</span>&gt; data= &#123;<span class="string">&#x27;I&#x27;</span>,<span class="string">&#x27;V&#x27;</span>,<span class="string">&#x27;X&#x27;</span>,<span class="string">&#x27;L&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;M&#x27;</span>&#125;;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; cdata = &#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">50</span>,<span class="number">100</span>,<span class="number">500</span>,<span class="number">1000</span>&#125;;</span><br><span class="line">        <span class="keyword">auto</span> remain = num;</span><br><span class="line">        string res;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = cdata.<span class="built_in">size</span>()<span class="number">-1</span>;i&gt;<span class="number">-1</span>;i--)&#123;</span><br><span class="line">            <span class="type">int</span> t = remain / cdata[i];</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>;j&lt;t;j++)&#123;</span><br><span class="line">                res += data[i];</span><br><span class="line">            &#125;</span><br><span class="line">            remain -= t*cdata[i];</span><br><span class="line">            <span class="keyword">if</span>(i!=<span class="number">0</span>)&#123;</span><br><span class="line">                t = remain/(cdata[i]-cdata[i<span class="number">-1</span>-((i+<span class="number">1</span>)%<span class="number">2</span>)]);</span><br><span class="line">                <span class="keyword">if</span>(t==<span class="number">1</span>)&#123;</span><br><span class="line">                    res+=data[i<span class="number">-1</span>-((i+<span class="number">1</span>)%<span class="number">2</span>)];</span><br><span class="line">                    res+=data[i];</span><br><span class="line">                    remain -= cdata[i] - cdata[i<span class="number">-1</span>-((i+<span class="number">1</span>)%<span class="number">2</span>)];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(remain==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> res = <span class="built_in">Solution</span>().<span class="built_in">intToRoman</span>(<span class="number">1994</span>);</span><br><span class="line">        cout&lt;&lt;res&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1171,278 +1465,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> T DeepCopy&lt;T&gt;(T obj)&#123;</span><br><span class="line">    string json= JsonConvert.SerializeObject(obj);</span><br><span class="line">    <span class="keyword">return</span> JsonConvert.DeserializeObject&lt;T&gt;(json);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/algorithm/Validate-Binary-Search-Tree/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/algorithm/Validate-Binary-Search-Tree/" class="post-title-link" itemprop="url">Validate Binary Search Tree</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-08-11 14:48:01 / Modified: 14:49:01" itemprop="dateCreated datePublished" datetime="2022-08-11T14:48:01+08:00">2022-08-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="98-Validate-Binary-Search-Tree"><a href="#98-Validate-Binary-Search-Tree" class="headerlink" title="98. Validate Binary Search Tree"></a>98. Validate Binary Search Tree</h1><p>Given the <code>root</code> of a binary tree, <em>determine if it is a valid binary search tree (BST)</em>.</p>
-<p>A <strong>valid BST</strong> is defined as follows:</p>
-<ul>
-<li>The left subtree of a node contains only nodes with keys <strong>less than</strong> the node’s key.</li>
-<li>The right subtree of a node contains only nodes with keys <strong>greater than</strong> the node’s key.</li>
-<li>Both the left and right subtrees must also be binary search trees.</li>
-</ul>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1:"></a>Example 1:</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202208111443217.png" alt="image-20220811144313167"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [2,1,3]</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2:"></a>Example 2:</h3><p><img data-src="https://juggler-1256897757.cos.ap-chengdu.myqcloud.com/picgo/202208111443366.png" alt="image-20220811144353322"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [5,1,4,null,null,3,6]</span><br><span class="line">Output: false</span><br><span class="line">Explanation: The root node&#x27;s value is 5 but its right child&#x27;s value is 4.</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>Constraints:</strong></p>
-<ul>
-<li>The number of nodes in the tree is in the range <code>[1, 104]</code>.</li>
-<li><code>-231 &lt;= Node.val &lt;= 231 - 1</code></li>
-</ul>
-<h2 id="我解"><a href="#我解" class="headerlink" title="我解"></a>我解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValidBST</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root==<span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">check</span>(root)[<span class="number">2</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">check</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="type">bool</span> left, right;</span><br><span class="line">        <span class="type">int</span> mid;</span><br><span class="line">        root-&gt;left == <span class="literal">NULL</span> ? left = <span class="literal">false</span> : left = <span class="literal">true</span>;</span><br><span class="line">        mid = root-&gt;val;</span><br><span class="line">        root-&gt;right == <span class="literal">NULL</span> ? right = <span class="literal">false</span> : right = <span class="literal">true</span>;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; tempLeft, tempRight;</span><br><span class="line">        <span class="keyword">if</span> (left) &#123;</span><br><span class="line">            tempLeft = <span class="built_in">check</span>(root-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (right) &#123;</span><br><span class="line">            tempRight = <span class="built_in">check</span>(root-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (left&amp;&amp;tempLeft[<span class="number">2</span>] == <span class="number">-1</span> || right&amp;&amp;tempRight[<span class="number">2</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">-1</span>,<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!left&amp;&amp;!right) &#123;</span><br><span class="line">            <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;mid, mid,<span class="number">1</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!left) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tempRight[<span class="number">0</span>] &gt; mid) &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;mid, tempRight[<span class="number">1</span>], <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">-1</span>,<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!right) &#123;</span><br><span class="line">            <span class="keyword">if</span> (tempLeft[<span class="number">1</span>] &lt; mid) &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;tempLeft[<span class="number">0</span>], mid, <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">-1</span>,<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (tempLeft[<span class="number">1</span>] &lt; mid &amp;&amp; mid &lt; tempRight[<span class="number">0</span>]) &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;tempLeft[<span class="number">0</span>], tempRight[<span class="number">1</span>], <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> vector&lt;<span class="type">int</span>&gt;&#123;<span class="number">-1</span>, <span class="number">-1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="优解"><a href="#优解" class="headerlink" title="优解"></a>优解</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isValidBST</span><span class="params">(TreeNode* root, <span class="type">long</span> min = LONG_MIN, <span class="type">long</span> max = LONG_MAX)</span></span>&#123; </span><br><span class="line">       <span class="keyword">if</span>(root == <span class="literal">NULL</span>)</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">       <span class="keyword">if</span>((root-&gt;val &gt;= max) || (root-&gt;val &lt;= min))</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">           <span class="keyword">return</span> <span class="built_in">isValidBST</span>(root-&gt;left,min,root-&gt;val) &amp;&amp;  <span class="built_in">isValidBST</span>(root-&gt;right,root-&gt;val,max);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>。。。。。。。</p>
-<p>如何处理递归方法中的信息传递是个很严重的问题。还有</p>
-<p><strong>把标志位与值放在一个单位里传递是一种思维上不优雅，使用上容易犯错的危险行为。</strong></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/uncategorized/winodows%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A1%AC%E7%9B%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/uncategorized/winodows%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%A1%AC%E7%9B%98/" class="post-title-link" itemprop="url">winodows格式化硬盘</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-08-01 11:13:53 / Modified: 11:14:23" itemprop="dateCreated datePublished" datetime="2022-08-01T11:13:53+08:00">2022-08-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="windows格式化硬盘"><a href="#windows格式化硬盘" class="headerlink" title="windows格式化硬盘"></a>windows格式化硬盘</h1><p>GUI的那个有时候不太好用，记下命令行的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br><span class="line">list disk</span><br><span class="line">select disk 4</span><br><span class="line">list disk</span><br><span class="line">clean</span><br><span class="line">create partition primary</span><br><span class="line">format fs=fat32 <span class="comment">#格式化分區。我們使用FAT32作為USB隨身碟的文件系統。如果你要格式化HDD或SSD，你可以將其更改為exFAT或NTFS。(format fs=exfat或format fs=ntfs)</span></span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/docker/docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/docker/docker/" class="post-title-link" itemprop="url">docker</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-07-26 14:18:05" itemprop="dateCreated datePublished" datetime="2022-07-26T14:18:05+08:00">2022-07-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-12 15:32:52" itemprop="dateModified" datetime="2022-10-12T15:32:52+08:00">2022-10-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-change-default-docker-images-path"><a href="#1-change-default-docker-images-path" class="headerlink" title="1. change default docker images path"></a>1. change default docker images path</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- Step 1. Stop docker daemon.</span><br><span class="line">sudo /etc/init.d/docker stop</span><br><span class="line"></span><br><span class="line">- Step 2. Make sure that there are no docker related processes.</span><br><span class="line">ps aux|grep docker</span><br><span class="line"></span><br><span class="line">- Step 3. Move the contents of /var/lib/docker to your new location.</span><br><span class="line">sudo <span class="built_in">mv</span> /var/lib/docker &#123;path_to_move&#125;</span><br><span class="line"></span><br><span class="line">- Step 4. Create a softlink to default location.</span><br><span class="line">sudo <span class="built_in">ln</span> -s &#123;path_to_move&#125;/docker/ /var/lib/docker</span><br><span class="line"></span><br><span class="line">- Step 5. Start docker daemon.</span><br><span class="line">sudo /etc/init.d/docker start</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-run-docker-without-sudo"><a href="#2-run-docker-without-sudo" class="headerlink" title="2 run docker without sudo"></a>2 run docker without sudo</h2><p>1.创建docker组（已经存在则不用创建）</p>
-<p>sudo groupadd docker</p>
-<p>2.添加当前用户到docker组</p>
-<p>sudo gpasswd -a ${USER} docker</p>
-<p>3.重启 docker服务</p>
-<p>sudo systemctl restart docker </p>
-<p>4.切换到docker组</p>
-<p>newgrp docker</p>
 
       
     </div>
