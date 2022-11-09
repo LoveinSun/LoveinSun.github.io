@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -215,6 +215,88 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://juggler.fun/Unity/Unity-fake-parent/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Juggler">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JugglerDancing">
+      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | JugglerDancing">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Unity/Unity-fake-parent/" class="post-title-link" itemprop="url">Unity fake parent</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-23 16:25:36 / Modified: 16:26:30" itemprop="dateCreated datePublished" datetime="2022-03-23T16:25:36+08:00">2022-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Unity/" itemprop="url" rel="index"><span itemprop="name">Unity</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>Unity 设置不是父子关系的跟随效果</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Entity;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Follow</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Transform FakeParent;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Vector3 _positionOffset;</span><br><span class="line">    <span class="keyword">private</span> Quaternion _rotationOffset;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (FakeParent != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            SetFakeParent(FakeParent);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//Invoke(&quot;Timer&quot;, 15.0f);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FakeParent == <span class="literal">null</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> targetPos = FakeParent.position - _positionOffset;</span><br><span class="line">        <span class="keyword">var</span> targetRot = FakeParent.localRotation * _rotationOffset;</span><br><span class="line"></span><br><span class="line">        transform.position = RotatePointAroundPivot(targetPos, FakeParent.position, targetRot);</span><br><span class="line">        transform.localRotation = targetRot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Timer</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Debug.Log(string.Format(&quot;Timer3 is up !!! time=$&#123;0&#125;&quot;, Time.time));</span></span><br><span class="line">        <span class="comment">//GC.Collect();</span></span><br><span class="line">        <span class="comment">//Invoke(&quot;Timer&quot;, 17.0f);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetFakeParent</span>(<span class="params">Transform parent</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Offset vector</span></span><br><span class="line">        _positionOffset = parent.position - transform.position;</span><br><span class="line">        <span class="comment">//Offset rotation</span></span><br><span class="line">        _rotationOffset = Quaternion.Inverse(parent.localRotation * transform.localRotation);</span><br><span class="line">        <span class="comment">//Our fake parent</span></span><br><span class="line">        FakeParent = parent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Vector3 <span class="title">RotatePointAroundPivot</span>(<span class="params">Vector3 point, Vector3 pivot, Quaternion rotation</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//Get a direction from the pivot to the point</span></span><br><span class="line">        Vector3 dir = point - pivot;</span><br><span class="line">        <span class="comment">//Rotate vector around pivot</span></span><br><span class="line">        dir = rotation * dir;</span><br><span class="line">        <span class="comment">//Calc the rotated vector</span></span><br><span class="line">        point = dir + pivot;</span><br><span class="line">        <span class="comment">//Return calculated vector</span></span><br><span class="line">        <span class="keyword">return</span> point;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -251,7 +333,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-21 14:32:17" itemprop="dateModified" datetime="2022-10-21T14:32:17+08:00">2022-10-21</time>
+      <time title="Modified: 2022-11-09 10:38:28" itemprop="dateModified" datetime="2022-11-09T10:38:28+08:00">2022-11-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -273,17 +355,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>昨天好几个梦都梦到了某人，笑死，在梦里都不敢多想，只是回到那时候就已经很幸福了，不知道恢复之后的我怎么想？</p>
-<blockquote>
-<p>恢复后：安拉，犯深井冰习惯了<br>：q<br>我手中的乃不能抛弃之物，<br>我追寻的是无可抵达的梦。</p>
-</blockquote>
+          <p>我手中的乃不能抛弃之物，<br>我追寻的是无可抵达的梦。</p>
+<p>我手中的乃不能抛弃之物事，<br>我追寻的是无可抵达的梦乡。</p>
+<p>我所紧握的乃不能抛弃之_ _ _，<br>我所追寻的是无可抵达的幻想乡。</p>
 <p>追逐梦想不是请客吃饭</p>
 <p>桂花同酒千里来，风满楼台月照白，<br>千帆淘浪今始过，桑榆梦晚尚可怀。</p>
+<p>桂花同酒千里来，风满楼台月照白，<br>千帆戏浪今始过，桑榆梦晚尚可怀。</p>
+<p>桂花同酒千里来，风满楼台月照白，<br>朽木千帆今始过，桑榆梦晚尚可怀。</p>
 <blockquote>
 <p>朽木千帆今始过</p>
 </blockquote>
 <p>天有不测，<br>人有力尽,<br>我已到极限</p>
-<p>物含妙理，世界不生无根之火。<br>造化无情，人间竟得斯人来过。<br>岁月蹉跎</p>
+<p>天有不测，<br>人有力竭,<br>我已到极限</p>
+<p>物含妙理，世界不生无根之火<br>造化无情，人间竟得斯人来过。<br>岁月蹉跎</p>
 <p>必死凡人得其九</p>
 
       
@@ -940,96 +1024,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> Azure.Messaging.ServiceBus;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">ServiceBusConsole</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// connection string to your Service Bus namespace</span></span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> connectionString = <span class="string">&quot;Endpoint=sb://&quot;</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// name of your Service Bus topic</span></span><br><span class="line">        <span class="keyword">static</span> <span class="built_in">string</span> topicName = <span class="string">&quot;actieue&quot;</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">static</span> Queue&lt;<span class="built_in">string</span>&gt; a;</span><br><span class="line">        <span class="comment">// number of messages to be sent to the topic</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">const</span> <span class="built_in">int</span> taskNumber = <span class="number">8</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Random random = <span class="keyword">new</span> Random();</span><br><span class="line">            a = <span class="keyword">new</span> Queue&lt;<span class="built_in">string</span>&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; taskNumber; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                JObject jo = <span class="keyword">new</span> JObject();</span><br><span class="line">                jo[<span class="string">&quot;taskId&quot;</span>] = i;</span><br><span class="line">                jo[<span class="string">&quot;excutionTime&quot;</span>] = random.Next(<span class="number">10</span>);</span><br><span class="line">                a.Enqueue(jo.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">            ArrayList b = <span class="keyword">new</span> ArrayList();</span><br><span class="line">            b.Add(a.Dequeue());</span><br><span class="line">            sendMessage(b).Wait();</span><br><span class="line">            <span class="keyword">get</span>().Wait();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">sendMessage</span>(<span class="params">ArrayList msgs</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// the client that owns the connection and can be used to create senders and receivers</span></span><br><span class="line">            ServiceBusClient client;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// the sender used to publish messages to the topic</span></span><br><span class="line">            ServiceBusSender sender;</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// The Service Bus client types are safe to cache and use as a singleton for the lifetime</span></span><br><span class="line">            <span class="comment">// of the application, which is best practice when messages are being published or read</span></span><br><span class="line">            <span class="comment">// regularly.</span></span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="comment">// Create the clients that we&#x27;ll use for sending and processing messages.</span></span><br><span class="line">            client = <span class="keyword">new</span> ServiceBusClient(connectionString);</span><br><span class="line">            sender = client.CreateSender(topicName);</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// create a batch </span></span><br><span class="line">            ServiceBusMessageBatch messageBatch = <span class="keyword">await</span> sender.CreateMessageBatchAsync();</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">foreach</span> (Object o <span class="keyword">in</span> msgs)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">string</span> msg = (<span class="built_in">string</span>)o;</span><br><span class="line">                <span class="comment">// try adding a message to the batch</span></span><br><span class="line">                ServiceBusMessage m = <span class="keyword">new</span> ServiceBusMessage(msg);</span><br><span class="line">                JObject j = JObject.Parse(msg);</span><br><span class="line">                <span class="built_in">double</span> d = <span class="built_in">double</span>.Parse(j[<span class="string">&quot;excutionTime&quot;</span>].ToString());</span><br><span class="line">                m.ScheduledEnqueueTime = DateTimeOffset.Now.AddSeconds(d);</span><br><span class="line">                <span class="keyword">if</span> (!messageBatch.TryAddMessage(m))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// if it is too large for the batch</span></span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">$&quot;The message msg is too large to fit in the batch.&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Use the producer client to send the batch of messages to the Service Bus topic</span></span><br><span class="line">                <span class="keyword">await</span> sender.SendMessagesAsync(messageBatch);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Calling DisposeAsync on client types is required to ensure that network</span></span><br><span class="line">                <span class="comment">// resources and other unmanaged objects are properly cleaned up.</span></span><br><span class="line">                messageBatch.Dispose();</span><br><span class="line">                <span class="keyword">await</span> sender.DisposeAsync();</span><br><span class="line">                <span class="keyword">await</span> client.DisposeAsync();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">get</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            ServiceBusClient client;</span><br><span class="line">            ServiceBusProcessor processor;</span><br><span class="line">            client = <span class="keyword">new</span> ServiceBusClient(connectionString);</span><br><span class="line">            processor = client.CreateProcessor(topicName, <span class="keyword">new</span> ServiceBusProcessorOptions());</span><br><span class="line"> </span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// add handler to process messages</span></span><br><span class="line">                processor.ProcessMessageAsync += MessageHandler;</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// add handler to process any errors</span></span><br><span class="line">                processor.ProcessErrorAsync += ErrorHandler;</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// start processing </span></span><br><span class="line">                <span class="keyword">await</span> processor.StartProcessingAsync();</span><br><span class="line"> </span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Start Task 0 is runing&quot;</span>);</span><br><span class="line">                Console.WriteLine(<span class="string">$&quot;It is <span class="subst">&#123;DateTimeOffset.Now&#125;</span> now&quot;</span>);</span><br><span class="line">                Console.ReadKey();</span><br><span class="line"> </span><br><span class="line">                <span class="comment">// stop processing </span></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;\nStopping the receiver...&quot;</span>);</span><br><span class="line">                <span class="keyword">await</span> processor.StopProcessingAsync();</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;Stopped receiving messages&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">finally</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Calling DisposeAsync on client types is required to ensure that network</span></span><br><span class="line">                <span class="comment">// resources and other unmanaged objects are properly cleaned up.</span></span><br><span class="line">                <span class="keyword">await</span> processor.DisposeAsync();</span><br><span class="line">                <span class="keyword">await</span> client.DisposeAsync();</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">async</span> Task <span class="title">MessageHandler</span>(<span class="params">ProcessMessageEventArgs args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            ArrayList c = <span class="keyword">new</span> ArrayList();</span><br><span class="line">            <span class="built_in">string</span> body = args.Message.Body.ToString();</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                c.Add(a.Dequeue());</span><br><span class="line">                sendMessage(c).Wait();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line"> </span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            Console.WriteLine(<span class="string">$&quot;At <span class="subst">&#123;DateTimeOffset.Now&#125;</span>,This task is finished:\nReceived: <span class="subst">&#123;body&#125;</span> &quot;</span>);</span><br><span class="line"> </span><br><span class="line">            <span class="comment">// complete the message. messages is deleted from the subscription. </span></span><br><span class="line">            <span class="keyword">await</span> args.CompleteMessageAsync(args.Message);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">// handle any errors when receiving messages</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> Task <span class="title">ErrorHandler</span>(<span class="params">ProcessErrorEventArgs args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(args.Exception.ToString());</span><br><span class="line">            <span class="keyword">return</span> Task.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://juggler.fun/%E6%9D%82%E8%AE%B0/%E7%A5%9D%E5%AE%89%E5%A5%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Juggler">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JugglerDancing">
-      <meta itemprop="description" content="吾之生命如流星，誓要从全世界路过。">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | JugglerDancing">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%9D%82%E8%AE%B0/%E7%A5%9D%E5%AE%89%E5%A5%BD/" class="post-title-link" itemprop="url">祝安好</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-22 11:17:52" itemprop="dateCreated datePublished" datetime="2022-03-22T11:17:52+08:00">2022-03-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-07-26 14:25:50" itemprop="dateModified" datetime="2022-07-26T14:25:50+08:00">2022-07-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">杂记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>我想在早 中 晚对你说 <br>早安 午安 晚安<br>可我早已无处寻你</p>
-<p>就好像四季<br>春天我见不到你 我只能带着初醒的梦 和每一朵花对话。<br>夏天我见不到你 绿皮红瓤的季节 我只能剪一头短发 把蝉鸣收藏。<br>秋天我见不到你 黄昏细雨里 我只能回忆起你熟悉的味道 让你感知我最澄澈的眷恋。<br>冬天我见不到你 冬夜渐深 细碎过往已让回忆温柔很多 于是在漫天大雪里 绵延不绝的是我对你的祝福。</p>
-<p>忘不掉的是夏夜的磅礴大雨<br>从前我享受飘摇其中的感觉<br>现在我想为谁撑起一把伞</p>
-<p>可我如何前去寻你 <br>绝望疯长恣肆无所忌惮 <br>寂寞而眷恋着某个人 </p>
-<p>如果此生再不能相见 <br>祝你早安 午安<br>和晚安</p>
-<p>改自：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/34648905">https://www.zhihu.com/question/34648905</a></p>
 
       
     </div>
